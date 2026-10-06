@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniya D’silva — Design Archetype Gallery</title>
+  <meta name="description" content="Compact Design Gallery of 6 WCAG 2.2 AA compliant archetypes for Taniya D'silva.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              olive: '#526640',
+              olivedark: '#3D4C2F',
+              paper: '#FAF8F5',
+              bar: '#181614',
+              border: '#2E2A26',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    iframe { transition: opacity 0.15s ease; }
+    .active-pill {
+      background-color: #526640 !important;
+      color: #FAF8F5 !important;
+      border-color: #526640 !important;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-brand-bar text-white font-sans flex flex-col h-screen overflow-hidden">
+
+  <!-- ULTRA-COMPACT TOP CONTROL BAR (One single slim row) -->
+  <header class="bg-brand-bar text-white px-3 py-1.5 border-b border-brand-border flex items-center justify-between gap-3 shrink-0 z-50 h-11">
+    
+    <!-- Left: Identity Badge (Ultra Compact) -->
+    <div class="flex items-center gap-2 shrink-0">
+      <div class="w-6 h-6 rounded bg-brand-olive text-white flex items-center justify-center font-serif text-xs font-semibold">
+        TD
+      </div>
+      <div class="flex items-baseline gap-1.5">
+        <span class="text-xs font-semibold tracking-tight text-white whitespace-nowrap">Taniya D’silva</span>
+        <span class="hidden xl:inline text-[10px] font-mono text-stone-400">· 6 Archetypes</span>
+      </div>
+    </div>
+
+    <!-- Center: 6 Compact Pill Buttons (Zero Wrap, Smooth Scroll) -->
+    <nav class="flex items-center space-x-1.5 overflow-x-auto no-scrollbar py-0.5" aria-label="Archetype Switcher">
+      <button onclick="switchDesign('designs/design-1-editorial-monograph.html', 1, this)" class="active-pill px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap">
+        01. Monograph
+      </button>
+      <button onclick="switchDesign('designs/design-2-nordic-warm-minimal.html', 2, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
+        02. Nordic Minimal
+      </button>
+      <button onclick="switchDesign('designs/design-3-evidence-bento.html', 3, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
+        03. Evidence Bento
+      </button>
+      <button onclick="switchDesign('designs/design-4-swiss-high-grid.html', 4, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
+        04. Swiss Grid
+      </button>
+      <button onclick="switchDesign('designs/design-5-split-canvas.html', 5, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
+        05. Split Canvas
+      </button>
+      <button onclick="switchDesign('designs/design-6-strategic-dossier.html', 6, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
+        06. Strategic Dossier
+      </button>
+    </nav>
+
+    <!-- Right: Viewport Controls & Open Button -->
+    <div class="flex items-center gap-2 shrink-0">
+      <div class="hidden md:flex items-center bg-white/5 border border-white/10 rounded text-[10px] font-mono p-0.5">
+        <button id="vp-full" onclick="setViewport('100%', this)" class="px-2 py-0.5 rounded bg-white/20 text-white font-medium">Desktop</button>
+        <button id="vp-tab" onclick="setViewport('768px', this)" class="px-2 py-0.5 rounded text-stone-400 hover:text-white">Tablet</button>
+        <button id="vp-mob" onclick="setViewport('390px', this)" class="px-2 py-0.5 rounded text-stone-400 hover:text-white">Mobile</button>
+      </div>
+
+      <a id="openNewTab" href="designs/design-1-editorial-monograph.html" target="_blank" title="Open full screen in a new tab" class="px-2.5 py-1 rounded bg-brand-olive text-white text-[11px] font-mono flex items-center gap-1 hover:bg-white hover:text-brand-bar transition-colors whitespace-nowrap">
+        <span>Open ↗</span>
+      </a>
+    </div>
+
+  </header>
+
+  <!-- WORKSPACE CANVAS -->
+  <main class="flex-1 bg-[#1F1C19] flex items-center justify-center p-0 md:p-2 overflow-hidden relative">
+    <div id="viewportContainer" class="w-full h-full bg-white shadow-2xl transition-all duration-300 overflow-hidden md:rounded border border-white/10">
+      <iframe id="designFrame" src="designs/design-1-editorial-monograph.html" title="Taniya D'silva Design Archetype" class="w-full h-full border-0"></iframe>
+    </div>
+  </main>
+
+  <script>
+    function switchDesign(url, id, btn) {
+      const frame = document.getElementById('designFrame');
+      const openBtn = document.getElementById('openNewTab');
+      
+      frame.style.opacity = '0.3';
+      frame.src = url;
+      openBtn.href = url;
+      
+      frame.onload = () => {
+        frame.style.opacity = '1';
+      };
+
+      document.querySelectorAll('nav button').forEach(b => {
+        b.classList.remove('active-pill');
+        b.classList.add('text-stone-300');
+      });
+      btn.classList.add('active-pill');
+      btn.classList.remove('text-stone-300');
+    }
+
+    function setViewport(width, btn) {
+      const container = document.getElementById('viewportContainer');
+      container.style.maxWidth = width;
+      container.style.height = width === '100%' ? '100%' : '95%';
+
+      ['vp-full', 'vp-tab', 'vp-mob'].forEach(id => {
+        const b = document.getElementById(id);
+        if (b) {
+          b.classList.remove('bg-white/20', 'text-white', 'font-medium');
+          b.classList.add('text-stone-400');
+        }
+      });
+      if (btn) {
+        btn.classList.remove('text-stone-400');
+        btn.classList.add('bg-white/20', 'text-white', 'font-medium');
+      }
+    }
+  </script>
+</body>
+</html>

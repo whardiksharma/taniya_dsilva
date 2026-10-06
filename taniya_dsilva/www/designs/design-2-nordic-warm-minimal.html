@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniya D’silva — Archetype 02: Nordic Warm Minimal</title>
+  <meta name="description" content="Strategic Social Impact Advisory, Research, Evidence-to-Action Programme & Portfolio Management by Taniya D'silva.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nordic: {
+              canvas: '#F7F6F2',
+              card: '#FFFFFF',
+              border: '#E8E5DD',
+              subtle: '#D6D1C4',
+              text: '#22201D',
+              muted: '#716C63',
+              olive: '#4D5E3F',
+              sage: '#E3E9DC',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid #4D5E3F;
+      outline-offset: 4px;
+    }
+    ::selection { background: #E3E9DC; color: #22201D; }
+  </style>
+</head>
+<body class="bg-nordic-canvas text-nordic-text font-sans antialiased selection:bg-nordic-sage">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-nordic-olive text-white font-mono text-xs rounded-full">
+    Skip to content
+  </a>
+
+  <!-- MINIMAL FLOATING PILL NAVBAR -->
+  <header class="fixed top-6 inset-x-0 z-40 px-6 pointer-events-none">
+    <div class="max-w-4xl mx-auto flex items-center justify-between bg-nordic-card/90 backdrop-blur-md px-6 py-3 rounded-full border border-nordic-border shadow-sm pointer-events-auto">
+      
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-nordic-olive group-hover:scale-125 transition-transform"></span>
+        <span class="font-semibold text-sm tracking-tight text-nordic-text">Taniya D’silva</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-xs text-nordic-muted font-medium">
+        <a href="#about" class="hover:text-nordic-text transition-colors">About</a>
+        <a href="#pillars" class="hover:text-nordic-text transition-colors">Pillars</a>
+        <a href="#credentials" class="hover:text-nordic-text transition-colors">Credentials</a>
+        <a href="#practice" class="hover:text-nordic-text transition-colors">Wise Impact</a>
+        <a href="#work" class="hover:text-nordic-text transition-colors">Work</a>
+      </nav>
+
+      <a href="#connect" class="px-4 py-1.5 rounded-full bg-nordic-text text-nordic-canvas text-xs font-mono hover:bg-nordic-olive transition-colors">
+        Discuss Project
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="pt-36">
+    
+    <!-- HERO (Deep Calm & Generous Space) -->
+    <section id="hero" class="max-w-4xl mx-auto px-6 py-20 lg:py-28 text-center space-y-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-nordic-sage/60 rounded-full text-xs font-mono text-nordic-olive font-medium">
+        <span>Strategic Social Impact Advisory</span>
+        <span>•</span>
+        <span>Evidence-to-Action</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-light tracking-tight text-nordic-text leading-[1.15] text-balance">
+        Translating complex evidence into <span class="font-normal underline decoration-nordic-olive/40 underline-offset-8">practical social programmes</span> and organizational action.
+      </h1>
+
+      <p class="text-base sm:text-lg text-nordic-muted max-w-2xl mx-auto font-light leading-relaxed">
+        15 years driving strategy, multi-stakeholder coalitions, and multi-million dollar portfolios across climate, gender equity, and public health in LMIC contexts.
+      </p>
+
+      <div class="pt-4 flex flex-wrap justify-center items-center gap-4">
+        <a href="#connect" class="px-7 py-3 rounded-full bg-nordic-text text-white text-xs font-mono uppercase tracking-wider hover:bg-nordic-olive transition-colors shadow-sm">
+          Discuss a project requirement
+        </a>
+        <a href="#work" class="px-7 py-3 rounded-full border border-nordic-border bg-nordic-card text-nordic-text text-xs font-mono uppercase tracking-wider hover:border-nordic-olive transition-colors">
+          View selected work
+        </a>
+      </div>
+
+      <!-- Clean Minimal Portrait Floating Card -->
+      <div class="pt-12 max-w-xs mx-auto">
+        <div class="p-3 bg-nordic-card rounded-2xl border border-nordic-border shadow-sm">
+          <img src="../public/taniya-avatar.svg" alt="Taniya D'silva" class="w-full aspect-square rounded-xl object-contain bg-nordic-canvas/50" />
+          <div class="mt-3 px-2 flex justify-between items-center text-[11px] font-mono text-nordic-muted">
+            <span class="text-nordic-text font-medium">Taniya D’silva</span>
+            <span>PMP®, 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 border-t border-nordic-border bg-nordic-card/60">
+      <div class="max-w-4xl mx-auto px-6 space-y-12">
+        <div class="flex items-center gap-3 font-mono text-xs text-nordic-olive font-semibold uppercase tracking-widest">
+          <span class="w-8 h-px bg-nordic-olive"></span>
+          <span>About Taniya</span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-light text-nordic-text leading-snug">
+          “Understanding the evidence, clarifying strategic choices, aligning stakeholders, and translating priorities into implementable systems.”
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-nordic-muted leading-relaxed">
+          <p>
+            Taniya works at the intersection of research, strategy and implementation. Her experience spans advisory engagements with nonprofits, foundations, the private sector, and government bodies.
+          </p>
+          <p>
+            Rather than relying on generic consulting playbooks, her approach combines deep qualitative rigor with the practical realities of frontline team leadership and institutional resourcing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE 4 PILLARS (Clean Minimalist Cards) -->
+    <section id="pillars" class="py-24 border-t border-nordic-border">
+      <div class="max-w-4xl mx-auto px-6 space-y-16">
+        
+        <div>
+          <div class="flex items-center gap-3 font-mono text-xs text-nordic-olive font-semibold uppercase tracking-widest mb-3">
+            <span class="w-8 h-px bg-nordic-olive"></span>
+            <span>Advisory Framework</span>
+          </div>
+          <h2 class="text-3xl font-light text-nordic-text">Four Pillars of Practice</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="p-8 bg-nordic-card border border-nordic-border rounded-2xl space-y-4 hover:border-nordic-olive transition-colors">
+            <div class="text-xs font-mono text-nordic-olive font-bold">01 / STRATEGY</div>
+            <h3 class="text-xl font-medium text-nordic-text">Strategy & Organisational Advisory</h3>
+            <p class="text-xs text-nordic-muted leading-relaxed">
+              Helping organisations translate ambition into clear strategic choices, priorities and multi-year roadmaps.
+            </p>
+            <div class="pt-2 text-xs text-nordic-muted space-y-1">
+              <div>• Organisational and portfolio strategy</div>
+              <div>• Strategic planning and foresight</div>
+              <div>• Investment theses and portfolio priorities</div>
+              <div>• Senior leadership decision support</div>
+            </div>
+          </div>
+
+          <div class="p-8 bg-nordic-card border border-nordic-border rounded-2xl space-y-4 hover:border-nordic-olive transition-colors">
+            <div class="text-xs font-mono text-nordic-olive font-bold">02 / RESEARCH</div>
+            <h3 class="text-xl font-medium text-nordic-text">Research & Strategy</h3>
+            <p class="text-xs text-nordic-muted leading-relaxed">
+              Turning evidence, research and stakeholder insights into actionable strategic direction.
+            </p>
+            <div class="pt-2 text-xs text-nordic-muted space-y-1">
+              <div>• Landscape & ecosystem research</div>
+              <div>• Qualitative research & market analysis</div>
+              <div>• Evidence-to-action synthesis</div>
+              <div>• Actionable recommendations</div>
+            </div>
+          </div>
+
+          <div class="p-8 bg-nordic-card border border-nordic-border rounded-2xl space-y-4 hover:border-nordic-olive transition-colors">
+            <div class="text-xs font-mono text-nordic-olive font-bold">03 / PROGRAMMES</div>
+            <h3 class="text-xl font-medium text-nordic-text">Programme & Portfolio Design</h3>
+            <p class="text-xs text-nordic-muted leading-relaxed">
+              Designing and strengthening programmes that move seamlessly from strategic intent to effective implementation.
+            </p>
+            <div class="pt-2 text-xs text-nordic-muted space-y-1">
+              <div>• Implementation & pilot design</div>
+              <div>• Multi-stakeholder programme design</div>
+              <div>• Portfolio reviews & problem-solving</div>
+              <div>• Strategic delivery monitoring</div>
+            </div>
+          </div>
+
+          <div class="p-8 bg-nordic-card border border-nordic-border rounded-2xl space-y-4 hover:border-nordic-olive transition-colors">
+            <div class="text-xs font-mono text-nordic-olive font-bold">04 / CAPABILITY</div>
+            <h3 class="text-xl font-medium text-nordic-text">Partnerships & Capability</h3>
+            <p class="text-xs text-nordic-muted leading-relaxed">
+              Strengthening relationships, capabilities and systems needed to deliver lasting impact on the ground.
+            </p>
+            <div class="pt-2 text-xs text-nordic-muted space-y-1">
+              <div>• Government & institutional engagement</div>
+              <div>• Donor & philanthropic partnerships</div>
+              <div>• Leadership & capability building</div>
+              <div>• Executive communications & briefings</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CREDENTIALS AT A GLANCE (Minimalist Metric List) -->
+    <section id="credentials" class="py-24 border-t border-nordic-border bg-nordic-card/40">
+      <div class="max-w-4xl mx-auto px-6 space-y-12">
+        <div>
+          <div class="flex items-center gap-3 font-mono text-xs text-nordic-olive font-semibold uppercase tracking-widest mb-3">
+            <span class="w-8 h-px bg-nordic-olive"></span>
+            <span>Proof Points</span>
+          </div>
+          <h2 class="text-3xl font-light text-nordic-text">Credentials at a Glance</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-olive font-medium">15 Years</div>
+            <div class="text-xs text-nordic-muted mt-1">Across strategy, programmes and social impact in LMIC contexts.</div>
+          </div>
+
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-text font-medium">PMP® Certified</div>
+            <div class="text-xs text-nordic-muted mt-1">Certified Project Management Professional (PMI, 2026).</div>
+          </div>
+
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-olive font-medium">USD 1.3M</div>
+            <div class="text-xs text-nordic-muted mt-1">Directed national gender equity programme in automotive & EV sector.</div>
+          </div>
+
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-text font-medium">30+ Members</div>
+            <div class="text-xs text-nordic-muted mt-1">Led interdisciplinary teams across strategy and execution.</div>
+          </div>
+
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-olive font-medium">€1.3M / 300+</div>
+            <div class="text-xs text-nordic-muted mt-1">Developed 300+ proposals during pre-sales leadership at Sattva.</div>
+          </div>
+
+          <div class="p-6 bg-nordic-card rounded-xl border border-nordic-border">
+            <div class="text-2xl font-mono text-nordic-text font-medium">USD 1M+</div>
+            <div class="text-xs text-nordic-muted mt-1">Secured through philanthropic partnerships across social enterprises.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE VEHICLE: WISE IMPACT -->
+    <section id="practice" class="py-24 border-t border-nordic-border">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="p-10 bg-nordic-card rounded-3xl border border-nordic-border space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 bg-nordic-sage text-nordic-olive text-[11px] font-mono rounded-full font-semibold">PRACTICE VEHICLE</span>
+            <span class="text-xs font-mono text-nordic-muted">Wise Impact Consulting Solutions</span>
+          </div>
+          
+          <h3 class="text-2xl sm:text-3xl font-light text-nordic-text">
+            “Rallying the team and the organization to translate the grand vision to programs on the ground.”
+          </h3>
+
+          <p class="text-sm text-nordic-muted leading-relaxed">
+            Founded by Taniya D’silva, Wise Impact Consulting Solutions provides actionable advisory in research, strategy development, programme design, and capability building to nonprofits and foundations.
+          </p>
+
+          <div class="pt-4 border-t border-nordic-border flex flex-wrap justify-between items-center text-xs font-mono text-nordic-muted">
+            <span>Tagline: Strategy & Programme/Portfolio Leadership for Social Impact</span>
+            <a href="#connect" class="text-nordic-olive font-semibold hover:underline">Engage Practice →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT WORK -->
+    <section id="work" class="py-24 border-t border-nordic-border bg-nordic-card/60">
+      <div class="max-w-4xl mx-auto px-6 space-y-12">
+        <div class="flex justify-between items-end">
+          <div>
+            <div class="flex items-center gap-3 font-mono text-xs text-nordic-olive font-semibold uppercase tracking-widest mb-3">
+              <span class="w-8 h-px bg-nordic-olive"></span>
+              <span>Evidence Dispatches</span>
+            </div>
+            <h2 class="text-3xl font-light text-nordic-text">Recent Work</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="p-8 bg-nordic-card rounded-2xl border border-nordic-border hover:border-nordic-olive transition-all group block">
+            <div class="text-xs font-mono text-nordic-muted">L’Express International</div>
+            <h3 class="text-lg font-medium text-nordic-text group-hover:text-nordic-olive transition-colors mt-2">
+              What Mauritius can learn from the Himalayas ↗
+            </h3>
+            <p class="text-xs text-nordic-muted mt-2 leading-relaxed">
+              Research synthesis on climate resilience, mountain hydrological systems, and island vulnerabilities.
+            </p>
+          </a>
+
+          <a href="https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations" target="_blank" rel="noopener noreferrer" class="p-8 bg-nordic-card rounded-2xl border border-nordic-border hover:border-nordic-olive transition-all group block">
+            <div class="text-xs font-mono text-nordic-muted">Executive Toolkit</div>
+            <h3 class="text-lg font-medium text-nordic-text group-hover:text-nordic-olive transition-colors mt-2">
+              Strategic Planning for Climate Nonprofits ↗
+            </h3>
+            <p class="text-xs text-nordic-muted mt-2 leading-relaxed">
+              Executive curriculum helping leaders navigate trade-offs, portfolio prioritisation, and donor alignment.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section id="connect" class="py-24 border-t border-nordic-border">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-nordic-card p-10 rounded-3xl border border-nordic-border space-y-8">
+          <div>
+            <div class="text-xs font-mono text-nordic-olive font-semibold uppercase tracking-widest mb-2">Engage</div>
+            <h2 class="text-3xl font-light text-nordic-text">Discuss a project requirement</h2>
+            <p class="text-xs text-nordic-muted mt-1 font-mono">Routing directly to its.taniya.dsilva@gmail.com</p>
+          </div>
+
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message noted. Thank you!');">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" required placeholder="Name *" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+              <input type="text" required placeholder="Organisation *" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="email" required placeholder="Email *" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+              <input type="text" placeholder="Role / Designation" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+            </div>
+
+            <select required class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive text-nordic-text">
+              <option value="">What are you looking for? *</option>
+              <option value="Strategy & organisational advisory">Strategy & organisational advisory</option>
+              <option value="Research / landscape analysis">Research / landscape analysis</option>
+              <option value="Programme design">Programme design</option>
+              <option value="Programme / portfolio management">Programme / portfolio management</option>
+              <option value="Partnerships / stakeholder strategy">Partnerships / stakeholder strategy</option>
+              <option value="Organisational capability building">Organisational capability building</option>
+              <option value="Speaking / facilitation">Speaking / facilitation</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <textarea rows="3" required placeholder="Brief description of the challenge/opportunity *" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive"></textarea>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input type="text" placeholder="Expected timeline" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+              <input type="text" placeholder="How did you hear about Taniya?" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+            </div>
+
+            <input type="url" placeholder="Optional: relevant documents / website" class="w-full px-4 py-3 bg-nordic-canvas rounded-xl text-xs border border-nordic-border focus:border-nordic-olive">
+
+            <button type="submit" class="px-8 py-3.5 bg-nordic-text text-white text-xs font-mono uppercase tracking-wider rounded-full hover:bg-nordic-olive transition-colors">
+              Submit Requirement
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-nordic-border py-12 px-6 font-mono text-xs text-nordic-muted">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>© 2026 Taniya D’silva · Wise Impact Consulting Solutions</div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" class="hover:text-nordic-text">LinkedIn</a>
+        <a href="#hero" class="hover:text-nordic-text">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
