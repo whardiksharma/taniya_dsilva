@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniya D’silva — Living Ecosystem Atlas | Systems & Social Impact</title>
+  <meta name="description" content="15 years translating evidence and strategic vision into ground reality across climate, gender equity, labour markets, and public health in LMIC contexts.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            atlas: {
+              canvas: '#0D110D',
+              surface: '#141A14',
+              card: '#1B241B',
+              border: 'rgba(255,255,255,0.08)',
+              borderActive: '#709A58',
+              forest: '#263325',
+              olive: '#587B46',
+              bright: '#8EC271',
+              mist: '#E8F2E2',
+              cream: '#F4EFE6',
+              amber: '#DEAB52',
+              copper: '#C96D46',
+              charcoal: '#7A8C7A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::selection { background: #587B46; color: #FFFFFF; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #0D110D; }
+    ::-webkit-scrollbar-thumb { background: #263325; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #587B46; }
+    .contour-lines {
+      background-image: radial-gradient(circle at 1px 1px, rgba(142, 194, 113, 0.12) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+    .node-active {
+      border-color: #8EC271 !important;
+      background-color: rgba(142, 194, 113, 0.12) !important;
+    }
+  </style>
+</head>
+<body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
+
+  <!-- TOP RUNNING ATLAS HEADER -->
+  <header class="sticky top-0 z-50 bg-atlas-canvas/92 backdrop-blur-md border-b border-atlas-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Lockup -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full border border-atlas-bright/50 flex items-center justify-center bg-atlas-surface text-atlas-bright font-serif font-bold text-base shadow-sm">
+          TD
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-normal tracking-tight block text-white group-hover:text-atlas-bright transition-colors">
+            Taniya D’silva
+          </span>
+          <span class="font-mono text-[10px] tracking-widest text-atlas-charcoal uppercase block">
+            Living Systems Atlas · Strategy & Programme Leadership
+          </span>
+        </div>
+      </a>
+
+      <!-- 4 Universal Design Switcher Pills -->
+      <div class="hidden xl:flex items-center bg-white/5 border border-white/10 rounded-full p-1 text-[11px] font-mono">
+        <a href="index.html" class="px-3 py-1 rounded-full text-atlas-charcoal hover:text-white transition-colors">
+          01. Obsidian Balmoiabe
+        </a>
+        <a href="design-2.html" class="px-3 py-1 rounded-full text-atlas-charcoal hover:text-white transition-colors">
+          02. Warm Ivory
+        </a>
+        <a href="design-3.html" class="px-3 py-1 rounded-full bg-atlas-olive text-white font-medium shadow-sm">
+          03. Systems Atlas
+        </a>
+        <a href="design-4.html" class="px-3 py-1 rounded-full text-atlas-charcoal hover:text-white transition-colors">
+          04. Slate Terracotta
+        </a>
+      </div>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="p-2 text-atlas-charcoal hover:text-atlas-bright transition-colors" title="LinkedIn">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#connect" class="px-5 py-2.5 rounded-full bg-atlas-olive hover:bg-atlas-bright hover:text-atlas-canvas text-white font-mono text-xs uppercase tracking-wider transition-all shadow-md">
+          Discuss Requirement ↗
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================================================= -->
+    <!-- 1. HERO: LIVING ATLAS DUAL-CHAMBER SYSTEM -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="py-16 sm:py-24 border-b border-atlas-border">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-atlas-surface border border-atlas-border font-mono text-xs text-atlas-bright">
+              <span class="w-2 h-2 rounded-full bg-atlas-bright animate-ping"></span>
+              <span>15 YEARS INTERSECTORAL PRAXIS · LMIC CONTEXTS</span>
+              <span>·</span>
+              <span class="text-atlas-amber">PMP® CERTIFIED</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal leading-[1.08] tracking-tight">
+              Translating evidence and grand vision into ground reality.
+            </h1>
+
+            <p class="text-atlas-cream/80 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+              15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health in LMIC contexts.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#connect" class="px-7 py-3.5 rounded-full bg-atlas-olive hover:bg-atlas-bright hover:text-atlas-canvas text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg shadow-atlas-olive/20">
+                Discuss a Project Requirement
+              </a>
+              <a href="#landscape" class="px-7 py-3.5 rounded-full border border-atlas-border hover:border-atlas-bright text-atlas-cream font-mono text-xs uppercase tracking-widest transition-all">
+                Explore 4 Corridors
+              </a>
+            </div>
+
+            <!-- Credentials Telemetry Bar -->
+            <div class="pt-8 border-t border-atlas-border grid grid-cols-3 gap-6 font-mono text-xs">
+              <div>
+                <span class="font-serif text-3xl sm:text-4xl text-white block">15+</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">Years Leadership</span>
+              </div>
+              <div>
+                <span class="font-serif text-3xl sm:text-4xl text-atlas-bright block">USD 1.3M</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">EV & Gender Programme</span>
+              </div>
+              <div>
+                <span class="font-serif text-3xl sm:text-4xl text-atlas-amber block">PMP®</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">Certified Directorship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Portrait & Animated Likeness Composition -->
+          <div class="lg:col-span-5 relative">
+            <div class="p-3.5 rounded-3xl bg-atlas-surface border border-atlas-border shadow-2xl relative group">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden relative">
+                <img src="public/taniya_headshot_2.png" alt="Taniya D'silva Strategy Desk" class="w-full h-full object-cover filter contrast-105 group-hover:scale-102 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-atlas-canvas via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <div class="font-serif text-xl text-white">Taniya D’silva</div>
+                  <div class="font-mono text-xs text-atlas-bright">Principal · Wise Impact Consulting Solutions</div>
+                  <div class="font-mono text-[10px] text-atlas-charcoal mt-0.5">Primary Professional & Advisory Identity</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Vector Likeness Badge Inset -->
+            <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl overflow-hidden border-2 border-atlas-amber shadow-2xl bg-atlas-card hidden sm:block p-1">
+              <img src="public/taniya_animated_likeness.png" alt="Vector Portrait Likeness Plate" class="w-full h-full object-cover rounded-xl">
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-atlas-canvas/90 text-[8px] font-mono text-atlas-amber uppercase">Likeness</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. THE 4 THEMATIC ECOSYSTEM CORRIDORS (OUT OF THE BOX ATLAS ARCHITECTURE) -->
+    <!-- ========================================================================= -->
+    <section id="landscape" class="py-20 border-b border-atlas-border bg-atlas-surface/50">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Thematic Landscape</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mt-1">Four Intersectoral Corridors</h2>
+          </div>
+          <p class="font-mono text-xs text-atlas-charcoal mt-2 md:mt-0">15 Years Bridging Planetary Boundaries & Social Equity</p>
+        </div>
+
+        <!-- 4 Grid Corridors with Rich Photography & Proof Points -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Corridor 1: Climate & Mountain Watersheds -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
+            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Mountain Watersheds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-atlas-card via-transparent to-transparent opacity-85"></div>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-atlas-canvas/90 border border-atlas-border text-atlas-amber font-mono text-[10px] uppercase">
+                Corridor 01 · Climate & Ecology
+              </div>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-white font-normal mb-2">Climate Resilience, Watersheds & High-Altitude Agriculture</h3>
+              <p class="text-sm text-atlas-cream/70 font-light leading-relaxed">
+                Advising on climate adaptation across fragile ecological belts. Synthesizing rain-fed agricultural collapse, water scarcity, and agro-pastoral transitions as published in <em>L'Express (France/Mauritius)</em>.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Feature: L'Express Himalayas</span>
+              <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline flex items-center gap-1">
+                <span>View Dispatch</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Corridor 2: Gender Equity & Clean Mobility (USD 1.3M EV) -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
+            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Electric Vehicle Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-atlas-card via-transparent to-transparent opacity-85"></div>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-atlas-canvas/90 border border-atlas-border text-atlas-bright font-mono text-[10px] uppercase">
+                Corridor 02 · Gender & Manufacturing
+              </div>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-white font-normal mb-2">USD 1.3M National Gender Equity in Automotive & EV</h3>
+              <p class="text-sm text-atlas-cream/70 font-light leading-relaxed">
+                Directed national multi-stakeholder programme accelerating female workforce participation, technical skilling, and retention across India's automotive and electric vehicle manufacturing ecosystems.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Scope: USD 1.3M Portfolio</span>
+              <span class="text-atlas-bright font-semibold">Line Ministries & OEMs</span>
+            </div>
+          </div>
+
+          <!-- Corridor 3: Labour Markets & Informal Sector -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
+            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80" alt="Informal Women Workers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-atlas-card via-transparent to-transparent opacity-85"></div>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-atlas-canvas/90 border border-atlas-border text-atlas-amber font-mono text-[10px] uppercase">
+                Corridor 03 · Labour Markets
+              </div>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-white font-normal mb-2">Informal Labour, Social Security & Care Economies</h3>
+              <p class="text-sm text-atlas-cream/70 font-light leading-relaxed">
+                Deep empirical field diagnostics uncovering structural wage penalties, childcare infrastructure deficits, and social protection architectures for women home-based and subcontracted workers.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Method: Qualitative Field Synthesis</span>
+              <span class="text-atlas-bright font-semibold">Policy Reform</span>
+            </div>
+          </div>
+
+          <!-- Corridor 4: Public Health & Primary Delivery -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
+            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Public Health Delivery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-atlas-card via-transparent to-transparent opacity-85"></div>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-atlas-canvas/90 border border-atlas-border text-atlas-bright font-mono text-[10px] uppercase">
+                Corridor 04 · Public Health
+              </div>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-white font-normal mb-2">Primary Healthcare Systems & Frontline Delivery</h3>
+              <p class="text-sm text-atlas-cream/70 font-light leading-relaxed">
+                Strategic evaluations of last-mile maternal health distribution chains, community health worker empowerment, and frontline healthcare governance across LMIC rural corridors.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Consortiums: UN & Foundations</span>
+              <span class="text-atlas-bright font-semibold">Scale Implementation</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. THE INTERACTIVE 4 PILLARS ATLAS (EVIDENCE & CAPABILITIES) -->
+    <!-- ========================================================================= -->
+    <section id="pillars" class="py-20 border-b border-atlas-border">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Capabilities & Solutions</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Four Pillars of Practice</h2>
+          <p class="text-sm text-atlas-charcoal font-light">Interactive capability nodes designed for boards and leadership teams.</p>
+        </div>
+
+        <!-- Interactive Pillar Nodes Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Node 1 -->
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
+            <div class="w-10 h-10 rounded-xl bg-atlas-card border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg">
+              01
+            </div>
+            <h3 class="font-serif text-xl text-white font-normal">Strategy & Organisational Advisory</h3>
+            <p class="text-xs text-atlas-cream/70 font-light leading-relaxed">
+              Helping organisations translate ambition into clear strategic choices, priorities and roadmaps.
+            </p>
+            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+              <li>✓ Organisational & portfolio strategy</li>
+              <li>✓ Strategic planning & foresight</li>
+              <li>✓ Investment theses & priorities</li>
+              <li>✓ Multi-year operational roadmaps</li>
+              <li>✓ Decision support for C-suite</li>
+            </ul>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
+            <div class="w-10 h-10 rounded-xl bg-atlas-card border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg">
+              02
+            </div>
+            <h3 class="font-serif text-xl text-white font-normal">Research & Strategy</h3>
+            <p class="text-xs text-atlas-cream/70 font-light leading-relaxed">
+              Turning evidence, research and stakeholder insights into actionable strategic direction.
+            </p>
+            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+              <li>✓ Landscape & ecosystem research</li>
+              <li>✓ Qualitative fieldwork methodologies</li>
+              <li>✓ Sector and market analysis</li>
+              <li>✓ Research synthesis for ministers</li>
+              <li>✓ Evidence-to-action strategy</li>
+            </ul>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
+            <div class="w-10 h-10 rounded-xl bg-atlas-card border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg">
+              03
+            </div>
+            <h3 class="font-serif text-xl text-white font-normal">Programme Design & PMO</h3>
+            <p class="text-xs text-atlas-cream/70 font-light leading-relaxed">
+              Design and strengthen programmes that move from strategic intent to effective implementation.
+            </p>
+            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+              <li>✓ Programme strategy & implementation</li>
+              <li>✓ PMP® portfolio management & PMO</li>
+              <li>✓ Multi-stakeholder design</li>
+              <li>✓ Pilot and innovation blueprints</li>
+              <li>✓ Bottleneck & governance reviews</li>
+            </ul>
+          </div>
+
+          <!-- Node 4 -->
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
+            <div class="w-10 h-10 rounded-xl bg-atlas-card border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg">
+              04
+            </div>
+            <h3 class="font-serif text-xl text-white font-normal">Partnerships & Capability</h3>
+            <p class="text-xs text-atlas-cream/70 font-light leading-relaxed">
+              Strengthening relationships, capabilities and systems needed to deliver impact on the ground.
+            </p>
+            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+              <li>✓ Multi-stakeholder partnerships</li>
+              <li>✓ Government & institutional pacts</li>
+              <li>✓ Donor & philanthropic relations</li>
+              <li>✓ Leadership capability building</li>
+              <li>✓ Executive briefings & alignment</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. PRACTICE VEHICLE: WISE IMPACT CONSULTING SOLUTIONS -->
+    <!-- ========================================================================= -->
+    <section id="practice" class="py-20 border-b border-atlas-border bg-atlas-surface/60">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="p-8 sm:p-14 rounded-3xl bg-atlas-card border border-atlas-border space-y-6">
+          <div class="flex items-center gap-3 font-mono text-xs text-atlas-bright uppercase tracking-widest">
+            <span class="w-2.5 h-2.5 rounded-full bg-atlas-bright"></span>
+            <span>Current Consulting Practice Vehicle</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal leading-tight">
+            Wise Impact Consulting Solutions
+          </h2>
+
+          <p class="text-atlas-cream/80 text-base sm:text-lg font-light leading-relaxed max-w-4xl">
+            WISE understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.
+          </p>
+
+          <p class="text-atlas-cream/80 text-base font-light leading-relaxed max-w-4xl">
+            Wise Impact Consulting Solutions provides actionable advisory solutions in <strong class="font-medium text-white">research, strategy development, programme design, and organisational capability building</strong> to nonprofits and foundations to aid with bringing these visions to life.
+          </p>
+
+          <div class="pt-4 border-t border-atlas-border font-mono text-xs text-atlas-charcoal">
+            Registered Legal Entity: <span class="text-white">Wise Impact Consulting Solutions</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. WHAT OTHERS SAY (ENDORSEMENTS) -->
+    <!-- ========================================================================= -->
+    <section id="endorsements" class="py-20 border-b border-atlas-border">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Testimonials</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">What Others Say</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border flex flex-col justify-between space-y-4">
+            <p class="font-serif italic text-atlas-cream text-base leading-relaxed">
+              “Taniya brings rare clarity to multi-partner programmes. Her ability to translate high-stakes policy into ground operations gave our team confidence from day one.”
+            </p>
+            <div class="pt-4 border-t border-atlas-border font-mono text-xs">
+              <span class="text-white block font-semibold">Senior Programme Director</span>
+              <span class="text-atlas-charcoal">Bilateral Development Mission</span>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border flex flex-col justify-between space-y-4">
+            <p class="font-serif italic text-atlas-cream text-base leading-relaxed">
+              “Rigorous, evidence-first, and deeply empathetic. She aligns diverse stakeholders around shared priorities with remarkable ease and diplomatic skill.”
+            </p>
+            <div class="pt-4 border-t border-atlas-border font-mono text-xs">
+              <span class="text-white block font-semibold">Executive Trustee</span>
+              <span class="text-atlas-charcoal">Climate & Livelihoods Foundation</span>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-atlas-surface border border-atlas-border flex flex-col justify-between space-y-4">
+            <p class="font-serif italic text-atlas-cream text-base leading-relaxed">
+              “Her PMP-certified precision combined with deep social sector nuance ensured our multi-million dollar portfolio delivered every key milestone on time.”
+            </p>
+            <div class="pt-4 border-t border-atlas-border font-mono text-xs">
+              <span class="text-white block font-semibold">Managing Partner</span>
+              <span class="text-atlas-charcoal">Social Advisory Practice</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. CONNECT / INQUIRY FORM (COMPLETE CLIENT SRS) -->
+    <!-- ========================================================================= -->
+    <section id="connect" class="py-24 bg-atlas-surface/80">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="p-8 sm:p-14 rounded-3xl bg-atlas-card border border-atlas-border shadow-2xl space-y-10">
+          
+          <div class="text-center space-y-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Strategic Collaboration</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Discuss a Project Requirement</h2>
+            <p class="text-sm text-atlas-cream/70 max-w-xl mx-auto font-light leading-relaxed">
+              Inquiries route directly to Taniya D’silva at <span class="font-mono text-atlas-bright font-medium">its.taniya.dsilva@gmail.com</span> for independent advisory, programme directorship, or research commissions.
+            </p>
+          </div>
+
+          <form action="mailto:its.taniya.dsilva@gmail.com" method="POST" enctype="text/plain" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">1. Full Name *</label>
+                <input type="text" name="name" required placeholder="Elena Vance" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">2. Organisation *</label>
+                <input type="text" name="organisation" required placeholder="Global Climate Resilience Facility" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">3. Email Address *</label>
+                <input type="email" name="email" required placeholder="vance@resilience.org" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">4. Role / Designation *</label>
+                <input type="text" name="designation" required placeholder="Executive Director" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block font-mono text-xs text-atlas-charcoal uppercase">5. What are you looking for? *</label>
+              <select name="scope" required class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+                <option value="Strategy & organisational advisory">Strategy & organisational advisory</option>
+                <option value="Research / landscape analysis">Research / landscape analysis</option>
+                <option value="Programme design">Programme design</option>
+                <option value="Programme / portfolio management">Programme / portfolio management</option>
+                <option value="Partnerships / stakeholder strategy">Partnerships / stakeholder strategy</option>
+                <option value="Organisational capability building">Organisational capability building</option>
+                <option value="Speaking / facilitation">Speaking / facilitation</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block font-mono text-xs text-atlas-charcoal uppercase">6. Brief description of the challenge/opportunity *</label>
+              <textarea name="challenge" rows="4" required placeholder="Describe the strategic challenge, context, and desired outcomes..." class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">7. Expected Timeline</label>
+                <input type="text" name="timeline" placeholder="e.g. Q3 2026 / 6 Months" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+              <div class="space-y-1.5">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">8. How did you hear about Taniya?</label>
+                <input type="text" name="referral" placeholder="e.g. Recommendation / LinkedIn / L'Express" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block font-mono text-xs text-atlas-charcoal uppercase">9. Optional: Relevant documents / website</label>
+              <input type="text" name="docs" placeholder="https://yourorganisation.org or link to brief" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-white text-sm focus:border-atlas-bright focus:outline-none">
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-atlas-olive hover:bg-atlas-bright hover:text-atlas-canvas text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg shadow-atlas-olive/30">
+              Submit Project Requirement →
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-atlas-border py-12 bg-atlas-canvas text-atlas-charcoal font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="text-white font-semibold">Taniya D’silva</span> · Wise Impact Consulting Solutions
+      </div>
+      <div>
+        India Based · Available for Global & Regional Missions
+      </div>
+      <div class="text-atlas-bright">
+        its.taniya.dsilva@gmail.com
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

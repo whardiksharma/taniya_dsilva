@@ -19,17 +19,17 @@
         extend: {
           colors: {
             brand: {
-              obsidian: '#0B0D0A',
-              surface: '#131612',
-              card: '#181C16',
-              border: 'rgba(255,255,255,0.08)',
-              olive: '#4D613D',
-              oliveLight: '#7E9C65',
-              oliveSoft: '#9EBA87',
-              cream: '#F6F3EC',
-              sand: '#E6E1D4',
-              muted: '#8A9285',
-              mint: '#63B3A3'
+              obsidian: '#F8F5EE',
+              surface: '#FFFFFF',
+              card: '#F2EDE4',
+              border: '#E2D9CC',
+              olive: '#475C36',
+              oliveLight: '#394A2B',
+              oliveSoft: '#475C36',
+              cream: '#1C1916',
+              sand: '#4A443D',
+              muted: '#7A7268',
+              mint: '#3D6B52'
             }
           },
           fontFamily: {
@@ -44,9 +44,9 @@
   <style>
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #0B0D0A; }
-    ::-webkit-scrollbar-thumb { background: #2A3324; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #4D613D; }
+    ::-webkit-scrollbar-track { background: #F8F5EE; }
+    ::-webkit-scrollbar-thumb { background: #C8BFB2; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475C36; }
 
     /* Balmoiabe 3-Panel Split Hero Interaction */
     .hero-panel {
@@ -141,17 +141,17 @@
       <!-- Right CTAs -->
       <div class="hidden sm:flex items-center gap-3">
         <!-- 4 Design Switcher Pills -->
-        <div class="hidden xl:flex items-center bg-white/5 border border-white/10 rounded-full p-1 text-[11px] font-mono">
-          <a href="index.html" class="px-3 py-1 rounded-full bg-brand-olive text-white font-medium shadow-sm">
+        <div class="hidden xl:flex items-center bg-brand-border/60 border border-brand-border rounded-full p-1 text-[11px] font-mono">
+          <a href="index.html" class="px-3 py-1 rounded-full text-brand-muted hover:text-brand-cream transition-colors">
             01. Obsidian Balmoiabe
           </a>
-          <a href="design-2.html" class="px-3 py-1 rounded-full text-brand-cream/70 hover:text-white transition-colors">
+          <a href="design-2.html" class="px-3 py-1 rounded-full bg-brand-olive text-white font-medium shadow-sm">
             02. Warm Ivory
           </a>
-          <a href="design-3.html" class="px-3 py-1 rounded-full text-brand-cream/70 hover:text-white transition-colors">
+          <a href="design-3.html" class="px-3 py-1 rounded-full text-brand-muted hover:text-brand-cream transition-colors">
             03. Systems Atlas
           </a>
-          <a href="design-4.html" class="px-3 py-1 rounded-full text-brand-cream/70 hover:text-white transition-colors">
+          <a href="design-4.html" class="px-3 py-1 rounded-full text-brand-muted hover:text-brand-cream transition-colors">
             04. Slate Terracotta
           </a>
         </div>
