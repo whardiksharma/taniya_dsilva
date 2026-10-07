@@ -3,257 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taniya D’silva — Archetype 05: Split Canvas Living Narrative</title>
-  <meta name="description" content="Strategic Social Impact Advisory, Research, Evidence-to-Action Programme & Portfolio Management by Taniya D'silva.">
+  <title>Taniya D’silva — Archetype 05: Cyberpunk Neon HUD & Dark Grid</title>
+  <meta name="description" content="Cyberpunk Neon HUD and high-contrast tactical dark grid for Taniya D'silva. Future-forward global strategy and social innovation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            canvas: {
-              left: '#211E1A',
-              leftcard: '#2D2924',
-              right: '#F9F7F2',
-              rightcard: '#FFFFFF',
-              border: '#E8E3D8',
-              olive: '#72885B',
-              olivedark: '#485739',
-              sand: '#DFD8CC',
-              ink: '#1F1C18',
+            cyber: {
+              void: '#04070B',
+              panel: '#0B111A',
+              card: '#101926',
+              cyan: '#00F0FF',
+              neonGreen: '#39FF14',
+              magenta: '#FF0055',
+              border: 'rgba(0, 240, 255, 0.2)',
+              text: '#C0D0E0',
+              dim: '#58708C'
             }
           },
           fontFamily: {
-            serif: ['Newsreader', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"Space Mono"', 'monospace'],
+            hud: ['"Orbitron"', 'sans-serif'],
+            mono: ['"Share Tech Mono"', 'monospace'],
+            sans: ['"Inter"', 'sans-serif'],
           }
         }
       }
     }
   </script>
+  <style>
+    .glow-cyan { text-shadow: 0 0 15px rgba(0,240,255,0.6); }
+    .box-glow { box-shadow: 0 0 20px rgba(0,240,255,0.15); }
+    .hud-clip {
+      clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: #00F0FF; border-radius: 2px; }
+  </style>
 </head>
-<body class="bg-canvas-right text-canvas-ink font-sans antialiased">
+<body class="bg-cyber-void text-cyber-text font-sans antialiased selection:bg-cyber-cyan selection:text-black">
 
-  <div class="min-h-screen flex flex-col lg:flex-row">
-    
-    <!-- LEFT PANEL: STICKY EXECUTIVE IDENTITY (Dark Warm Linen) -->
-    <aside class="lg:w-5/12 bg-canvas-left text-canvas-sand p-8 sm:p-12 lg:p-16 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between border-r border-canvas-leftcard/80">
-      
-      <!-- Top Monogram & Name -->
-      <div class="space-y-6">
-        <div class="flex items-center gap-3 font-mono text-xs text-canvas-olive">
-          <span class="w-2 h-2 rounded-full bg-canvas-olive"></span>
-          <span class="uppercase tracking-widest">Executive Persona</span>
-        </div>
+  <!-- HUD STATUS HEADER -->
+  <header class="border-b border-cyber-border bg-cyber-panel/90 backdrop-blur-md sticky top-0 z-50 font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-3 h-3 bg-cyber-cyan animate-ping rounded-sm"></span>
+        <span class="font-hud text-xl text-cyber-cyan tracking-wider glow-cyan">TANIYA::D'SILVA</span>
+        <span class="text-cyber-dim hidden sm:inline">[SYS_ACTIVE · 15Y_EXP]</span>
+      </div>
 
-        <div class="space-y-2">
-          <h1 class="font-serif text-4xl sm:text-5xl text-white font-normal leading-none tracking-tight">
-            Taniya<br/>D’silva
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest text-cyber-dim uppercase">
+        <a href="#overview" class="hover:text-cyber-cyan transition-colors">01//OVERVIEW</a>
+        <a href="#pillars" class="hover:text-cyber-cyan transition-colors">02//PILLARS</a>
+        <a href="#intel" class="hover:text-cyber-cyan transition-colors">03//INTEL</a>
+        <a href="#engage" class="hover:text-cyber-cyan transition-colors">04//UPLINK</a>
+      </nav>
+
+      <a href="#engage" class="px-5 py-2 border border-cyber-cyan text-cyber-cyan font-mono text-xs uppercase tracking-wider hud-clip hover:bg-cyber-cyan hover:text-black transition-all box-glow">
+        INITIATE UPLINK &gt;
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+
+    <!-- HERO HUD SECTION -->
+    <section id="overview" class="p-8 lg:p-14 bg-cyber-panel border border-cyber-border hud-clip box-glow">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyber-card border border-cyber-border text-cyber-cyan text-xs font-mono">
+            <span>DIRECTIVE: STRATEGIC IMPACT ADVISORY & GLOBAL PORTFOLIO LEADERSHIP</span>
+          </div>
+
+          <h1 class="font-hud text-4xl sm:text-6xl text-white font-bold leading-tight glow-cyan">
+            TRANSFORMING MACRO POLICY INTO FIELD DEPLOYMENT.
           </h1>
-          <p class="font-mono text-xs text-canvas-olive uppercase tracking-wider">
-            Strategy & Programme/Portfolio Leadership
+
+          <p class="text-cyber-text text-base sm:text-lg font-light leading-relaxed">
+            15 years managing multi-million-dollar portfolios, aligning sovereign donors, and deploying evidence-based systemic interventions across LMIC territories.
           </p>
+
+          <!-- HUD Telemetry Grid -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-cyber-border font-mono">
+            <div class="p-3 bg-cyber-card border border-cyber-border rounded">
+              <span class="block font-hud text-2xl sm:text-3xl text-cyber-cyan">15+</span>
+              <span class="text-[10px] text-cyber-dim uppercase">Years Active</span>
+            </div>
+            <div class="p-3 bg-cyber-card border border-cyber-border rounded">
+              <span class="block font-hud text-2xl sm:text-3xl text-cyber-neonGreen">PMP®</span>
+              <span class="text-[10px] text-cyber-dim uppercase">Certified Lead</span>
+            </div>
+            <div class="p-3 bg-cyber-card border border-cyber-border rounded">
+              <span class="block font-hud text-2xl sm:text-3xl text-cyber-magenta">04</span>
+              <span class="text-[10px] text-cyber-dim uppercase">Core Pillars</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Stylized Likeness Avatar Frame -->
-        <div class="max-w-[200px] aspect-square rounded-2xl bg-canvas-leftcard border border-white/10 p-4 shadow-inner">
-          <img src="../public/taniya-avatar.svg" alt="Taniya D'silva Avatar" class="w-full h-full object-contain" />
+        <!-- Cyber Portrait Frame -->
+        <div class="lg:col-span-5 relative">
+          <div class="p-2 border-2 border-cyber-cyan bg-cyber-card hud-clip box-glow">
+            <div class="aspect-[4/5] overflow-hidden relative">
+              <img src="../public/taniya_headshot_2.png" alt="Taniya D'silva Cyber Session" class="w-full h-full object-cover filter contrast-125">
+              <div class="absolute inset-0 bg-cyber-cyan/10 mix-blend-overlay"></div>
+              <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-black/90 text-cyber-cyan text-[10px] font-mono">
+                OPERATOR::TANIYA_DSILVA
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Animated Avatar Stamp -->
+          <div class="absolute -bottom-6 -left-6 w-28 h-28 border-2 border-cyber-neonGreen bg-cyber-panel overflow-hidden hidden sm:block box-glow">
+            <img src="../public/taniya_animated_likeness.png" alt="Vector Avatar" class="w-full h-full object-cover">
+          </div>
         </div>
 
-        <p class="font-serif text-base text-canvas-sand/90 italic leading-relaxed">
-          “Translating ambitious ideas for a just and equitable world into practical programs and grounded organizational action.”
-        </p>
+      </div>
+    </section>
+
+    <!-- 4 STRATEGIC PILLARS HUD NODES -->
+    <section id="pillars" class="space-y-8">
+      <div class="flex items-center justify-between border-b border-cyber-border pb-4">
+        <h2 class="font-hud text-2xl sm:text-4xl text-white tracking-wide glow-cyan">SYSTEMIC ARCHITECTURE // 4 NODES</h2>
+        <span class="font-mono text-xs text-cyber-cyan">PROTOCOL ACTIVE</span>
       </div>
 
-      <!-- Left Bottom Details -->
-      <div class="pt-8 border-t border-white/10 space-y-4 font-mono text-xs text-canvas-sand/70">
-        <div class="flex justify-between">
-          <span>Experience:</span>
-          <span class="text-white">15 Years in LMIC</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-mono">
+        
+        <div class="p-8 bg-cyber-panel border border-cyber-border hover:border-cyber-cyan transition-all hud-clip space-y-3">
+          <div class="flex justify-between text-xs text-cyber-cyan">
+            <span>NODE::01</span>
+            <span>STRATEGY</span>
+          </div>
+          <h3 class="font-hud text-xl text-white">Strategic Impact Advisory & Organisational Strategy</h3>
+          <p class="font-sans text-xs text-cyber-text leading-relaxed">
+            Guiding boards and executive directors through complex transitions, theory of change formulation, governance pivots, and high-stakes donor realignment.
+          </p>
         </div>
-        <div class="flex justify-between">
-          <span>Certification:</span>
-          <span class="text-white">PMP® (2026)</span>
+
+        <div class="p-8 bg-cyber-panel border border-cyber-border hover:border-cyber-cyan transition-all hud-clip space-y-3">
+          <div class="flex justify-between text-xs text-cyber-cyan">
+            <span>NODE::02</span>
+            <span>DIRECTORSHIP</span>
+          </div>
+          <h3 class="font-hud text-xl text-white">Programme Design, Directorship & PMO</h3>
+          <p class="font-sans text-xs text-cyber-text leading-relaxed">
+            Operationalising multi-million dollar portfolios with PMP® certified discipline. Harmonising multi-partner consortia across government line departments.
+          </p>
         </div>
-        <div class="flex justify-between">
-          <span>Practice:</span>
-          <span class="text-white">Wise Impact Consulting</span>
+
+        <div class="p-8 bg-cyber-panel border border-cyber-border hover:border-cyber-cyan transition-all hud-clip space-y-3">
+          <div class="flex justify-between text-xs text-cyber-cyan">
+            <span>NODE::03</span>
+            <span>SYNTHESIS</span>
+          </div>
+          <h3 class="font-hud text-xl text-white">Research, Evidence Synthesis & Policy Translation</h3>
+          <p class="font-sans text-xs text-cyber-text leading-relaxed">
+            Translating complex primary epidemiological, economic, and climate research into high-impact ministerial white papers and accessible public briefs.
+          </p>
         </div>
-        <div class="pt-2">
-          <a href="#connect" class="inline-block w-full py-3 bg-canvas-olive text-white text-center rounded-lg uppercase tracking-wider font-semibold hover:bg-canvas-olive/90 transition-colors">
-            Discuss Requirement →
-          </a>
+
+        <div class="p-8 bg-cyber-panel border border-cyber-border hover:border-cyber-cyan transition-all hud-clip space-y-3">
+          <div class="flex justify-between text-xs text-cyber-cyan">
+            <span>NODE::04</span>
+            <span>COALITION</span>
+          </div>
+          <h3 class="font-hud text-xl text-white">Executive Communications & Coalition Building</h3>
+          <p class="font-sans text-xs text-cyber-text leading-relaxed">
+            High-trust convenor uniting adversarial stakeholders across civil society, state actors, and private capital into aligned action agendas.
+          </p>
         </div>
+
+      </div>
+    </section>
+
+    <!-- INTEL BRIEF (L'EXPRESS) -->
+    <section id="intel" class="p-8 bg-cyber-panel border border-cyber-border hud-clip space-y-4">
+      <div class="font-mono text-xs text-cyber-neonGreen">INTEL_DISPATCH::L_EXPRESS_FRANCE</div>
+      <h2 class="font-hud text-2xl sm:text-4xl text-white glow-cyan">
+        "In the Indian Himalayas, Climate Change Threatens Agriculture and Beyond"
+      </h2>
+      <p class="text-sm font-light text-cyber-text max-w-3xl leading-relaxed">
+        Published field analysis examining climate shocks, weather pattern disruptions, and mountain food system security across northern India.
+      </p>
+    </section>
+
+    <!-- UPLINK FORM -->
+    <section id="engage" class="max-w-3xl mx-auto p-8 sm:p-12 bg-cyber-panel border border-cyber-cyan hud-clip box-glow space-y-6">
+      <div class="text-center space-y-2 border-b border-cyber-border pb-4">
+        <h2 class="font-hud text-3xl text-white glow-cyan">ESTABLISH ADVISORY UPLINK</h2>
+        <p class="font-mono text-xs text-cyber-dim">DIRECT PACKET ROUTING: its.taniya.dsilva@gmail.com</p>
       </div>
 
-    </aside>
-
-    <!-- RIGHT PANEL: SCROLLING EVIDENCE & PORTFOLIO STREAM -->
-    <main class="lg:w-7/12 p-8 sm:p-12 lg:p-20 space-y-20">
-      
-      <!-- SECTION 1: BIO & THESIS -->
-      <section class="space-y-6">
-        <div class="font-mono text-xs text-canvas-olivedark uppercase tracking-widest font-semibold">
-          01 / The Overview
-        </div>
-        <h2 class="font-serif text-3xl sm:text-4xl text-canvas-ink leading-snug">
-          Bridging research, strategic priorities, and ground execution across climate, gender, and public health.
-        </h2>
-        <div class="text-sm text-canvas-ink/80 space-y-4 leading-relaxed font-sans">
-          <p>
-            Taniya D’silva has 15 years of experience driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships in LMIC contexts.
-          </p>
-          <p>
-            Her approach combines strategic thinking with practical execution: understanding the evidence, clarifying the strategic choices, aligning stakeholders and translating priorities into implementable programmes and systems.
-          </p>
-        </div>
-      </section>
-
-      <!-- SECTION 2: METRICS MATRIX -->
-      <section class="space-y-6 pt-10 border-t border-canvas-border">
-        <div class="font-mono text-xs text-canvas-olivedark uppercase tracking-widest font-semibold">
-          02 / Evidence Ledger
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border shadow-sm">
-            <div class="font-mono text-3xl font-semibold text-canvas-olivedark">$1.3M</div>
-            <div class="text-xs text-canvas-ink/70 mt-1">National EV gender equity programme directed</div>
-          </div>
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border shadow-sm">
-            <div class="font-mono text-3xl font-semibold text-canvas-ink">30+</div>
-            <div class="text-xs text-canvas-ink/70 mt-1">Member interdisciplinary teams led</div>
-          </div>
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border shadow-sm">
-            <div class="font-mono text-3xl font-semibold text-canvas-olivedark">€1.3M</div>
-            <div class="text-xs text-canvas-ink/70 mt-1">300+ proposals built during pre-sales at Sattva</div>
-          </div>
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border shadow-sm">
-            <div class="font-mono text-3xl font-semibold text-canvas-ink">$1M+</div>
-            <div class="text-xs text-canvas-ink/70 mt-1">Philanthropic partnerships secured</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 3: 4 PILLARS -->
-      <section class="space-y-6 pt-10 border-t border-canvas-border">
-        <div class="font-mono text-xs text-canvas-olivedark uppercase tracking-widest font-semibold">
-          03 / Four Pillars of Support
-        </div>
-        <div class="space-y-4">
-          
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border space-y-2">
-            <div class="font-mono text-xs text-canvas-olivedark font-bold">PILLAR 01</div>
-            <h3 class="font-serif text-xl font-medium text-canvas-ink">Strategy & Organisational Advisory</h3>
-            <p class="text-xs text-canvas-ink/70 leading-relaxed">
-              Organisational & portfolio strategy, strategic foresight, investment theses, and senior leadership decision support.
-            </p>
-          </div>
-
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border space-y-2">
-            <div class="font-mono text-xs text-canvas-olivedark font-bold">PILLAR 02</div>
-            <h3 class="font-serif text-xl font-medium text-canvas-ink">Research & Strategy</h3>
-            <p class="text-xs text-canvas-ink/70 leading-relaxed">
-              Landscape research, qualitative stakeholder analysis, synthesis, and evidence-to-action strategic recommendations.
-            </p>
-          </div>
-
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border space-y-2">
-            <div class="font-mono text-xs text-canvas-olivedark font-bold">PILLAR 03</div>
-            <h3 class="font-serif text-xl font-medium text-canvas-ink">Programme & Portfolio Design</h3>
-            <p class="text-xs text-canvas-ink/70 leading-relaxed">
-              Implementation planning, pilot and innovation design, strategic problem-solving, and delivery monitoring.
-            </p>
-          </div>
-
-          <div class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border space-y-2">
-            <div class="font-mono text-xs text-canvas-olivedark font-bold">PILLAR 04</div>
-            <h3 class="font-serif text-xl font-medium text-canvas-ink">Partnerships & Organisational Capability</h3>
-            <p class="text-xs text-canvas-ink/70 leading-relaxed">
-              Government and institutional alliances, donor partnerships, capability building, and executive briefings.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SECTION 4: PRACTICE VEHICLE -->
-      <section class="p-8 bg-canvas-rightcard rounded-2xl border border-canvas-border space-y-4 shadow-sm">
-        <span class="px-2.5 py-1 bg-canvas-sand/60 text-canvas-olivedark text-[11px] font-mono rounded font-semibold">PRACTICE VEHICLE</span>
-        <h3 class="font-serif text-2xl font-medium text-canvas-ink">Wise Impact Consulting Solutions</h3>
-        <p class="text-xs text-canvas-ink/80 leading-relaxed font-sans">
-          Providing actionable advisory solutions in research, strategy development, programme design, and capability building to nonprofits and foundations to aid with bringing these visions to life.
-        </p>
-      </section>
-
-      <!-- SECTION 5: RECENT WORK -->
-      <section class="space-y-6 pt-10 border-t border-canvas-border">
-        <div class="font-mono text-xs text-canvas-olivedark uppercase tracking-widest font-semibold">
-          05 / Publications
-        </div>
+      <form action="mailto:its.taniya.dsilva@gmail.com" method="POST" enctype="text/plain" class="space-y-4 font-mono text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border hover:border-canvas-olivedark transition-colors block">
-            <div class="font-mono text-xs text-canvas-ink/50">L’Express</div>
-            <h4 class="font-serif text-lg font-medium text-canvas-ink mt-2">What Mauritius can learn from the Himalayas ↗</h4>
-          </a>
-          <a href="https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations" target="_blank" rel="noopener noreferrer" class="p-6 bg-canvas-rightcard rounded-xl border border-canvas-border hover:border-canvas-olivedark transition-colors block">
-            <div class="font-mono text-xs text-canvas-ink/50">Course</div>
-            <h4 class="font-serif text-lg font-medium text-canvas-ink mt-2">Strategic Planning for Climate Nonprofits ↗</h4>
-          </a>
+          <div>
+            <label class="block text-cyber-cyan mb-1">OPERATOR_NAME</label>
+            <input type="text" name="name" required class="w-full p-3 bg-cyber-card border border-cyber-border text-white focus:border-cyber-cyan focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-cyber-cyan mb-1">ORGANISATION_ENTITY</label>
+            <input type="text" name="organisation" required class="w-full p-3 bg-cyber-card border border-cyber-border text-white focus:border-cyber-cyan focus:outline-none">
+          </div>
         </div>
-      </section>
 
-      <!-- SECTION 6: INQUIRY -->
-      <section id="connect" class="p-8 sm:p-10 bg-canvas-rightcard rounded-2xl border border-canvas-border shadow-sm space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-cyber-cyan mb-1">EMAIL_ENDPOINT</label>
+            <input type="email" name="email" required class="w-full p-3 bg-cyber-card border border-cyber-border text-white focus:border-cyber-cyan focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-cyber-cyan mb-1">DIRECTIVE_TYPE</label>
+            <select name="scope" class="w-full p-3 bg-cyber-card border border-cyber-border text-white focus:border-cyber-cyan focus:outline-none">
+              <option value="strategic_advisory">Strategic Impact Advisory</option>
+              <option value="programme_directorship">Programme Directorship & PMO</option>
+              <option value="research_synthesis">Research & Policy Synthesis</option>
+              <option value="executive_communications">Executive Communications</option>
+              <option value="other">General Inquiry</option>
+            </select>
+          </div>
+        </div>
+
         <div>
-          <div class="font-mono text-xs text-canvas-olivedark uppercase tracking-widest font-semibold">06 / Engage</div>
-          <h2 class="font-serif text-3xl font-medium text-canvas-ink mt-1">Discuss a project requirement</h2>
-          <p class="font-mono text-xs text-canvas-ink/60 mt-1">Direct to its.taniya.dsilva@gmail.com</p>
+          <label class="block text-cyber-cyan mb-1">MESSAGE_PAYLOAD</label>
+          <textarea name="message" rows="4" class="w-full p-3 bg-cyber-card border border-cyber-border text-white focus:border-cyber-cyan focus:outline-none"></textarea>
         </div>
 
-        <form class="space-y-4 text-xs font-sans" onsubmit="event.preventDefault(); alert('Inquiry recorded. Thank you!');">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="text" required placeholder="Name *" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-            <input type="text" required placeholder="Organisation *" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="email" required placeholder="Email *" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-            <input type="text" placeholder="Role / Designation" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-          </div>
-          <select required class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-            <option value="">What are you looking for? *</option>
-            <option value="Strategy & organisational advisory">Strategy & organisational advisory</option>
-            <option value="Research / landscape analysis">Research / landscape analysis</option>
-            <option value="Programme design">Programme design</option>
-            <option value="Programme / portfolio management">Programme / portfolio management</option>
-            <option value="Partnerships / stakeholder strategy">Partnerships / stakeholder strategy</option>
-            <option value="Organisational capability building">Organisational capability building</option>
-            <option value="Speaking / facilitation">Speaking / facilitation</option>
-            <option value="Other">Other</option>
-          </select>
-          <textarea rows="3" required placeholder="Brief description of the challenge/opportunity *" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg"></textarea>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="text" placeholder="Expected timeline" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-            <input type="text" placeholder="How did you hear about Taniya?" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-          </div>
-          <input type="url" placeholder="Optional: relevant documents / website" class="w-full p-3 bg-canvas-right border border-canvas-border rounded-lg">
-          <button type="submit" class="px-8 py-3.5 bg-canvas-left text-white font-mono uppercase tracking-wider rounded-lg hover:bg-canvas-olivedark transition-colors font-semibold">
-            Submit Requirement
-          </button>
-        </form>
-      </section>
+        <button type="submit" class="w-full py-4 bg-cyber-cyan text-black font-hud font-bold text-sm uppercase tracking-wider hud-clip hover:bg-white transition-all box-glow">
+          TRANSMIT UPLINK PACKET &gt;&gt;
+        </button>
+      </form>
+    </section>
 
-      <footer class="pt-8 border-t border-canvas-border text-xs font-mono text-canvas-ink/60 flex justify-between">
-        <div>© 2026 Taniya D’silva · Wise Impact</div>
-        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" class="hover:underline">LinkedIn</a>
-      </footer>
+  </main>
 
-    </main>
-
-  </div>
+  <footer class="border-t border-cyber-border py-8 text-center font-mono text-xs text-cyber-dim bg-cyber-panel">
+    © 2026 TANIYA D’SILVA · CYBERPUNK HUD ARCHETYPE · WISE IMPACT
+  </footer>
 
 </body>
 </html>

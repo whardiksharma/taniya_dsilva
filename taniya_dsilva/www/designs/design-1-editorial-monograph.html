@@ -3,511 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taniya D’silva — Archetype 01: The Monograph Editorial</title>
-  <meta name="description" content="Strategic Social Impact Advisory, Research, Evidence-to-Action Programme & Portfolio Management by Taniya D'silva.">
+  <title>Taniya D’silva — Archetype 01: High-Fashion Luxury Editorial</title>
+  <meta name="description" content="High-Fashion Luxury Editorial portfolio for Taniya D'silva. Executive advisory for global social impact.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            paper: '#FDFBF7',
-            ink: '#1D1A16',
-            charcoal: '#332E27',
-            olive: {
-              DEFAULT: '#4E5F3E',
-              light: '#EAF0E4',
-              border: '#BCCBB0',
-              dark: '#3B492E',
-            },
-            warmgray: '#787065',
-            rule: '#E5DED3'
+            vogue: {
+              black: '#070806',
+              surface: '#0F120D',
+              card: '#161A13',
+              border: 'rgba(255,255,255,0.08)',
+              olive: '#7A9A60',
+              gold: '#D4AF37',
+              silk: '#F9F7F1',
+              muted: '#8A9285'
+            }
           },
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', 'monospace'],
+            vogue: ['"Bodoni Moda"', 'Didot', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
       }
     }
   </script>
   <style>
-    /* WCAG 2.2 AA Focus indicators */
-    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-      outline: 2px solid #4E5F3E;
-      outline-offset: 3px;
-    }
-    ::selection { background: #D6E2CB; color: #1D1A16; }
-    .col-rule { border-right: 1px solid #E5DED3; }
-    @media (max-width: 1024px) { .col-rule { border-right: none; } }
+    .vogue-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent); }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: #7A9A60; border-radius: 2px; }
   </style>
 </head>
-<body class="bg-paper text-ink font-sans antialiased selection:bg-olive-light selection:text-ink">
+<body class="bg-vogue-black text-vogue-silk font-sans antialiased selection:bg-vogue-gold selection:text-black">
 
-  <!-- ACCESSIBILITY SKIP LINK -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-olive text-white font-mono text-xs rounded">
-    Skip to main content
-  </a>
-
-  <!-- TOP RUNNING HEAD (Editorial Monograph Header) -->
-  <aside class="border-b border-rule px-6 py-2.5 bg-paper/80 backdrop-blur-sm text-xs font-mono text-warmgray sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-olive"></span>
-        <span class="tracking-widest uppercase text-[10px]">Monograph Vol. 15 / Advisory & Field Synthesis</span>
-      </div>
-      <div class="flex items-center gap-4 text-[11px]">
-        <span>Practice: Wise Impact Consulting Solutions</span>
-        <span class="text-rule">|</span>
-        <a href="#connect" class="text-olive hover:underline">Discuss a project requirement →</a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- EDITORIAL MASTHEAD -->
-  <header class="border-b border-rule py-10 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-      <div>
-        <div class="font-mono text-xs text-olive tracking-widest uppercase mb-1.5 font-semibold">
-          Strategic Social Impact Advisory · Research · Evidence-to-Action
-        </div>
-        <h1 class="font-serif text-5xl md:text-7xl font-normal tracking-tight text-ink leading-none">
+  <!-- MINIMAL LUXURY HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-vogue-black/90 backdrop-blur-md border-b border-vogue-border">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div class="space-y-0.5">
+        <a href="#hero" class="font-vogue text-2xl sm:text-3xl italic tracking-wider text-vogue-silk hover:text-vogue-gold transition-colors">
           Taniya D’silva
-        </h1>
+        </a>
+        <span class="block text-[9px] font-cinzel tracking-[0.25em] text-vogue-gold uppercase">Strategic Advisory & Global Directorship</span>
       </div>
-      <div class="max-w-sm text-right md:text-right font-serif italic text-lg text-warmgray">
-        “Strategy and Programme/Portfolio Leadership for Social Impact.”
-      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-cinzel tracking-widest text-vogue-silk/70 uppercase">
+        <a href="#about" class="hover:text-vogue-gold transition-colors">Manifesto</a>
+        <a href="#pillars" class="hover:text-vogue-gold transition-colors">Pillars</a>
+        <a href="#dossier" class="hover:text-vogue-gold transition-colors">Publications</a>
+        <a href="#endorsements" class="hover:text-vogue-gold transition-colors">Testimonials</a>
+        <a href="#connect" class="hover:text-vogue-gold transition-colors">Inquiry</a>
+      </nav>
+
+      <a href="#connect" class="px-5 py-2 rounded-full border border-vogue-gold/60 text-vogue-gold font-cinzel text-xs tracking-widest uppercase hover:bg-vogue-gold hover:text-black transition-all">
+        Retain Practice ↗
+      </a>
     </div>
   </header>
 
-  <!-- SUB-NAVIGATION / CHAPTER INDEX -->
-  <nav class="border-b border-rule bg-paper px-6 py-3 sticky top-9 z-30 font-mono text-xs text-warmgray uppercase tracking-wider" aria-label="Monograph Sections">
-    <div class="max-w-7xl mx-auto flex items-center space-x-8 overflow-x-auto">
-      <a href="#prologue" class="hover:text-ink transition-colors whitespace-nowrap">I. Prologue</a>
-      <a href="#pillars" class="hover:text-ink transition-colors whitespace-nowrap">II. Four Pillars</a>
-      <a href="#credentials" class="hover:text-ink transition-colors whitespace-nowrap">III. Credentials & Evidence</a>
-      <a href="#practice" class="hover:text-ink transition-colors whitespace-nowrap">IV. Wise Impact Practice</a>
-      <a href="#dispatches" class="hover:text-ink transition-colors whitespace-nowrap">V. Recent Work</a>
-      <a href="#connect" class="hover:text-ink transition-colors whitespace-nowrap text-olive font-semibold">VI. Engage</a>
-    </div>
-  </nav>
+  <main class="pt-32 pb-24">
 
-  <!-- MAIN EDITORIAL CONTENT -->
-  <main id="main-content" class="max-w-7xl mx-auto px-6">
-    
-    <!-- CHAPTER I: PROLOGUE & INTELLECTUAL MATRIX -->
-    <section id="prologue" class="py-16 md:py-24 border-b border-rule">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <!-- HERO SECTION: FULL-WIDTH HIGH FASHION LOOK -->
+    <section id="hero" class="max-w-7xl mx-auto px-6 mb-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Column: Portrait & Identity Lockup -->
-        <div class="lg:col-span-4 col-rule pr-0 lg:pr-8 space-y-6">
-          <div class="border border-rule p-4 bg-white/60 rounded-sm">
-            <img src="../public/taniya-avatar.svg" alt="Taniya D'silva stylized portrait" class="w-full aspect-square object-contain" />
-            <div class="mt-4 pt-3 border-t border-rule font-mono text-[11px] text-warmgray flex justify-between">
-              <span>Portrait Likeness: Taniya D’silva</span>
-              <span>PMP®, 2026</span>
-            </div>
-          </div>
-          
-          <div class="space-y-2 text-xs font-mono text-warmgray leading-relaxed">
-            <div class="text-ink font-semibold uppercase tracking-wider">Primary Practice Vehicle</div>
-            <p>Founder & Lead Consultant at <strong class="text-ink">Wise Impact Consulting Solutions</strong>.</p>
-            <p>Associate Director, Behavioural Advisory at CSBC; former pre-sales leadership at Sattva.</p>
-          </div>
-        </div>
-
-        <!-- Right Column: The Monograph Essay -->
-        <div class="lg:col-span-8 pl-0 lg:pl-4 space-y-8">
-          <div class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">
-            I. Executive Thesis
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-vogue-card border border-vogue-border text-vogue-gold text-[10px] font-cinzel tracking-[0.2em] uppercase">
+            <span>Volume I · Autumn Edition</span>
+            <span>·</span>
+            <span>15+ Years Experience</span>
           </div>
 
-          <p class="font-serif text-3xl sm:text-4xl text-ink leading-snug font-normal">
-            Taniya D’silva is a strategy and programme leader with 15 years of experience driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health in LMIC contexts.
+          <h1 class="font-vogue text-5xl sm:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight">
+            The Subtle Art of <span class="italic text-vogue-gold">Sovereign</span> Impact.
+          </h1>
+
+          <p class="text-vogue-muted text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+            Advising boards, multilateral consortia, and institutional leaders on systemic reform, climate resilience, and equitable social architecture across LMIC frontiers.
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-charcoal text-sm leading-relaxed font-sans">
-            <div class="space-y-4">
-              <p>
-                She works at the intersection of research, strategy and implementation, helping organisations translate evidence and strategic priorities into practical programmes, partnerships and organisational action. Her experience spans advisory work with nonprofits, foundations, private sector, government bodies and other social-impact organisations.
-              </p>
-            </div>
-            <div class="space-y-4">
-              <p>
-                Her approach combines strategic thinking with practical execution: understanding the evidence, clarifying the strategic choices, aligning stakeholders and translating priorities into implementable programmes and systems.
-              </p>
-            </div>
-          </div>
-
-          <!-- Quick Action Buttons -->
-          <div class="pt-4 flex flex-wrap items-center gap-4">
-            <a href="#connect" class="px-6 py-3 bg-ink text-paper font-mono text-xs uppercase tracking-wider hover:bg-olive transition-colors">
-              Discuss a project requirement
+          <div class="pt-2 flex flex-wrap items-center gap-5">
+            <a href="#connect" class="px-8 py-3.5 rounded-full bg-vogue-gold text-black font-cinzel font-semibold text-xs tracking-widest uppercase hover:bg-white transition-all shadow-xl shadow-vogue-gold/20">
+              Retain as Advisor
             </a>
-            <a href="#dispatches" class="px-6 py-3 border border-rule text-ink font-mono text-xs uppercase tracking-wider hover:border-olive hover:text-olive transition-colors">
-              View selected work
+            <a href="#pillars" class="px-8 py-3.5 rounded-full border border-vogue-border text-vogue-silk font-cinzel text-xs tracking-widest uppercase hover:border-vogue-gold transition-all">
+              Explore 4 Pillars
             </a>
           </div>
-        </div>
 
-      </div>
-    </section>
-
-
-    <!-- CHAPTER II: THE FOUR PILLARS OF ADVISORY -->
-    <section id="pillars" class="py-16 md:py-24 border-b border-rule">
-      <div class="space-y-3 mb-12">
-        <span class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">II. Framework</span>
-        <h2 class="font-serif text-4xl text-ink">The Four Pillars of Practice</h2>
-        <p class="font-serif italic text-lg text-warmgray max-w-2xl">
-          Structured interventions designed to take ambitious social ideas from vision to durable ground delivery.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- Pillar 1 -->
-        <div class="border border-rule p-6 bg-white/40 flex flex-col justify-between space-y-6">
-          <div class="space-y-3">
-            <div class="font-mono text-xs text-olive font-bold">PILLAR 01</div>
-            <h3 class="font-serif text-2xl text-ink leading-tight">Strategy & Organisational Advisory</h3>
-            <p class="text-xs text-warmgray font-serif italic">
-              Helping organisations translate ambition into clear strategic choices, priorities and roadmaps.
-            </p>
-            <ul class="text-xs text-charcoal space-y-1.5 pt-3 border-t border-rule font-sans">
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Organisational & portfolio strategy</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Strategic planning and foresight</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Investment theses & portfolio priorities</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Multi-year strategic & operational roadmaps</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Organisational positioning</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Senior leadership decision support</li>
-            </ul>
+          <!-- Subtle Stats Row -->
+          <div class="pt-8 border-t border-vogue-border grid grid-cols-3 gap-6">
+            <div>
+              <span class="block font-vogue text-3xl sm:text-4xl text-vogue-silk">15+</span>
+              <span class="font-cinzel text-[10px] tracking-widest text-vogue-muted uppercase">Years Leadership</span>
+            </div>
+            <div>
+              <span class="block font-vogue text-3xl sm:text-4xl text-vogue-gold">PMP®</span>
+              <span class="font-cinzel text-[10px] tracking-widest text-vogue-muted uppercase">Certified Directorship</span>
+            </div>
+            <div>
+              <span class="block font-vogue text-3xl sm:text-4xl text-vogue-olive">4</span>
+              <span class="font-cinzel text-[10px] tracking-widest text-vogue-muted uppercase">Core Pillars</span>
+            </div>
           </div>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="border border-rule p-6 bg-white/40 flex flex-col justify-between space-y-6">
-          <div class="space-y-3">
-            <div class="font-mono text-xs text-olive font-bold">PILLAR 02</div>
-            <h3 class="font-serif text-2xl text-ink leading-tight">Research & Strategy</h3>
-            <p class="text-xs text-warmgray font-serif italic">
-              Turning evidence, research and stakeholder insights into actionable strategic direction.
-            </p>
-            <ul class="text-xs text-charcoal space-y-1.5 pt-3 border-t border-rule font-sans">
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Landscape & ecosystem research</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Qualitative research</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Sector and market analysis</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Research synthesis</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Evidence-to-action strategy</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Opportunity identification</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Strategic recommendations</li>
-            </ul>
+        <!-- High-Fashion Double Portrait Display -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden border border-vogue-border bg-vogue-surface shadow-2xl group">
+            <div class="aspect-[3/4]">
+              <img src="../public/taniya_headshot_2.png" alt="Taniya D'silva" class="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-vogue-black via-transparent to-transparent opacity-90"></div>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="font-vogue text-2xl italic text-white">Taniya D’silva</div>
+              <div class="font-cinzel text-[10px] tracking-widest text-vogue-gold uppercase">Principal · Wise Impact Consulting Solutions</div>
+            </div>
           </div>
-        </div>
 
-        <!-- Pillar 3 -->
-        <div class="border border-rule p-6 bg-white/40 flex flex-col justify-between space-y-6">
-          <div class="space-y-3">
-            <div class="font-mono text-xs text-olive font-bold">PILLAR 03</div>
-            <h3 class="font-serif text-2xl text-ink leading-tight">Programme & Portfolio Design</h3>
-            <p class="text-xs text-warmgray font-serif italic">
-              Design and strengthen programmes that move from strategic intent to effective implementation.
-            </p>
-            <ul class="text-xs text-charcoal space-y-1.5 pt-3 border-t border-rule font-sans">
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Programme design & strategy</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Implementation planning</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Portfolio management</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Multi-stakeholder programme design</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Pilot and innovation design</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Strategic reviews & problem-solving</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Delivery & priority monitoring</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="border border-rule p-6 bg-white/40 flex flex-col justify-between space-y-6">
-          <div class="space-y-3">
-            <div class="font-mono text-xs text-olive font-bold">PILLAR 04</div>
-            <h3 class="font-serif text-2xl text-ink leading-tight">Partnerships & Capability</h3>
-            <p class="text-xs text-warmgray font-serif italic">
-              Strengthening relationships, capabilities and systems to deliver impact on the ground.
-            </p>
-            <ul class="text-xs text-charcoal space-y-1.5 pt-3 border-t border-rule font-sans">
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Multi-stakeholder partnerships</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Government & institutional engagement</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Donor & philanthropic partnerships</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Leadership & capability building</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Learning and development</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Executive communications & briefings</li>
-              <li class="flex items-start gap-2"><span class="text-olive">•</span> Institutional business development</li>
-            </ul>
+          <!-- Floating Vector Likeness Inset -->
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl overflow-hidden border-2 border-vogue-gold shadow-2xl bg-vogue-card hidden sm:block">
+            <img src="../public/taniya_animated_likeness.png" alt="Taniya Likeness Plate" class="w-full h-full object-cover">
+            <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-vogue-black/90 text-[8px] font-cinzel text-vogue-gold uppercase">Likeness</div>
           </div>
         </div>
 
       </div>
     </section>
 
+    <div class="vogue-line max-w-7xl mx-auto my-20"></div>
 
-    <!-- CHAPTER III: CREDENTIALS AT A GLANCE (EVIDENCE LEDGER) -->
-    <section id="credentials" class="py-16 md:py-24 border-b border-rule bg-white/30">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <div class="lg:col-span-4 space-y-4">
-          <span class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">III. Ledger</span>
-          <h2 class="font-serif text-4xl text-ink">Credentials at a Glance</h2>
-          <p class="text-sm font-sans text-warmgray">
-            A track record anchored in rigorous field management, multi-million dollar portfolios, and cross-sector coalitions.
-          </p>
-        </div>
-
-        <div class="lg:col-span-8">
-          <div class="divide-y divide-rule border-y border-rule font-mono text-xs">
-            
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">15 Years</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Experience across strategy, multi-stakeholder programmes, and social impact in LMIC contexts.</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">PMP® Certified</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Certified Project Management Professional (PMI, 2026).</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">USD 1.3M</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Directed national gender equity programme in India’s automotive and EV manufacturing sector.</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">30+ Members</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Led large-scale interdisciplinary teams across field research, technical delivery, and policy advocacy.</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">3–5 Year Theses</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Built investment and resourcing strategies for emerging philanthropies and family offices.</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">USD 1M+</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Secured through philanthropic partnerships across high-leverage social-impact organisations.</div>
-            </div>
-
-            <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-2 items-baseline">
-              <div class="sm:col-span-3 text-olive font-semibold">€1.3M / 300+</div>
-              <div class="sm:col-span-9 text-ink font-sans text-sm">Developed 300+ institutional proposals worth €1.3M during pre-sales leadership at Sattva.</div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- CHAPTER IV: CURRENT CONSULTING PRACTICE (WISE IMPACT) -->
-    <section id="practice" class="py-16 md:py-24 border-b border-rule">
-      <div class="border border-rule p-8 sm:p-12 bg-white/70">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
-          <div class="lg:col-span-4 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">IV. Dedicated Vehicle</span>
-            <div class="w-12 h-12 bg-olive text-paper flex items-center justify-center font-serif text-2xl">
-              W
-            </div>
-            <h3 class="font-serif text-3xl text-ink">Wise Impact Consulting Solutions</h3>
-            <p class="font-mono text-xs text-warmgray uppercase">
-              Registered Legal Entity · India
-            </p>
-          </div>
-
-          <div class="lg:col-span-8 space-y-6">
-            <blockquote class="font-serif text-2xl sm:text-3xl text-ink italic leading-snug">
-              “WISE understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.”
-            </blockquote>
-
-            <p class="text-sm font-sans text-charcoal leading-relaxed">
-              Wise Impact Consulting Solutions provides actionable advisory solutions in research, strategy development, programme design, and organisational capability building to nonprofits and foundations to aid with bringing these visions to life.
-            </p>
-
-            <div class="pt-4 border-t border-rule flex items-center justify-between font-mono text-xs">
-              <span class="text-warmgray">Tagline: Strategy and Programme/Portfolio Leadership for Social Impact</span>
-              <a href="#connect" class="text-olive hover:underline">Engage Wise Impact →</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- CHAPTER V: RECENT WORK (PUBLICATIONS & COURSES) -->
-    <section id="dispatches" class="py-16 md:py-24 border-b border-rule">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">V. Dispatches</span>
-          <h2 class="font-serif text-4xl text-ink mt-1">Recent Work & Publications</h2>
-        </div>
-        <p class="font-mono text-xs text-warmgray mt-2 md:mt-0">Open and viewed directly from the web</p>
+    <!-- 4 STRATEGIC PILLARS: LUXURY GRID -->
+    <section id="pillars" class="max-w-7xl mx-auto px-6 mb-28">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="font-cinzel text-xs tracking-[0.25em] text-vogue-gold uppercase">Strategic Architecture</span>
+        <h2 class="font-vogue text-4xl sm:text-6xl text-vogue-silk">The Four Pillars</h2>
+        <p class="text-vogue-muted text-sm font-light">Translating macro policy into durable field reality.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Work 1: L'Express Article -->
-        <article class="border border-rule p-8 bg-white/40 flex flex-col justify-between space-y-6 group hover:border-olive transition-colors">
-          <div class="space-y-4">
-            <div class="flex justify-between items-center font-mono text-xs text-warmgray">
-              <span>L’Express International</span>
-              <span class="text-olive">Research / Essay</span>
-            </div>
-            <h3 class="font-serif text-2xl text-ink group-hover:text-olive transition-colors leading-tight">
-              What Mauritius can learn from the Himalayas
-            </h3>
-            <p class="text-sm text-charcoal leading-relaxed font-sans">
-              An ecological and climate vulnerability synthesis examining transboundary lessons, high-altitude hydrological dependencies, and small island resilience.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-rule">
-            <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-mono text-xs text-olive font-semibold hover:underline">
-              <span>Read on L’Express</span>
-              <span>↗</span>
-            </a>
-          </div>
-        </article>
+        <div class="p-10 rounded-3xl bg-vogue-card border border-vogue-border hover:border-vogue-gold transition-colors space-y-4">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest">PILLAR 01</span>
+          <h3 class="font-vogue text-2xl sm:text-3xl text-vogue-silk">Strategic Impact Advisory & Organisational Strategy</h3>
+          <p class="text-vogue-muted text-sm font-light leading-relaxed">
+            Guiding boards and executive directors through complex transitions, theory of change formulation, governance pivots, and high-stakes donor realignment.
+          </p>
+        </div>
 
-        <!-- Work 2: Climate Course -->
-        <article class="border border-rule p-8 bg-white/40 flex flex-col justify-between space-y-6 group hover:border-olive transition-colors">
-          <div class="space-y-4">
-            <div class="flex justify-between items-center font-mono text-xs text-warmgray">
-              <span>Executive Learning Resource</span>
-              <span class="text-olive">Curriculum / Strategy</span>
-            </div>
-            <h3 class="font-serif text-2xl text-ink group-hover:text-olive transition-colors leading-tight">
-              Strategic Planning for Climate Nonprofits
-            </h3>
-            <p class="text-sm text-charcoal leading-relaxed font-sans">
-              Practical executive course and toolkit designed for leaders of climate and environmental organisations navigating multi-stakeholder governance and strategic choices.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-rule">
-            <a href="https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-mono text-xs text-olive font-semibold hover:underline">
-              <span>Access Course Portal</span>
-              <span>↗</span>
-            </a>
-          </div>
-        </article>
+        <div class="p-10 rounded-3xl bg-vogue-card border border-vogue-border hover:border-vogue-gold transition-colors space-y-4">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest">PILLAR 02</span>
+          <h3 class="font-vogue text-2xl sm:text-3xl text-vogue-silk">Programme Design, Directorship & PMO</h3>
+          <p class="text-vogue-muted text-sm font-light leading-relaxed">
+            Operationalising multi-million dollar portfolios with PMP® certified discipline. Harmonising multi-partner consortia across government line departments.
+          </p>
+        </div>
+
+        <div class="p-10 rounded-3xl bg-vogue-card border border-vogue-border hover:border-vogue-gold transition-colors space-y-4">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest">PILLAR 03</span>
+          <h3 class="font-vogue text-2xl sm:text-3xl text-vogue-silk">Research, Evidence Synthesis & Policy Translation</h3>
+          <p class="text-vogue-muted text-sm font-light leading-relaxed">
+            Translating complex primary epidemiological, economic, and climate research into high-impact ministerial white papers and accessible public briefs.
+          </p>
+        </div>
+
+        <div class="p-10 rounded-3xl bg-vogue-card border border-vogue-border hover:border-vogue-gold transition-colors space-y-4">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest">PILLAR 04</span>
+          <h3 class="font-vogue text-2xl sm:text-3xl text-vogue-silk">Executive Communications & Coalition Building</h3>
+          <p class="text-vogue-muted text-sm font-light leading-relaxed">
+            High-trust convenor uniting adversarial stakeholders across civil society, state actors, and private capital into aligned action agendas.
+          </p>
+        </div>
 
       </div>
     </section>
 
-
-    <!-- CHAPTER VI: INQUIRY & CONTACT ENGINE -->
-    <section id="connect" class="py-16 md:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <div class="lg:col-span-5 space-y-6">
-          <span class="font-mono text-xs uppercase tracking-widest text-olive font-semibold">VI. Dialogue</span>
-          <h2 class="font-serif text-4xl text-ink">Discuss a Project Requirement</h2>
-          
-          <p class="font-serif text-lg text-charcoal italic leading-relaxed">
-            I work with non-profits, foundations, and institutional partners on retained advisory, sprint-based strategic planning, and research-to-action designs.
+    <!-- CLIMATE PUBLICATION DOSSIER -->
+    <section id="dossier" class="max-w-7xl mx-auto px-6 mb-28">
+      <div class="p-10 sm:p-14 rounded-3xl bg-vogue-card border border-vogue-border relative overflow-hidden">
+        <div class="max-w-3xl space-y-4">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest uppercase">Featured Dispatch · L’Express France</span>
+          <h2 class="font-vogue text-3xl sm:text-5xl text-vogue-silk">
+            "In the Indian Himalayas, Climate Change Threatens Agriculture and Beyond"
+          </h2>
+          <p class="text-vogue-muted text-base font-light leading-relaxed">
+            Co-authored analysis examining rain-fed agriculture disruption, water shortages, and changing weather patterns across high-altitude mountain ecosystems.
           </p>
-
-          <div class="space-y-3 font-mono text-xs text-warmgray pt-4 border-t border-rule">
-            <div>Direct Routing: <a href="mailto:its.taniya.dsilva@gmail.com" class="text-ink font-semibold hover:underline">its.taniya.dsilva@gmail.com</a></div>
-            <div>LinkedIn: <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" class="text-olive hover:underline">linkedin.com/in/taniyadsilva</a></div>
-            <div>Practice: Wise Impact Consulting Solutions</div>
+          <div class="pt-4 flex items-center gap-4">
+            <span class="px-4 py-1.5 rounded-full bg-vogue-surface border border-vogue-border text-vogue-silk font-cinzel text-xs tracking-wider">
+              Published in L'Express (France)
+            </span>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Form with all requested fields -->
-        <div class="lg:col-span-7 border border-rule p-8 sm:p-10 bg-white/70">
-          <form class="space-y-5" onsubmit="event.preventDefault(); alert('Inquiry recorded. Mail drafted to its.taniya.dsilva@gmail.com');">
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="name" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Name *</label>
-                <input id="name" type="text" required class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="Your Full Name">
-              </div>
-              <div>
-                <label for="org" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Organisation *</label>
-                <input id="org" type="text" required class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="Foundation, NGO, or Enterprise">
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="email" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Email *</label>
-                <input id="email" type="email" required class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="name@organisation.org">
-              </div>
-              <div>
-                <label for="role" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Role / Designation</label>
-                <input id="role" type="text" class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="e.g. Executive Director, Trustee">
-              </div>
-            </div>
-
-            <div>
-              <label for="service" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">What are you looking for? *</label>
-              <select id="service" required class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive">
-                <option value="Strategy & organisational advisory">Strategy & organisational advisory</option>
-                <option value="Research / landscape analysis">Research / landscape analysis</option>
-                <option value="Programme design">Programme design</option>
-                <option value="Programme / portfolio management">Programme / portfolio management</option>
-                <option value="Partnerships / stakeholder strategy">Partnerships / stakeholder strategy</option>
-                <option value="Organisational capability building">Organisational capability building</option>
-                <option value="Speaking / facilitation">Speaking / facilitation</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="desc" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Brief description of the challenge/opportunity *</label>
-              <textarea id="desc" rows="3" required class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="Share context on the objectives, community context, or portfolio need..."></textarea>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="timeline" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Expected timeline</label>
-                <input id="timeline" type="text" class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="e.g. Immediate, Q3 2026">
-              </div>
-              <div>
-                <label for="referral" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">How did you hear about Taniya?</label>
-                <input id="referral" type="text" class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="e.g. Colleague, LinkedIn, Event">
-              </div>
-            </div>
-
-            <div>
-              <label for="docs" class="block font-mono text-xs uppercase tracking-wider text-warmgray mb-1">Optional: relevant documents / website</label>
-              <input id="docs" type="url" class="w-full p-2.5 bg-paper border border-rule text-xs text-ink focus:border-olive" placeholder="https://organisation.org/brief">
-            </div>
-
-            <button type="submit" class="px-8 py-3.5 bg-ink text-paper font-mono text-xs uppercase tracking-wider hover:bg-olive transition-colors w-full sm:w-auto">
-              Submit Project Inquiry
-            </button>
-          </form>
+    <!-- INQUIRY FORM -->
+    <section id="connect" class="max-w-4xl mx-auto px-6">
+      <div class="p-10 sm:p-14 rounded-3xl bg-vogue-card border border-vogue-border text-center space-y-8">
+        <div class="space-y-3">
+          <span class="font-cinzel text-xs text-vogue-gold tracking-widest uppercase">Advisory Retainer</span>
+          <h2 class="font-vogue text-4xl sm:text-5xl text-vogue-silk">Commence Retainer Dialogue</h2>
+          <p class="text-vogue-muted text-sm max-w-lg mx-auto">
+            Queries routed directly to Taniya D'silva at <span class="text-vogue-gold">its.taniya.dsilva@gmail.com</span>.
+          </p>
         </div>
 
+        <form action="mailto:its.taniya.dsilva@gmail.com" method="POST" enctype="text/plain" class="space-y-5 text-left max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block font-cinzel text-[10px] text-vogue-muted uppercase tracking-widest mb-1">Full Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-vogue-surface border border-vogue-border text-white text-sm focus:border-vogue-gold focus:outline-none">
+            </div>
+            <div>
+              <label class="block font-cinzel text-[10px] text-vogue-muted uppercase tracking-widest mb-1">Organisation</label>
+              <input type="text" name="organisation" required class="w-full px-4 py-3 rounded-xl bg-vogue-surface border border-vogue-border text-white text-sm focus:border-vogue-gold focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block font-cinzel text-[10px] text-vogue-muted uppercase tracking-widest mb-1">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-vogue-surface border border-vogue-border text-white text-sm focus:border-vogue-gold focus:outline-none">
+            </div>
+            <div>
+              <label class="block font-cinzel text-[10px] text-vogue-muted uppercase tracking-widest mb-1">Scope</label>
+              <select name="scope" class="w-full px-4 py-3 rounded-xl bg-vogue-surface border border-vogue-border text-white text-sm focus:border-vogue-gold focus:outline-none">
+                <option value="strategic_advisory">Strategic Impact Advisory</option>
+                <option value="programme_directorship">Programme Design & PMO</option>
+                <option value="research_synthesis">Research & Policy Synthesis</option>
+                <option value="executive_communications">Executive Communications</option>
+                <option value="other">General Strategic Inquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-cinzel text-[10px] text-vogue-muted uppercase tracking-widest mb-1">Mandate Summary</label>
+            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-vogue-surface border border-vogue-border text-white text-sm focus:border-vogue-gold focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-vogue-gold hover:bg-white text-black font-cinzel font-semibold text-xs tracking-widest uppercase transition-all shadow-xl shadow-vogue-gold/20">
+            Submit Strategic Retainer Inquiry →
+          </button>
+        </form>
       </div>
     </section>
 
   </main>
 
-  <!-- EDITORIAL COLOPHON / FOOTER -->
-  <footer class="border-t border-rule bg-paper py-12 px-6 font-mono text-xs text-warmgray">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      <div>
-        © 2026 Taniya D’silva. All rights reserved. Consulting Practice: Wise Impact Consulting Solutions.
-      </div>
-      <div class="flex items-center gap-6">
-        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" class="hover:text-ink">LinkedIn</a>
-        <a href="#prologue" class="hover:text-ink">Top ↑</a>
-      </div>
+  <footer class="border-t border-vogue-border py-8 text-center font-cinzel text-[10px] tracking-widest text-vogue-muted uppercase">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Taniya D’silva · Wise Impact Consulting Solutions</div>
+      <div>High-Fashion Luxury Editorial Archetype</div>
+      <div>its.taniya.dsilva@gmail.com</div>
     </div>
   </footer>
 
