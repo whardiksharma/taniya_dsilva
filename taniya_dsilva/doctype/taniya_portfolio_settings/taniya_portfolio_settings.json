@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "creation": "2026-10-07 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "full_name",
+  "tagline",
+  "sub_descriptor",
+  "contact_email",
+  "linkedin_url",
+  "headshot_image",
+  "animated_likeness_image",
+  "hero_section",
+  "hero_headline",
+  "hero_subheadline",
+  "pmp_year",
+  "metrics_section",
+  "metric_years",
+  "metric_ev_fund",
+  "metric_team_size",
+  "metric_philanthropy_capital",
+  "metric_proposals_val",
+  "metric_proposals_count",
+  "bio_section",
+  "bio_text",
+  "approach_text",
+  "practice_positioning_note",
+  "wise_impact_section",
+  "wise_impact_title",
+  "wise_impact_thesis",
+  "wise_impact_description",
+  "pillars_section",
+  "pillar_1_title",
+  "pillar_1_desc",
+  "pillar_2_title",
+  "pillar_2_desc",
+  "pillar_3_title",
+  "pillar_3_desc",
+  "pillar_4_title",
+  "pillar_4_desc",
+  "recent_work_section",
+  "recent_work_1_title",
+  "recent_work_1_url",
+  "recent_work_2_title",
+  "recent_work_2_url",
+  "routing_section",
+  "enabled",
+  "landing_domain",
+  "landing_route"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "Identity & Contact"
+  },
+  {
+   "default": "Taniya D’silva",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "default": "Strategy and Programme/Portfolio Leadership for Social Impact",
+   "fieldname": "tagline",
+   "fieldtype": "Data",
+   "label": "Tagline / Descriptor",
+   "reqd": 1
+  },
+  {
+   "default": "Strategic Social Impact Advisory | Research | Evidence-to-Action Programme & Portfolio Management",
+   "fieldname": "sub_descriptor",
+   "fieldtype": "Data",
+   "label": "Practice Sub-Descriptor"
+  },
+  {
+   "default": "its.taniya.dsilva@gmail.com",
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Routing Email",
+   "reqd": 1
+  },
+  {
+   "default": "https://www.linkedin.com/in/taniyadsilva",
+   "fieldname": "linkedin_url",
+   "fieldtype": "Data",
+   "label": "LinkedIn Profile URL"
+  },
+  {
+   "fieldname": "headshot_image",
+   "fieldtype": "Attach Image",
+   "label": "Official Headshot Image"
+  },
+  {
+   "fieldname": "animated_likeness_image",
+   "fieldtype": "Attach Image",
+   "label": "Animated / Illustrated Likeness"
+  },
+  {
+   "fieldname": "hero_section",
+   "fieldtype": "Section Break",
+   "label": "Hero Section"
+  },
+  {
+   "default": "Translating evidence and grand vision into ground reality.",
+   "fieldname": "hero_headline",
+   "fieldtype": "Data",
+   "label": "Hero Headline"
+  },
+  {
+   "default": "15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor partnerships across climate, gender equity, labour markets and public health in LMIC contexts.",
+   "fieldname": "hero_subheadline",
+   "fieldtype": "Small Text",
+   "label": "Hero Subheadline"
+  },
+  {
+   "default": "2026",
+   "fieldname": "pmp_year",
+   "fieldtype": "Data",
+   "label": "PMP Certification Year"
+  },
+  {
+   "fieldname": "metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Living Ledger Proof Metrics"
+  },
+  {
+   "default": "15",
+   "fieldname": "metric_years",
+   "fieldtype": "Data",
+   "label": "Years Experience"
+  },
+  {
+   "default": "$1.3M",
+   "fieldname": "metric_ev_fund",
+   "fieldtype": "Data",
+   "label": "Flagship EV Programme Directed"
+  },
+  {
+   "default": "30+",
+   "fieldname": "metric_team_size",
+   "fieldtype": "Data",
+   "label": "Teams Led Size"
+  },
+  {
+   "default": "$1M+",
+   "fieldname": "metric_philanthropy_capital",
+   "fieldtype": "Data",
+   "label": "Philanthropic Capital Secured"
+  },
+  {
+   "default": "€1.3M",
+   "fieldname": "metric_proposals_val",
+   "fieldtype": "Data",
+   "label": "Pre-Sales Proposal Pipeline Value"
+  },
+  {
+   "default": "300+",
+   "fieldname": "metric_proposals_count",
+   "fieldtype": "Data",
+   "label": "Proposals Developed Count"
+  },
+  {
+   "fieldname": "bio_section",
+   "fieldtype": "Section Break",
+   "label": "Biography & Positioning"
+  },
+  {
+   "default": "Taniya D’silva is a strategy and programme leader with 15 years of experience driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health in LMIC contexts.\n\nShe works at the intersection of research, strategy and implementation, helping organisations translate evidence and strategic priorities into practical programmes, partnerships and organisational action. Her experience spans advisory work with nonprofits, foundations, private sector, government bodies and other social-impact organisations.",
+   "fieldname": "bio_text",
+   "fieldtype": "Text",
+   "label": "Biography"
+  },
+  {
+   "default": "Her approach combines strategic thinking with practical execution: understanding the evidence, clarifying the strategic choices, aligning stakeholders and translating priorities into implementable programmes and systems.",
+   "fieldname": "approach_text",
+   "fieldtype": "Text",
+   "label": "Strategic Approach"
+  },
+  {
+   "default": "Taniya D’silva as the primary professional/advisory identity, with Wise Impact Consulting Solutions presented as her current consulting practice. The website provides room to undertake independent advisory assignments, collaborations, research, fellowships, speaking, institutional roles, and future ventures.",
+   "fieldname": "practice_positioning_note",
+   "fieldtype": "Text",
+   "label": "Practice Positioning Note"
+  },
+  {
+   "fieldname": "wise_impact_section",
+   "fieldtype": "Section Break",
+   "label": "Wise Impact Consulting Practice"
+  },
+  {
+   "default": "Wise Impact Consulting Solutions",
+   "fieldname": "wise_impact_title",
+   "fieldtype": "Data",
+   "label": "Wise Impact Title"
+  },
+  {
+   "default": "WISE understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.",
+   "fieldname": "wise_impact_thesis",
+   "fieldtype": "Text",
+   "label": "Core Thesis"
+  },
+  {
+   "default": "Wise Impact Consulting Solutions provides actionable advisory solutions in research, strategy development, programme design, and organisational capability building to nonprofits and foundations to aid with bringing these visions to life.",
+   "fieldname": "wise_impact_description",
+   "fieldtype": "Text",
+   "label": "Practice Description"
+  },
+  {
+   "fieldname": "pillars_section",
+   "fieldtype": "Section Break",
+   "label": "The 4 Advisory Pillars"
+  },
+  {
+   "default": "Strategy & Organisational Advisory",
+   "fieldname": "pillar_1_title",
+   "fieldtype": "Data",
+   "label": "Pillar 1 Title"
+  },
+  {
+   "default": "Helping organisations translate ambition into clear strategic choices, priorities and roadmaps.",
+   "fieldname": "pillar_1_desc",
+   "fieldtype": "Small Text",
+   "label": "Pillar 1 Description"
+  },
+  {
+   "default": "Research & Strategy",
+   "fieldname": "pillar_2_title",
+   "fieldtype": "Data",
+   "label": "Pillar 2 Title"
+  },
+  {
+   "default": "Turning evidence, research and stakeholder insights into actionable strategic direction.",
+   "fieldname": "pillar_2_desc",
+   "fieldtype": "Small Text",
+   "label": "Pillar 2 Description"
+  },
+  {
+   "default": "Programme & Portfolio Design",
+   "fieldname": "pillar_3_title",
+   "fieldtype": "Data",
+   "label": "Pillar 3 Title"
+  },
+  {
+   "default": "Design and strengthen programmes that move from strategic intent to effective implementation.",
+   "fieldname": "pillar_3_desc",
+   "fieldtype": "Small Text",
+   "label": "Pillar 3 Description"
+  },
+  {
+   "default": "Partnerships & Organisational Capability",
+   "fieldname": "pillar_4_title",
+   "fieldtype": "Data",
+   "label": "Pillar 4 Title"
+  },
+  {
+   "default": "Strengthening the relationships, capabilities and systems needed to deliver impact on the ground.",
+   "fieldname": "pillar_4_desc",
+   "fieldtype": "Small Text",
+   "label": "Pillar 4 Description"
+  },
+  {
+   "fieldname": "recent_work_section",
+   "fieldtype": "Section Break",
+   "label": "Recent Work Publications"
+  },
+  {
+   "default": "What Mauritius can learn from the Himalayas",
+   "fieldname": "recent_work_1_title",
+   "fieldtype": "Data",
+   "label": "Recent Work 1 Title"
+  },
+  {
+   "default": "https://lexpress.mu/node/561910",
+   "fieldname": "recent_work_1_url",
+   "fieldtype": "Data",
+   "label": "Recent Work 1 URL"
+  },
+  {
+   "default": "Strategic Planning for Climate Nonprofits",
+   "fieldname": "recent_work_2_title",
+   "fieldtype": "Data",
+   "label": "Recent Work 2 Title"
+  },
+  {
+   "default": "https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations",
+   "fieldname": "recent_work_2_url",
+   "fieldtype": "Data",
+   "label": "Recent Work 2 URL"
+  },
+  {
+   "fieldname": "routing_section",
+   "fieldtype": "Section Break",
+   "label": "Host-Based Routing"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable Host-Based Routing"
+  },
+  {
+   "default": "taniyadsilva.com",
+   "fieldname": "landing_domain",
+   "fieldtype": "Data",
+   "label": "Landing Page Domain"
+  },
+  {
+   "default": "index",
+   "fieldname": "landing_route",
+   "fieldtype": "Data",
+   "label": "Landing Route"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Taniya Dsilva",
+ "name": "Taniya Portfolio Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
