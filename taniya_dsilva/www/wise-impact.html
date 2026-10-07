@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise Impact Consulting Solutions — Practice Model</title>
+  <meta name="description" content="Wise Impact Consulting Solutions provides actionable advisory solutions in research, strategy, programme design, and organisational capability building.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              obsidian: '#0B0D0A',
+              surface: '#131612',
+              card: '#181C16',
+              border: 'rgba(255,255,255,0.08)',
+              olive: '#4D613D',
+              oliveLight: '#7E9C65',
+              oliveSoft: '#9EBA87',
+              cream: '#F6F3EC',
+              sand: '#E6E1D4',
+              muted: '#8A9285',
+              mint: '#63B3A3'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-obsidian text-brand-cream font-sans antialiased selection:bg-brand-olive selection:text-white">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-obsidian/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full border border-brand-oliveLight/40 flex items-center justify-center bg-brand-surface group-hover:border-brand-oliveSoft transition-colors">
+          <span class="font-serif text-lg font-medium text-brand-oliveSoft">TD</span>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-light tracking-wide block leading-none text-brand-cream group-hover:text-brand-oliveSoft transition-colors">Taniya D’silva</span>
+          <span class="font-mono text-[10px] tracking-widest text-brand-muted uppercase block mt-1">Strategic Social Impact Advisory</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center space-x-7" aria-label="Main Navigation">
+        <a href="index.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Portfolio</a>
+        <a href="about.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">About</a>
+        <a href="work.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Work</a>
+        <a href="wise-impact.html" class="text-xs font-mono tracking-wider uppercase text-brand-oliveSoft border-b border-brand-oliveSoft pb-0.5" aria-current="page">Wise Impact</a>
+        <a href="pillars.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Pillars</a>
+        <a href="ledger.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Ledger</a>
+        <a href="what-others-say.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">What Others Say</a>
+        <a href="blog.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Blog</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="connect.html" class="border border-brand-cream/30 hover:border-brand-oliveSoft px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider text-brand-cream hover:text-brand-oliveSoft transition-all flex items-center gap-2">
+          <span>Say Hello ↗</span>
+        </a>
+      </div>
+
+      <button class="xl:hidden p-2 text-brand-cream" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-6 py-6 space-y-4 font-mono text-sm uppercase tracking-widest">
+      <a href="index.html" class="block text-brand-cream/80">01 · Career Portfolio</a>
+      <a href="about.html" class="block text-brand-cream/80">02 · About Taniya</a>
+      <a href="work.html" class="block text-brand-cream/80">03 · Selected Work</a>
+      <a href="wise-impact.html" class="block text-brand-oliveSoft font-semibold">04 · Wise Impact Practice</a>
+      <a href="pillars.html" class="block text-brand-cream/80">05 · Advisory Pillars</a>
+      <a href="ledger.html" class="block text-brand-cream/80">06 · Impact Ledger</a>
+      <a href="what-others-say.html" class="block text-brand-cream/80">07 · What Others Say</a>
+      <a href="blog.html" class="block text-brand-cream/80">08 · Blog & Essays</a>
+      <a href="connect.html" class="block text-brand-mint">09 · Connect ↗</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-24">
+
+    <!-- PAGE HEADER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-4">[ THE PRACTICE VEHICLE ]</div>
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-brand-cream max-w-4xl leading-[1.08] mb-6">
+        Wise Impact <span class="italic font-normal text-brand-oliveSoft">Consulting Solutions.</span>
+      </h1>
+      <p class="font-sans text-brand-sand/80 text-lg sm:text-xl font-light max-w-3xl leading-relaxed">
+        Strategy and Programme/Portfolio Leadership for Social Impact — providing actionable advisory solutions to nonprofits and foundations.
+      </p>
+    </section>
+
+    <!-- SECTION 1: THE CORE THESIS (Twin Responsibilities) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="bg-brand-surface rounded-2xl border border-brand-border p-8 sm:p-14 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-8 space-y-6">
+            <span class="font-mono text-xs uppercase tracking-widest text-brand-mint block">[ CORE PRACTICE THESIS ]</span>
+            
+            <h2 class="font-serif text-3xl sm:text-4xl text-brand-cream font-light leading-snug">
+              Straddling the Twin Responsibilities of Social Sector Leaders
+            </h2>
+
+            <p class="font-sans text-brand-sand/85 text-base sm:text-lg font-light leading-relaxed">
+              WISE understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.
+            </p>
+
+            <p class="font-sans text-brand-sand/85 text-base sm:text-lg font-light leading-relaxed">
+              Wise Impact Consulting Solutions provides actionable advisory solutions in research, strategy development, programme design, and organisational capability building to nonprofits and foundations to aid with bringing these visions to life.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 p-8 bg-brand-card rounded-xl border border-brand-border space-y-4">
+            <span class="font-mono text-[11px] text-brand-oliveSoft uppercase tracking-widest block">ENTITY METADATA</span>
+            <div class="space-y-3 font-mono text-xs text-brand-sand/90">
+              <div>
+                <span class="text-brand-muted block text-[10px] uppercase">Registered Legal Entity</span>
+                <span class="text-brand-cream">Wise Impact Consulting Solutions</span>
+              </div>
+              <div class="pt-2 border-t border-brand-border">
+                <span class="text-brand-muted block text-[10px] uppercase">Practice Lead</span>
+                <span class="text-brand-cream">Taniya D’silva (Founder & Lead Advisor)</span>
+              </div>
+              <div class="pt-2 border-t border-brand-border">
+                <span class="text-brand-muted block text-[10px] uppercase">Delivery Format</span>
+                <span class="text-brand-cream">Bespoke Consortia & Direct Advisory</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: ADVISORY SUITE -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="max-w-2xl mb-12">
+        <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">[ PRACTICE SOLUTIONS ]</div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-brand-cream">
+          Structured Practice Capabilities
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="p-8 bg-brand-surface rounded-xl border border-brand-border hover:border-brand-olive transition-colors">
+          <div class="font-mono text-xs text-brand-oliveSoft mb-3">01 · RESEARCH</div>
+          <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Research & Evidence Synthesis</h3>
+          <p class="font-sans text-sm text-brand-sand/70 font-light leading-relaxed mb-4">
+            Grounding strategic plans in empirical findings. We conduct landscape studies, qualitative interviews, stakeholder mapping, and sector evaluations that inform programmatic hypotheses.
+          </p>
+        </div>
+
+        <div class="p-8 bg-brand-surface rounded-xl border border-brand-border hover:border-brand-olive transition-colors">
+          <div class="font-mono text-xs text-brand-oliveSoft mb-3">02 · STRATEGY</div>
+          <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Strategy & Multi-Year Roadmaps</h3>
+          <p class="font-sans text-sm text-brand-sand/70 font-light leading-relaxed mb-4">
+            Converting organizational vision into phased operational roadmaps. Establishing investment criteria, resourcing budgets, and milestones that governance boards can confidently track.
+          </p>
+        </div>
+
+        <div class="p-8 bg-brand-surface rounded-xl border border-brand-border hover:border-brand-olive transition-colors">
+          <div class="font-mono text-xs text-brand-oliveSoft mb-3">03 · DESIGN</div>
+          <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Programme & Pilot Architecture</h3>
+          <p class="font-sans text-sm text-brand-sand/70 font-light leading-relaxed mb-4">
+            Designing systemic programmes with robust theories of change, measurement indicators, partner hand-offs, and field delivery mechanisms tailored to local LMIC environments.
+          </p>
+        </div>
+
+        <div class="p-8 bg-brand-surface rounded-xl border border-brand-border hover:border-brand-olive transition-colors">
+          <div class="font-mono text-xs text-brand-oliveSoft mb-3">04 · CAPABILITY</div>
+          <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Capability & Leadership Building</h3>
+          <p class="font-sans text-sm text-brand-sand/70 font-light leading-relaxed mb-4">
+            Equipping leadership teams and staff with executive communication, cross-stakeholder alignment capabilities, and donor relationship management frameworks that ensure organizational resilience.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: INQUIRY GATEWAY -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="p-12 bg-brand-surface rounded-2xl border border-brand-border">
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-cream font-light mb-4">
+          Engage Wise Impact for Your Organisation
+        </h2>
+        <p class="font-sans text-brand-sand/70 text-sm font-light mb-8 max-w-lg mx-auto leading-relaxed">
+          Whether you need a multi-month programme architected or an organizational strategy evaluated, let's explore how we can support your leadership.
+        </p>
+        <a href="connect.html?practice=wise_impact" class="inline-flex items-center gap-3 bg-brand-olive hover:bg-brand-oliveLight text-white px-8 py-3.5 rounded-full font-mono text-xs uppercase tracking-widest transition-all">
+          <span>Inquire on Practice Solutions</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-brand-obsidian border-t border-brand-border py-12 text-brand-muted font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>© 2026 Taniya D’silva · Wise Impact Consulting Solutions</div>
+      <div class="flex items-center space-x-6">
+        <a href="index.html" class="hover:text-brand-cream">Portfolio</a>
+        <a href="about.html" class="hover:text-brand-cream">About</a>
+        <a href="pillars.html" class="hover:text-brand-cream">Pillars</a>
+        <a href="connect.html" class="text-brand-oliveSoft hover:text-white">Connect</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

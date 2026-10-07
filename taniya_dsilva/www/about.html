@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Taniya D’silva — Strategic Social Impact Advisory</title>
+  <meta name="description" content="15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor partnerships in LMIC contexts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              obsidian: '#0B0D0A',
+              surface: '#131612',
+              card: '#181C16',
+              border: 'rgba(255,255,255,0.08)',
+              olive: '#4D613D',
+              oliveLight: '#7E9C65',
+              oliveSoft: '#9EBA87',
+              cream: '#F6F3EC',
+              sand: '#E6E1D4',
+              muted: '#8A9285',
+              mint: '#63B3A3'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-obsidian text-brand-cream font-sans antialiased selection:bg-brand-olive selection:text-white">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-obsidian/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full border border-brand-oliveLight/40 flex items-center justify-center bg-brand-surface group-hover:border-brand-oliveSoft transition-colors">
+          <span class="font-serif text-lg font-medium text-brand-oliveSoft">TD</span>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-light tracking-wide block leading-none text-brand-cream group-hover:text-brand-oliveSoft transition-colors">Taniya D’silva</span>
+          <span class="font-mono text-[10px] tracking-widest text-brand-muted uppercase block mt-1">Strategic Social Impact Advisory</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center space-x-7" aria-label="Main Navigation">
+        <a href="index.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Portfolio</a>
+        <a href="about.html" class="text-xs font-mono tracking-wider uppercase text-brand-oliveSoft border-b border-brand-oliveSoft pb-0.5" aria-current="page">About</a>
+        <a href="work.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Work</a>
+        <a href="wise-impact.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Wise Impact</a>
+        <a href="pillars.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Pillars</a>
+        <a href="ledger.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Ledger</a>
+        <a href="what-others-say.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">What Others Say</a>
+        <a href="blog.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Blog</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="p-2 text-brand-cream/70 hover:text-brand-oliveSoft transition-colors" title="LinkedIn Profile">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="connect.html" class="border border-brand-cream/30 hover:border-brand-oliveSoft px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider text-brand-cream hover:text-brand-oliveSoft transition-all flex items-center gap-2">
+          <span>Say Hello</span>
+          <span class="text-brand-oliveSoft">↗</span>
+        </a>
+      </div>
+
+      <button class="xl:hidden p-2 text-brand-cream" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-6 py-6 space-y-4">
+      <a href="index.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">01 · Career Portfolio</a>
+      <a href="about.html" class="block font-mono text-sm tracking-widest uppercase text-brand-oliveSoft font-semibold">02 · About Taniya</a>
+      <a href="work.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">03 · Selected Work</a>
+      <a href="wise-impact.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">04 · Wise Impact Practice</a>
+      <a href="pillars.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">05 · Advisory Pillars</a>
+      <a href="ledger.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">06 · Impact Ledger</a>
+      <a href="what-others-say.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">07 · What Others Say</a>
+      <a href="blog.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80">08 · Blog & Essays</a>
+      <a href="connect.html" class="block font-mono text-sm tracking-widest uppercase text-brand-mint font-semibold">09 · Connect ↗</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-24">
+
+    <!-- PAGE HEADER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-4">[ BIOGRAPHY & PHILOSOPHY ]</div>
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-brand-cream max-w-4xl leading-[1.08] mb-6">
+        Bridging high-level strategy with <span class="italic font-normal text-brand-oliveSoft">ground-level reality.</span>
+      </h1>
+      <p class="font-sans text-brand-sand/80 text-lg sm:text-xl font-light max-w-2xl leading-relaxed">
+        15 years working at the nexus of research, strategy, and execution across LMIC contexts.
+      </p>
+    </section>
+
+    <!-- SECTION 1: DETAILED BIO & COURTNEY-STYLE PHOTO MOSAIC -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Bio Narrative (Left 7 Cols) -->
+        <div class="lg:col-span-7 space-y-6 text-brand-sand/85 font-light text-base sm:text-lg leading-relaxed">
+          
+          <p class="text-xl sm:text-2xl text-brand-cream font-serif leading-snug">
+            Taniya D’silva is a strategy and programme leader with 15 years of experience driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health in LMIC contexts.
+          </p>
+
+          <p>
+            She works at the intersection of research, strategy and implementation, helping organisations translate evidence and strategic priorities into practical programmes, partnerships and organisational action. Her experience spans advisory work with nonprofits, foundations, private sector, government bodies and other social-impact organisations.
+          </p>
+
+          <p>
+            Her approach combines strategic thinking with practical execution: understanding the evidence, clarifying the strategic choices, aligning stakeholders and translating priorities into implementable programmes and systems that endure.
+          </p>
+
+          <div class="p-6 bg-brand-surface rounded-lg border border-brand-border my-6">
+            <h3 class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">Practice Positioning Note</h3>
+            <p class="font-sans text-xs text-brand-sand/70 leading-relaxed">
+              Taniya maintains her primary digital identity as an independent strategic advisor, researcher, and board member. Her consulting vehicle, <strong>Wise Impact Consulting Solutions</strong>, operates alongside her independent advisory mandates, enabling bespoke consortia and programmatic implementation.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-border">
+            <div>
+              <span class="font-mono text-xs text-brand-muted block uppercase">Certifications</span>
+              <span class="font-serif text-xl text-brand-cream">PMP® Certified, 2026</span>
+            </div>
+            <div>
+              <span class="font-mono text-xs text-brand-muted block uppercase">Focus Geography</span>
+              <span class="font-serif text-xl text-brand-cream">LMIC & Global South</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Courtney-Style Photo Mosaic Grid (Right 5 Cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-lg overflow-hidden h-48 bg-brand-surface border border-brand-border group">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Strategy workshop" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="rounded-lg overflow-hidden h-48 bg-brand-surface border border-brand-border group">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Executive convening" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden h-64 bg-brand-surface border border-brand-border group">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Multi-stakeholder design table" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+          </div>
+          <div class="font-mono text-[11px] text-brand-muted text-center">
+            PRACTICE FIELDWORK · CONVENINGS · STAKEHOLDER WORKSHOPS
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: VALUES & HOW I WORK -->
+    <section class="bg-brand-surface py-20 border-y border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-12">
+          <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">[ VALUES & HOW I WORK ]</div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-brand-cream">
+            Guiding Principles of Advisory Practice
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border">
+            <div class="font-mono text-xs text-brand-oliveSoft mb-4">01 · EVIDENCE</div>
+            <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Evidence-Led Rigour</h3>
+            <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed">
+              Every strategic recommendation is anchored in credible qualitative and quantitative data, not consulting assumptions or superficial trends.
+            </p>
+          </div>
+
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border">
+            <div class="font-mono text-xs text-brand-oliveSoft mb-4">02 · EXECUTION</div>
+            <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Implementation Stamina</h3>
+            <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed">
+              A strategy is only as viable as the team tasked with executing it. We design frameworks that withstand ground-level operational pressures.
+            </p>
+          </div>
+
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border">
+            <div class="font-mono text-xs text-brand-oliveSoft mb-4">03 · ALIGNMENT</div>
+            <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Multi-Stakeholder Empathy</h3>
+            <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed">
+              Bridging the vocabularies of corporate donors, community leaders, and government ministries to build durable mutual trust.
+            </p>
+          </div>
+
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border">
+            <div class="font-mono text-xs text-brand-oliveSoft mb-4">04 · CLARITY</div>
+            <h3 class="font-serif text-2xl text-brand-cream font-light mb-3">Strategic Parsimony</h3>
+            <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed">
+              Rejecting corporate jargon and over-engineered decks. Clear choices, decisive roadmaps, and actionable priorities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl text-brand-cream font-light mb-4">
+        Explore Taniya's Advisory Portfolios & Work
+      </h2>
+      <p class="font-sans text-sm text-brand-sand/70 font-light mb-8 max-w-lg mx-auto">
+        Inspect key engagements, flagship grants directed, and the consulting practice model.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="work.html" class="bg-brand-olive hover:bg-brand-oliveLight text-white px-7 py-3 rounded-full font-mono text-xs uppercase tracking-widest transition-all">
+          View Selected Work →
+        </a>
+        <a href="connect.html" class="border border-brand-border hover:border-brand-oliveSoft text-brand-cream px-7 py-3 rounded-full font-mono text-xs uppercase tracking-widest transition-colors">
+          Discuss Engagement
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-obsidian border-t border-brand-border py-12 text-brand-muted font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>© 2026 Taniya D’silva · Strategic Social Impact Advisory</div>
+      <div class="flex items-center space-x-6">
+        <a href="index.html" class="hover:text-brand-cream">Portfolio</a>
+        <a href="work.html" class="hover:text-brand-cream">Work</a>
+        <a href="ledger.html" class="hover:text-brand-cream">Ledger</a>
+        <a href="connect.html" class="text-brand-oliveSoft hover:text-white">Connect</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

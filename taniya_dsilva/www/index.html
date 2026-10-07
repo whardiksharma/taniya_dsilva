@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taniya D’silva — Design Archetype Gallery</title>
-  <meta name="description" content="Compact Design Gallery of 6 WCAG 2.2 AA compliant archetypes for Taniya D'silva.">
+  <title>Taniya D’silva — Strategic Social Impact Advisory | Career Portfolio</title>
+  <meta name="description" content="15 years of strategy, multi-stakeholder programmes, executive communications, and donor partnerships across climate, gender equity, labour markets and public health in LMIC contexts.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,130 +15,720 @@
         extend: {
           colors: {
             brand: {
-              olive: '#526640',
-              olivedark: '#3D4C2F',
-              paper: '#FAF8F5',
-              bar: '#181614',
-              border: '#2E2A26',
+              obsidian: '#0B0D0A',
+              surface: '#131612',
+              card: '#181C16',
+              border: 'rgba(255,255,255,0.08)',
+              olive: '#4D613D',
+              oliveLight: '#7E9C65',
+              oliveSoft: '#9EBA87',
+              cream: '#F6F3EC',
+              sand: '#E6E1D4',
+              muted: '#8A9285',
+              mint: '#63B3A3'
             }
           },
           fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['Newsreader', 'serif'],
-            mono: ['"IBM Plex Mono"', 'monospace'],
+            mono: ['"Space Grotesk"', 'monospace']
           }
         }
       }
     }
   </script>
   <style>
-    iframe { transition: opacity 0.15s ease; }
-    .active-pill {
-      background-color: #526640 !important;
-      color: #FAF8F5 !important;
-      border-color: #526640 !important;
-      font-weight: 600;
+    /* Custom Scrollbar & Aesthetics */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0B0D0A; }
+    ::-webkit-scrollbar-thumb { background: #2A3324; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4D613D; }
+
+    /* Balmoiabe 3-Panel Hero Transitions */
+    .hero-panel {
+      transition: flex-grow 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s ease;
     }
+    .hero-panel:hover {
+      flex-grow: 1.35;
+    }
+    .hero-panel .panel-overlay {
+      transition: opacity 0.5s ease;
+    }
+    .hero-panel:hover .panel-overlay {
+      opacity: 0.35;
+    }
+
+    /* Courtney Savie Slanted Collage */
+    .slanted-card {
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+      transition: all 0.4s ease;
+    }
+    .slanted-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* Interactive modal backdrop */
+    .modal-active { display: flex !important; }
   </style>
 </head>
-<body class="bg-brand-bar text-white font-sans flex flex-col h-screen overflow-hidden">
+<body class="bg-brand-obsidian text-brand-cream font-sans antialiased selection:bg-brand-olive selection:text-white">
 
-  <!-- ULTRA-COMPACT TOP CONTROL BAR (One single slim row) -->
-  <header class="bg-brand-bar text-white px-3 py-1.5 border-b border-brand-border flex items-center justify-between gap-3 shrink-0 z-50 h-11">
-    
-    <!-- Left: Identity Badge (Ultra Compact) -->
-    <div class="flex items-center gap-2 shrink-0">
-      <div class="w-6 h-6 rounded bg-brand-olive text-white flex items-center justify-center font-serif text-xs font-semibold">
-        TD
-      </div>
-      <div class="flex items-baseline gap-1.5">
-        <span class="text-xs font-semibold tracking-tight text-white whitespace-nowrap">Taniya D’silva</span>
-        <span class="hidden xl:inline text-[10px] font-mono text-stone-400">· 6 Archetypes</span>
-      </div>
-    </div>
+  <!-- ACCESSIBILITY SKIP LINK -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-olive focus:text-white focus:px-4 focus:py-2 focus:rounded">
+    Skip to main content
+  </a>
 
-    <!-- Center: 6 Compact Pill Buttons (Zero Wrap, Smooth Scroll) -->
-    <nav class="flex items-center space-x-1.5 overflow-x-auto no-scrollbar py-0.5" aria-label="Archetype Switcher">
-      <button onclick="switchDesign('designs/design-1-editorial-monograph.html', 1, this)" class="active-pill px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap">
-        01. Monograph
-      </button>
-      <button onclick="switchDesign('designs/design-2-nordic-warm-minimal.html', 2, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
-        02. Nordic Minimal
-      </button>
-      <button onclick="switchDesign('designs/design-3-evidence-bento.html', 3, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
-        03. Evidence Bento
-      </button>
-      <button onclick="switchDesign('designs/design-4-swiss-high-grid.html', 4, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
-        04. Swiss Grid
-      </button>
-      <button onclick="switchDesign('designs/design-5-split-canvas.html', 5, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
-        05. Split Canvas
-      </button>
-      <button onclick="switchDesign('designs/design-6-strategic-dossier.html', 6, this)" class="px-2.5 py-1 rounded text-[11px] font-mono border border-white/15 hover:border-brand-olive transition-all whitespace-nowrap text-stone-300">
-        06. Strategic Dossier
-      </button>
-    </nav>
-
-    <!-- Right: Viewport Controls & Open Button -->
-    <div class="flex items-center gap-2 shrink-0">
-      <div class="hidden md:flex items-center bg-white/5 border border-white/10 rounded text-[10px] font-mono p-0.5">
-        <button id="vp-full" onclick="setViewport('100%', this)" class="px-2 py-0.5 rounded bg-white/20 text-white font-medium">Desktop</button>
-        <button id="vp-tab" onclick="setViewport('768px', this)" class="px-2 py-0.5 rounded text-stone-400 hover:text-white">Tablet</button>
-        <button id="vp-mob" onclick="setViewport('390px', this)" class="px-2 py-0.5 rounded text-stone-400 hover:text-white">Mobile</button>
-      </div>
-
-      <a id="openNewTab" href="designs/design-1-editorial-monograph.html" target="_blank" title="Open full screen in a new tab" class="px-2.5 py-1 rounded bg-brand-olive text-white text-[11px] font-mono flex items-center gap-1 hover:bg-white hover:text-brand-bar transition-colors whitespace-nowrap">
-        <span>Open ↗</span>
+  <!-- TOP NAVIGATION BAR (Exact Architecture) -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-obsidian/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo Lockup -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full border border-brand-oliveLight/40 flex items-center justify-center bg-brand-surface group-hover:border-brand-oliveSoft transition-colors">
+          <span class="font-serif text-lg font-medium text-brand-oliveSoft">TD</span>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-light tracking-wide block leading-none text-brand-cream group-hover:text-brand-oliveSoft transition-colors">Taniya D’silva</span>
+          <span class="font-mono text-[10px] tracking-widest text-brand-muted uppercase block mt-1">Strategic Social Impact Advisory</span>
+        </div>
       </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center space-x-7" aria-label="Main Navigation">
+        <a href="index.html" class="text-xs font-mono tracking-wider uppercase text-brand-oliveSoft border-b border-brand-oliveSoft pb-0.5" aria-current="page">Portfolio</a>
+        <a href="about.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">About</a>
+        <a href="work.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Work</a>
+        <a href="wise-impact.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Wise Impact</a>
+        <a href="pillars.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Pillars</a>
+        <a href="ledger.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Ledger</a>
+        <a href="what-others-say.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">What Others Say</a>
+        <a href="blog.html" class="text-xs font-mono tracking-wider uppercase text-brand-cream/70 hover:text-brand-cream transition-colors">Blog</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="p-2 text-brand-cream/70 hover:text-brand-oliveSoft transition-colors" title="LinkedIn Profile">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="connect.html" class="border border-brand-cream/30 hover:border-brand-oliveSoft px-5 py-2.5 rounded-full font-mono text-xs uppercase tracking-wider text-brand-cream hover:text-brand-oliveSoft transition-all flex items-center gap-2">
+          <span>Say Hello</span>
+          <span class="text-brand-oliveSoft">↗</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="xl:hidden p-2 text-brand-cream" aria-label="Toggle menu" onclick="toggleMobileNav()">
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+
     </div>
 
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-6 py-6 space-y-4">
+      <a href="index.html" class="block font-mono text-sm tracking-widest uppercase text-brand-oliveSoft">01 · Career Portfolio</a>
+      <a href="about.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">02 · About Taniya</a>
+      <a href="work.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">03 · Selected Work</a>
+      <a href="wise-impact.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">04 · Wise Impact Practice</a>
+      <a href="pillars.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">05 · Advisory Pillars</a>
+      <a href="ledger.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">06 · Impact Ledger</a>
+      <a href="what-others-say.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">07 · What Others Say</a>
+      <a href="blog.html" class="block font-mono text-sm tracking-widest uppercase text-brand-cream/80 hover:text-brand-cream">08 · Blog & Essays</a>
+      <a href="connect.html" class="block font-mono text-sm tracking-widest uppercase text-brand-mint font-semibold">09 · Connect / Discuss Project ↗</a>
+    </div>
   </header>
 
-  <!-- WORKSPACE CANVAS -->
-  <main class="flex-1 bg-[#1F1C19] flex items-center justify-center p-0 md:p-2 overflow-hidden relative">
-    <div id="viewportContainer" class="w-full h-full bg-white shadow-2xl transition-all duration-300 overflow-hidden md:rounded border border-white/10">
-      <iframe id="designFrame" src="designs/design-1-editorial-monograph.html" title="Taniya D'silva Design Archetype" class="w-full h-full border-0"></iframe>
-    </div>
+  <main id="main-content" class="pt-20">
+
+    <!-- ========================================================================= -->
+    <!-- 1. BALMOIABE-STYLE 3-PANEL INTERACTIVE HERO (Clickable Fullscreen Portals) -->
+    <!-- ========================================================================= -->
+    <section class="min-h-[85vh] lg:min-h-[90vh] flex flex-col lg:flex-row border-b border-brand-border overflow-hidden">
+      
+      <!-- Panel 1: Primary Executive Identity (Hero Anchor) -->
+      <div class="hero-panel relative lg:w-[46%] p-8 sm:p-12 lg:p-16 flex flex-col justify-between bg-brand-obsidian border-b lg:border-b-0 lg:border-r border-brand-border z-10">
+        <div>
+          <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-6">
+            <span>[ 01 / 07 ]</span>
+            <span class="w-8 h-px bg-brand-olive"></span>
+            <span>Strategic Social Impact Advisory</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight leading-[1.08] text-brand-cream mb-6">
+            Translating evidence and grand vision into <span class="italic font-normal text-brand-oliveSoft">ground reality.</span>
+          </h1>
+
+          <p class="font-sans text-base sm:text-lg text-brand-sand/80 font-light leading-relaxed max-w-xl mb-8">
+            15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor partnerships across climate, gender equity, labour markets, and public health in LMIC contexts.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="connect.html" class="inline-flex items-center gap-3 bg-brand-olive hover:bg-brand-oliveLight text-white px-7 py-3.5 rounded-full font-mono text-xs uppercase tracking-widest transition-all">
+              <span>Discuss a Requirement</span>
+              <span>→</span>
+            </a>
+            <a href="about.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-cream/80 hover:text-brand-oliveSoft transition-colors py-3 px-4">
+              <span>Explore Journey</span>
+              <span class="text-brand-olive">——</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-10 border-t border-brand-border mt-10 flex items-center justify-between font-mono text-[11px] text-brand-muted">
+          <span>PMP® CERTIFIED · 2026</span>
+          <span>BASED IN INDIA · GLOBAL ADVISORY</span>
+        </div>
+      </div>
+
+      <!-- Panel 2: Research & Advisory Gateway (Clickable Image Portal) -->
+      <a href="work.html" class="hero-panel group relative lg:w-[27%] min-h-[380px] lg:min-h-auto flex flex-col justify-between p-8 sm:p-10 border-b lg:border-b-0 lg:border-r border-brand-border cursor-pointer overflow-hidden">
+        <!-- Background Photography with Dark Tint -->
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-overlay absolute inset-0 bg-brand-obsidian/75 group-hover:bg-brand-obsidian/50 transition-colors duration-500"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-obsidian via-brand-obsidian/40 to-transparent"></div>
+
+        <!-- Panel Top Badge -->
+        <div class="relative z-10 flex items-center justify-between font-mono text-[11px] uppercase tracking-widest text-brand-oliveSoft">
+          <span>[ 02 · PROGRAMMES ]</span>
+          <span class="opacity-0 group-hover:opacity-100 transition-opacity">EXPLORE ↗</span>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="relative z-10">
+          <span class="font-mono text-[10px] tracking-widest text-brand-mint uppercase block mb-1">USD 1.3M Portfolio</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-brand-cream font-light mb-2 group-hover:text-brand-oliveSoft transition-colors">
+            National EV & Gender Equity Initiative
+          </h2>
+          <p class="font-sans text-xs text-brand-sand/80 line-clamp-3 font-light mb-4">
+            Directed national programme in India's automotive and electric vehicle manufacturing sector, bridging policy, industry, and inclusive workforce participation.
+          </p>
+          <div class="font-mono text-[11px] uppercase tracking-wider text-brand-cream flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            <span>Read Case Study</span>
+            <span>——</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Panel 3: Wise Impact Consulting Solutions (Clickable Image Portal) -->
+      <a href="wise-impact.html" class="hero-panel group relative lg:w-[27%] min-h-[380px] lg:min-h-auto flex flex-col justify-between p-8 sm:p-10 cursor-pointer overflow-hidden">
+        <!-- Background Photography with Dark Tint -->
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-overlay absolute inset-0 bg-brand-obsidian/80 group-hover:bg-brand-obsidian/55 transition-colors duration-500"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-obsidian via-brand-obsidian/40 to-transparent"></div>
+
+        <!-- Panel Top Badge -->
+        <div class="relative z-10 flex items-center justify-between font-mono text-[11px] uppercase tracking-widest text-brand-oliveSoft">
+          <span>[ 03 · THE PRACTICE ]</span>
+          <span class="opacity-0 group-hover:opacity-100 transition-opacity">DISCOVER ↗</span>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="relative z-10">
+          <span class="font-mono text-[10px] tracking-widest text-brand-sand uppercase block mb-1">Consulting Practice</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-brand-cream font-light mb-2 group-hover:text-brand-oliveSoft transition-colors">
+            Wise Impact Consulting Solutions
+          </h2>
+          <p class="font-sans text-xs text-brand-sand/80 line-clamp-3 font-light mb-4">
+            Solving the twin challenge of social leaders: holding grand societal vision while rallying teams to execute grounded programmes.
+          </p>
+          <div class="font-mono text-[11px] uppercase tracking-wider text-brand-cream flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            <span>Consulting Model</span>
+            <span>——</span>
+          </div>
+        </div>
+      </a>
+
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 2. HIGH-IMPACT CREDENTIALS & LIVING LEDGER STRIP (Big Numbers) -->
+    <!-- ========================================================================= -->
+    <section class="py-14 bg-brand-surface border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div>
+            <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">[ EVIDENCE & TRACK RECORD ]</div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-light text-brand-cream">Credentials & Capital Mobilised at a Glance</h2>
+          </div>
+          <a href="ledger.html" class="font-mono text-xs uppercase tracking-widest text-brand-sand/80 hover:text-brand-oliveSoft transition-colors flex items-center gap-2">
+            <span>View Full Impact Ledger</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- 5-Metric Bento Tiles -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          
+          <div class="p-6 bg-brand-card rounded-lg border border-brand-border hover:border-brand-olive transition-colors">
+            <span class="font-mono text-[11px] text-brand-muted uppercase block">Tenure</span>
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-cream block my-2">15</span>
+            <span class="text-xs text-brand-sand/70 font-light">Years across strategy, programmes & impact</span>
+          </div>
+
+          <div class="p-6 bg-brand-card rounded-lg border border-brand-border hover:border-brand-olive transition-colors">
+            <span class="font-mono text-[11px] text-brand-muted uppercase block">Flagship Directorship</span>
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-oliveSoft block my-2">$1.3M</span>
+            <span class="text-xs text-brand-sand/70 font-light">National Gender Equity Programme (EV sector)</span>
+          </div>
+
+          <div class="p-6 bg-brand-card rounded-lg border border-brand-border hover:border-brand-olive transition-colors">
+            <span class="font-mono text-[11px] text-brand-muted uppercase block">Team Leadership</span>
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-cream block my-2">30+</span>
+            <span class="text-xs text-brand-sand/70 font-light">Member interdisciplinary teams led</span>
+          </div>
+
+          <div class="p-6 bg-brand-card rounded-lg border border-brand-border hover:border-brand-olive transition-colors">
+            <span class="font-mono text-[11px] text-brand-muted uppercase block">Philanthropic Capital</span>
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-mint block my-2">$1M+</span>
+            <span class="text-xs text-brand-sand/70 font-light">Secured through partnerships & alliances</span>
+          </div>
+
+          <div class="p-6 bg-brand-card rounded-lg border border-brand-border hover:border-brand-olive transition-colors col-span-2 md:col-span-1">
+            <span class="font-mono text-[11px] text-brand-muted uppercase block">Pre-Sales Leadership</span>
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-cream block my-2">€1.3M</span>
+            <span class="text-xs text-brand-sand/70 font-light">300+ proposals architected at Sattva</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 3. COURTNEY SAVIE STYLE DIAGONAL MOSAIC (Workshops, Action, Leadership) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-brand-obsidian border-b border-brand-border overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Philosophy Narrative -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft">[ APPROACH & PHILOSOPHY ]</div>
+            
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-brand-cream leading-tight">
+              A leadership model rooted in <span class="italic font-normal text-brand-oliveSoft">practical execution.</span>
+            </h2>
+
+            <p class="font-sans text-brand-sand/80 text-sm sm:text-base font-light leading-relaxed">
+              Taniya works at the intersection of research, strategy, and implementation. Social sector leaders frequently face the dual challenge of stewarding big structural ambitions while rallying ground teams to deliver under complex, resource-constrained conditions.
+            </p>
+
+            <p class="font-sans text-brand-sand/80 text-sm sm:text-base font-light leading-relaxed">
+              Her approach combines strategic foresight with institutional stamina: clarifying choices, conducting rigorous qualitative inquiry, aligning disparate donors and government bodies, and establishing delivery systems that endure long after initial pilots conclude.
+            </p>
+
+            <div class="pt-4 flex items-center gap-6">
+              <a href="about.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-oliveSoft hover:text-white transition-colors">
+                <span>Read Full Biography & Values</span>
+                <span>→</span>
+              </a>
+              <span class="text-brand-border">|</span>
+              <a href="pillars.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-muted hover:text-white transition-colors">
+                <span>Advisory Pillars</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Courtney-style Slanted Image Collage (Clickable Photos) -->
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-3 gap-3 h-[420px] sm:h-[480px]">
+              
+              <!-- Slanted Card 1: Executive Boardroom Strategy -->
+              <div class="slanted-card relative h-full rounded-lg overflow-hidden group cursor-pointer" onclick="openPhotoModal('Executive Strategy Session', 'Leading 30+ member cross-sector alignments for climate and philanthropy portfolios.', 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80')">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Executive Strategy Session" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-brand-obsidian/40 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute bottom-3 left-3 right-3 p-2 bg-brand-obsidian/85 backdrop-blur-sm rounded font-mono text-[9px] uppercase tracking-wider text-brand-cream">
+                  01 · Board Alignment
+                </div>
+              </div>
+
+              <!-- Slanted Card 2: Field Workshop & Evidence -->
+              <div class="slanted-card relative h-full rounded-lg overflow-hidden group cursor-pointer translate-y-4" onclick="openPhotoModal('Participatory Field Design', 'Translating evidence from grassroots stakeholders into multi-year programme roadmaps.', 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80')">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" alt="Field Workshop Design" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-brand-obsidian/40 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute bottom-3 left-3 right-3 p-2 bg-brand-obsidian/85 backdrop-blur-sm rounded font-mono text-[9px] uppercase tracking-wider text-brand-cream">
+                  02 · Evidence Sourcing
+                </div>
+              </div>
+
+              <!-- Slanted Card 3: Automotive EV Manufacturing Plant -->
+              <div class="slanted-card relative h-full rounded-lg overflow-hidden group cursor-pointer" onclick="openPhotoModal('Automotive EV National Programme', 'USD 1.3M programme leadership in India\'s manufacturing sector for gender equity.', 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80')">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Automotive EV Manufacturing Plant" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 bg-brand-obsidian/40 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute bottom-3 left-3 right-3 p-2 bg-brand-obsidian/85 backdrop-blur-sm rounded font-mono text-[9px] uppercase tracking-wider text-brand-cream">
+                  03 · EV Field Directorship
+                </div>
+              </div>
+
+            </div>
+            <div class="font-mono text-[10px] text-brand-muted text-right mt-3">
+              CLICK ANY IMAGE TO EXPAND FIELD DOSSIER
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 4. FOUR STRATEGIC ADVISORY PILLARS (Balmoiabe Architectural Cards) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-brand-surface border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-14">
+          <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">[ CORE SERVICE PILLARS ]</div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-brand-cream">
+            Four pillars of advisory support.
+          </h2>
+          <p class="font-sans text-brand-sand/70 text-sm mt-3 font-light">
+            Comprehensive advisory engagement models tailored for emerging philanthropies, multilaterals, civil-society leaders, and governments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1 -->
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border flex flex-col justify-between group hover:border-brand-olive transition-colors">
+            <div>
+              <div class="flex items-center justify-between font-mono text-xs text-brand-oliveSoft mb-6">
+                <span>01</span>
+                <span>STRATEGY</span>
+              </div>
+              <h3 class="font-serif text-2xl text-brand-cream font-light mb-3 group-hover:text-brand-oliveSoft transition-colors">
+                Strategy & Organisational Advisory
+              </h3>
+              <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-6">
+                Helping organisations translate ambition into clear strategic choices, investment theses, positioning, and multi-year roadmaps.
+              </p>
+              <ul class="space-y-2 font-sans text-xs text-brand-sand/90 font-light border-t border-brand-border pt-4">
+                <li>• Strategic planning & foresight</li>
+                <li>• Investment theses & portfolio priorities</li>
+                <li>• Senior leadership decision support</li>
+                <li>• Organisational positioning</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-muted group-hover:text-brand-cream transition-colors">
+              <a href="pillars.html#pillar-1" class="flex items-center justify-between">
+                <span>Scope Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border flex flex-col justify-between group hover:border-brand-olive transition-colors">
+            <div>
+              <div class="flex items-center justify-between font-mono text-xs text-brand-oliveSoft mb-6">
+                <span>02</span>
+                <span>RESEARCH</span>
+              </div>
+              <h3 class="font-serif text-2xl text-brand-cream font-light mb-3 group-hover:text-brand-oliveSoft transition-colors">
+                Research & Strategy
+              </h3>
+              <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-6">
+                Turning evidence, ecosystem research, and stakeholder insights into actionable strategic direction for funders and institutions.
+              </p>
+              <ul class="space-y-2 font-sans text-xs text-brand-sand/90 font-light border-t border-brand-border pt-4">
+                <li>• Landscape & ecosystem research</li>
+                <li>• Qualitative field inquiry</li>
+                <li>• Sector & labour market analysis</li>
+                <li>• Evidence-to-action synthesis</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-muted group-hover:text-brand-cream transition-colors">
+              <a href="pillars.html#pillar-2" class="flex items-center justify-between">
+                <span>Scope Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border flex flex-col justify-between group hover:border-brand-olive transition-colors">
+            <div>
+              <div class="flex items-center justify-between font-mono text-xs text-brand-oliveSoft mb-6">
+                <span>03</span>
+                <span>PROGRAMMES</span>
+              </div>
+              <h3 class="font-serif text-2xl text-brand-cream font-light mb-3 group-hover:text-brand-oliveSoft transition-colors">
+                Programme & Portfolio Design
+              </h3>
+              <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-6">
+                Designing and strengthening programmes that move seamlessly from high-level intent to effective ground delivery.
+              </p>
+              <ul class="space-y-2 font-sans text-xs text-brand-sand/90 font-light border-t border-brand-border pt-4">
+                <li>• Multi-stakeholder programme design</li>
+                <li>• Pilot & innovation architecture</li>
+                <li>• Strategic reviews & problem-solving</li>
+                <li>• Monitoring priority delivery</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-muted group-hover:text-brand-cream transition-colors">
+              <a href="pillars.html#pillar-3" class="flex items-center justify-between">
+                <span>Scope Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="p-8 bg-brand-card rounded-lg border border-brand-border flex flex-col justify-between group hover:border-brand-olive transition-colors">
+            <div>
+              <div class="flex items-center justify-between font-mono text-xs text-brand-oliveSoft mb-6">
+                <span>04</span>
+                <span>CAPABILITY</span>
+              </div>
+              <h3 class="font-serif text-2xl text-brand-cream font-light mb-3 group-hover:text-brand-oliveSoft transition-colors">
+                Partnerships & Capability
+              </h3>
+              <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-6">
+                Strengthening relationships, donor partnerships, and internal governance needed to sustain impact across generations.
+              </p>
+              <ul class="space-y-2 font-sans text-xs text-brand-sand/90 font-light border-t border-brand-border pt-4">
+                <li>• Multi-stakeholder partnerships</li>
+                <li>• Govt & institutional engagement</li>
+                <li>• Donor & philanthropic alliances</li>
+                <li>• Executive communications & briefings</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-4 border-t border-brand-border font-mono text-[11px] text-brand-muted group-hover:text-brand-cream transition-colors">
+              <a href="pillars.html#pillar-4" class="flex items-center justify-between">
+                <span>Scope Details</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 5. SELECTED ESSAYS & PUBLICATIONS (Courtney Media Cards) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-brand-obsidian border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-2">[ RECENT THINKING & WORK ]</div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-light text-brand-cream">Articles, Curricula & Thought Leadership</h2>
+          </div>
+          <a href="blog.html" class="font-mono text-xs uppercase tracking-widest text-brand-sand hover:text-brand-oliveSoft transition-colors flex items-center gap-2">
+            <span>Explore All Publications</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Article 1: L'Express Mauritius -->
+          <article class="bg-brand-surface rounded-lg border border-brand-border overflow-hidden group hover:border-brand-olive transition-colors flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 font-mono text-[10px] text-brand-muted uppercase mb-2">
+                  <span class="text-brand-mint">ESSAY · L'EXPRESS</span>
+                  <span>·</span>
+                  <span>CLIMATE ADAPTATION</span>
+                </div>
+                <h3 class="font-serif text-2xl text-brand-cream font-light mb-2 group-hover:text-brand-oliveSoft transition-colors">
+                  What Mauritius Can Learn from the Himalayas
+                </h3>
+                <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-4">
+                  Comparative analysis of climate vulnerabilities, watershed ecology, and decentralized institutional responses between small island developing states and mountain ecosystems.
+                </p>
+              </div>
+              <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-wider text-brand-oliveSoft hover:text-white flex items-center gap-1.5">
+                <span>Read in L'Express Mauritius</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Course 2: Teachable Climate Strategy -->
+          <article class="bg-brand-surface rounded-lg border border-brand-border overflow-hidden group hover:border-brand-olive transition-colors flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 font-mono text-[10px] text-brand-muted uppercase mb-2">
+                  <span class="text-brand-mint">EXECUTIVE CURRICULUM</span>
+                  <span>·</span>
+                  <span>ONLINE COURSE</span>
+                </div>
+                <h3 class="font-serif text-2xl text-brand-cream font-light mb-2 group-hover:text-brand-oliveSoft transition-colors">
+                  Strategic Planning for Climate Nonprofits
+                </h3>
+                <p class="font-sans text-xs text-brand-sand/70 font-light leading-relaxed mb-4">
+                  Specialized strategic frameworks and operational tools developed to assist climate-focused civil-society organizations navigate uncertain funding and regulatory environments.
+                </p>
+              </div>
+              <a href="https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-wider text-brand-oliveSoft hover:text-white flex items-center gap-1.5">
+                <span>Access Course Portal</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 6. WHAT OTHERS SAY (Balmoiabe Pull Quote & Endorsements Strip) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-brand-surface border-b border-brand-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-6">[ WHAT PARTNERS & LEADERS SAY ]</div>
+        
+        <blockquote class="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-cream font-light italic leading-relaxed mb-8">
+          “Taniya has that rare ability to translate grand philanthropic visions into pragmatic, ground-level delivery frameworks that cross-functional teams actually take ownership of.”
+        </blockquote>
+
+        <div class="font-mono text-xs uppercase tracking-wider text-brand-muted">
+          <span class="text-brand-cream font-medium">Strategic Philanthropy Lead</span> · Climate & Gender Equity Ecosystem
+        </div>
+
+        <div class="mt-10">
+          <a href="what-others-say.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-sand hover:text-brand-oliveSoft border-b border-brand-olive/50 pb-1 transition-colors">
+            <span>Read All Endorsements & Partner Reflections</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- 7. PRIMARY ADVISORY INQUIRY CTA (Say Hello & Start a Conversation) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-brand-obsidian relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <div class="font-mono text-xs uppercase tracking-widest text-brand-oliveSoft mb-3">[ ADVISORY ENGAGEMENTS ]</div>
+        
+        <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-brand-cream mb-6">
+          Ready to translate evidence into <span class="italic font-normal text-brand-oliveSoft">systemic action?</span>
+        </h2>
+
+        <p class="font-sans text-brand-sand/80 text-base sm:text-lg font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+          Open to strategic advisory assignments, multi-stakeholder programme designs, research partnerships, and institutional board roles globally.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="connect.html" class="w-full sm:w-auto bg-brand-olive hover:bg-brand-oliveLight text-white px-8 py-4 rounded-full font-mono text-xs uppercase tracking-widest transition-all shadow-lg shadow-brand-olive/20">
+            Discuss a Project Requirement ↗
+          </a>
+          <a href="work.html" class="w-full sm:w-auto border border-brand-cream/30 hover:border-brand-oliveSoft text-brand-cream px-8 py-4 rounded-full font-mono text-xs uppercase tracking-widest transition-colors">
+            View Selected Work Portfolio
+          </a>
+        </div>
+
+        <div class="mt-8 font-mono text-xs text-brand-muted">
+          Direct correspondence: <a href="mailto:its.taniya.dsilva@gmail.com" class="text-brand-sand hover:text-brand-oliveSoft underline">its.taniya.dsilva@gmail.com</a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER (Clean 2-Row Editorial Architecture) -->
+  <!-- ========================================================================= -->
+  <footer class="bg-brand-obsidian border-t border-brand-border py-12 text-brand-muted">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Row -->
+      <div class="flex flex-col md:flex-row items-center justify-between pb-8 border-b border-brand-border gap-4">
+        <div class="flex items-center gap-3">
+          <span class="font-serif text-2xl text-brand-cream font-light">Taniya D’silva</span>
+          <span class="text-brand-border">|</span>
+          <span class="font-mono text-xs text-brand-sand/80">Strategy & Programme Leadership for Social Impact</span>
+        </div>
+        <div class="font-mono text-xs text-brand-muted">
+          Vehicle: Wise Impact Consulting Solutions
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
+        <div>
+          © 2026 Taniya D’silva. All rights reserved.
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="about.html" class="hover:text-brand-cream transition-colors">About</a>
+          <a href="work.html" class="hover:text-brand-cream transition-colors">Work</a>
+          <a href="wise-impact.html" class="hover:text-brand-cream transition-colors">Wise Impact</a>
+          <a href="ledger.html" class="hover:text-brand-cream transition-colors">Ledger</a>
+          <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cream transition-colors">LinkedIn</a>
+          <a href="connect.html" class="text-brand-oliveSoft hover:text-white transition-colors">Connect</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE PHOTO DOSSIER MODAL (Courtney / Balmoiabe Inspection Engine) -->
+  <!-- ========================================================================= -->
+  <div id="photoModal" class="fixed inset-0 z-50 bg-brand-obsidian/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8" onclick="closePhotoModal(event)">
+    <div class="bg-brand-surface border border-brand-border rounded-xl max-w-3xl w-full overflow-hidden relative shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closePhotoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-brand-obsidian/80 border border-brand-border text-brand-cream hover:text-white flex items-center justify-center font-mono text-sm">
+        ✕
+      </button>
+      <div class="h-80 sm:h-96 w-full overflow-hidden bg-brand-obsidian">
+        <img id="modalImg" src="" alt="Dossier photo" class="w-full h-full object-cover">
+      </div>
+      <div class="p-6 sm:p-8">
+        <div class="font-mono text-[11px] text-brand-oliveSoft uppercase tracking-widest mb-1">[ FIELD DOSSIER ]</div>
+        <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-light text-brand-cream mb-2"></h3>
+        <p id="modalDesc" class="font-sans text-sm text-brand-sand/80 font-light leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT INTERACTIONS -->
   <script>
-    function switchDesign(url, id, btn) {
-      const frame = document.getElementById('designFrame');
-      const openBtn = document.getElementById('openNewTab');
-      
-      frame.style.opacity = '0.3';
-      frame.src = url;
-      openBtn.href = url;
-      
-      frame.onload = () => {
-        frame.style.opacity = '1';
-      };
-
-      document.querySelectorAll('nav button').forEach(b => {
-        b.classList.remove('active-pill');
-        b.classList.add('text-stone-300');
-      });
-      btn.classList.add('active-pill');
-      btn.classList.remove('text-stone-300');
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
     }
 
-    function setViewport(width, btn) {
-      const container = document.getElementById('viewportContainer');
-      container.style.maxWidth = width;
-      container.style.height = width === '100%' ? '100%' : '95%';
-
-      ['vp-full', 'vp-tab', 'vp-mob'].forEach(id => {
-        const b = document.getElementById(id);
-        if (b) {
-          b.classList.remove('bg-white/20', 'text-white', 'font-medium');
-          b.classList.add('text-stone-400');
-        }
-      });
-      if (btn) {
-        btn.classList.remove('text-stone-400');
-        btn.classList.add('bg-white/20', 'text-white', 'font-medium');
-      }
+    function openPhotoModal(title, desc, imgSrc) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalImg').src = imgSrc;
+      const modal = document.getElementById('photoModal');
+      modal.classList.add('modal-active');
     }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModal');
+      modal.classList.remove('modal-active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePhotoModal();
+    });
   </script>
+
 </body>
 </html>
