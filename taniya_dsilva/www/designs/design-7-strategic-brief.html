@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniya D’silva — Archetype 07: Strategic Dossier Brief</title>
+  <meta name="description" content="Executive advisory dossier and credentials brief for Taniya D'silva.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dossier: {
+              bg: '#11140E',
+              surface: '#181C14',
+              card: '#20261B',
+              border: 'rgba(255,255,255,0.08)',
+              olive: '#4D613D',
+              oliveLight: '#8CAE70',
+              gold: '#C5A869',
+              goldMuted: '#9B8452',
+              cream: '#F4EFE6',
+              sand: '#DFD8CA',
+              muted: '#7E8675'
+            }
+          },
+          fontFamily: {
+            display: ['"Cinzel"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #11140E; }
+    ::-webkit-scrollbar-thumb { background: #35422B; border-radius: 3px; }
+    .stamp-badge {
+      border: 1.5px solid #C5A869;
+      color: #C5A869;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body class="bg-dossier-bg text-dossier-cream font-sans antialiased selection:bg-dossier-olive selection:text-white">
+
+  <!-- TOP HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dossier-bg/95 backdrop-blur-md border-b border-dossier-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="stamp-badge px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold">
+          CONFIDENTIAL DOSSIER
+        </div>
+        <div class="font-serif text-xl sm:text-2xl tracking-wide text-dossier-cream">
+          Taniya D’silva
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-mono uppercase tracking-widest text-dossier-sand/70">
+        <a href="#executive-summary" class="hover:text-dossier-gold transition-colors">Summary</a>
+        <a href="#credentials" class="hover:text-dossier-gold transition-colors">Ledger</a>
+        <a href="#pillars" class="hover:text-dossier-gold transition-colors">Pillars</a>
+        <a href="#work" class="hover:text-dossier-gold transition-colors">Engagements</a>
+        <a href="#inquiry" class="hover:text-dossier-gold transition-colors">Inquiry</a>
+      </nav>
+      <a href="#inquiry" class="stamp-badge px-4 py-2 rounded font-mono text-xs hover:bg-dossier-gold hover:text-dossier-bg transition-colors">
+        Engage Advisory ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+
+    <!-- HERO DOSSIER HEADER -->
+    <section id="executive-summary" class="max-w-7xl mx-auto px-6 mb-20">
+      <div class="p-8 sm:p-14 bg-dossier-surface rounded-2xl border border-dossier-border relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-8 space-y-6">
+            <div class="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-dossier-gold">
+              <span>REFERENCE: DSILVA-STRAT-2026</span>
+              <span>·</span>
+              <span>PMP® CERTIFIED</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl text-dossier-cream font-light leading-tight">
+              Strategic Social Impact Advisory, Research & Programme Directorship
+            </h1>
+
+            <p class="font-sans text-dossier-sand/85 text-base sm:text-lg font-light leading-relaxed">
+              15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health in LMIC contexts.
+            </p>
+
+            <div class="p-5 bg-dossier-card rounded-xl border border-dossier-border font-sans text-xs text-dossier-sand/80 leading-relaxed">
+              <strong class="text-dossier-gold font-mono uppercase block mb-1">Entity Practice Protocol</strong>
+              Taniya D’silva operates as the primary professional and advisory identity. Her consulting vehicle, <strong>Wise Impact Consulting Solutions</strong>, delivers complex programmatic consortia and institutional mandates.
+            </div>
+          </div>
+
+          <!-- Dual Headshot Preview -->
+          <div class="lg:col-span-4 space-y-4">
+            <div class="rounded-xl overflow-hidden bg-dossier-card border border-dossier-border">
+              <img src="../public/taniya_headshot_2.png" alt="Taniya D'silva" class="w-full h-72 object-cover object-top">
+              <div class="p-3 font-mono text-[11px] text-dossier-muted flex justify-between">
+                <span>PORTRAIT: TANIYA D'SILVA</span>
+                <span class="text-dossier-gold">FOUNDER</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- METRICS LEDGER -->
+    <section id="credentials" class="max-w-7xl mx-auto px-6 mb-20">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        
+        <div class="p-6 bg-dossier-surface rounded-xl border border-dossier-border">
+          <span class="font-mono text-[10px] text-dossier-muted uppercase block">Tenure</span>
+          <span class="font-serif text-4xl text-dossier-cream block my-2">15 Yrs</span>
+          <span class="text-xs text-dossier-sand/70">Strategy & Programmes</span>
+        </div>
+
+        <div class="p-6 bg-dossier-surface rounded-xl border border-dossier-border">
+          <span class="font-mono text-[10px] text-dossier-muted uppercase block">Flagship Fund</span>
+          <span class="font-serif text-4xl text-dossier-gold block my-2">$1.3M</span>
+          <span class="text-xs text-dossier-sand/70">National EV Gender Equity</span>
+        </div>
+
+        <div class="p-6 bg-dossier-surface rounded-xl border border-dossier-border">
+          <span class="font-mono text-[10px] text-dossier-muted uppercase block">Team Leadership</span>
+          <span class="font-serif text-4xl text-dossier-cream block my-2">30+</span>
+          <span class="text-xs text-dossier-sand/70">Member Teams Directed</span>
+        </div>
+
+        <div class="p-6 bg-dossier-surface rounded-xl border border-dossier-border">
+          <span class="font-mono text-[10px] text-dossier-muted uppercase block">Philanthropy</span>
+          <span class="font-serif text-4xl text-dossier-gold block my-2">$1M+</span>
+          <span class="text-xs text-dossier-sand/70">Capital Secured</span>
+        </div>
+
+        <div class="p-6 bg-dossier-surface rounded-xl border border-dossier-border">
+          <span class="font-mono text-[10px] text-dossier-muted uppercase block">Pre-Sales Sattva</span>
+          <span class="font-serif text-4xl text-dossier-cream block my-2">€1.3M</span>
+          <span class="text-xs text-dossier-sand/70">300+ Proposals Built</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 PILLARS -->
+    <section id="pillars" class="max-w-7xl mx-auto px-6 mb-20">
+      <div class="max-w-2xl mb-10">
+        <span class="font-mono text-xs uppercase tracking-widest text-dossier-gold">[ CORE PILLARS ]</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-dossier-cream mt-2">The Four Operational Pillars</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-8 bg-dossier-surface rounded-xl border border-dossier-border space-y-4">
+          <span class="font-mono text-xs text-dossier-gold block">01 · STRATEGY & ADVISORY</span>
+          <h3 class="font-serif text-2xl text-dossier-cream">Strategy & Organisational Advisory</h3>
+          <p class="font-sans text-xs text-dossier-sand/80 leading-relaxed">
+            Helping organisations translate ambition into clear strategic choices, priorities, investment theses and multi-year roadmaps.
+          </p>
+        </div>
+
+        <div class="p-8 bg-dossier-surface rounded-xl border border-dossier-border space-y-4">
+          <span class="font-mono text-xs text-dossier-gold block">02 · RESEARCH & STRATEGY</span>
+          <h3 class="font-serif text-2xl text-dossier-cream">Research & Strategy</h3>
+          <p class="font-sans text-xs text-dossier-sand/80 leading-relaxed">
+            Turning evidence, qualitative research, and stakeholder insights into actionable strategic direction and policy recommendations.
+          </p>
+        </div>
+
+        <div class="p-8 bg-dossier-surface rounded-xl border border-dossier-border space-y-4">
+          <span class="font-mono text-xs text-dossier-gold block">03 · PROGRAMME DESIGN</span>
+          <h3 class="font-serif text-2xl text-dossier-cream">Programme & Portfolio Design</h3>
+          <p class="font-sans text-xs text-dossier-sand/80 leading-relaxed">
+            Design and strengthen programmes that move from strategic intent to effective implementation, pilot architectures, and monitoring.
+          </p>
+        </div>
+
+        <div class="p-8 bg-dossier-surface rounded-xl border border-dossier-border space-y-4">
+          <span class="font-mono text-xs text-dossier-gold block">04 · PARTNERSHIPS</span>
+          <h3 class="font-serif text-2xl text-dossier-cream">Partnerships & Capability</h3>
+          <p class="font-sans text-xs text-dossier-sand/80 leading-relaxed">
+            Strengthening relationships, multi-stakeholder government engagements, donor partnerships, and leadership capability.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTAKE -->
+    <section id="inquiry" class="max-w-4xl mx-auto px-6">
+      <div class="p-10 bg-dossier-surface rounded-2xl border border-dossier-border text-center space-y-6">
+        <span class="stamp-badge px-3 py-1 rounded text-xs font-mono">DIRECT INTAKE</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-dossier-cream">Discuss a Strategic Requirement</h2>
+        <p class="font-sans text-xs text-dossier-sand/70 max-w-md mx-auto">
+          Correspondence routed to <strong class="text-dossier-gold">its.taniya.dsilva@gmail.com</strong>
+        </p>
+        <a href="mailto:its.taniya.dsilva@gmail.com?subject=Strategic%20Advisory%20Inquiry" class="inline-block stamp-badge px-8 py-3.5 rounded text-xs font-mono hover:bg-dossier-gold hover:text-dossier-bg transition-colors">
+          Transmit Advisory Brief ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-dossier-border py-8 text-center font-mono text-xs text-dossier-muted">
+    © 2026 Taniya D’silva · Strategic Social Impact Advisory Dossier
+  </footer>
+
+</body>
+</html>

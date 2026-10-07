@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taniya D’silva — Archetype 09: Modern Editorial Magazine</title>
+  <meta name="description" content="Editorial longform magazine layout inspired by The Atlantic and Harvard Business Review, presenting the leadership of Taniya D'silva.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mag: {
+              paper: '#FAF7F0',
+              cream: '#F2ECE1',
+              ink: '#161413',
+              charcoal: '#2D2825',
+              border: '#E2D9CB',
+              olive: '#475C36',
+              rust: '#B54C28',
+              gold: '#C49746',
+              muted: '#7A726B'
+            }
+          },
+          fontFamily: {
+            title: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Lora"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 5rem;
+      line-height: 4rem;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 4px;
+      font-family: "Playfair Display", Georgia, serif;
+      color: #475C36;
+      font-weight: 700;
+    }
+    .rule-double {
+      border-top: 3px double #161413;
+    }
+  </style>
+</head>
+<body class="bg-mag-paper text-mag-ink font-sans antialiased selection:bg-mag-rust selection:text-white">
+
+  <!-- TOP MASTHEAD HEADER -->
+  <header class="border-b border-mag-border bg-mag-paper/95 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="font-mono text-xs text-mag-muted uppercase tracking-widest">Vol. XV · Issue 01</span>
+        <span class="text-mag-border hidden sm:inline">|</span>
+        <span class="font-mono text-xs text-mag-olive hidden sm:inline">Strategic Social Impact Review</span>
+      </div>
+      <div class="font-title text-2xl sm:text-3xl font-bold tracking-tight text-mag-ink">
+        Taniya D’silva
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#connect" class="font-mono text-xs px-3.5 py-1.5 rounded-full border border-mag-charcoal hover:bg-mag-ink hover:text-white transition-colors">
+          Engage Practice
+        </a>
+      </div>
+    </div>
+    <!-- Horizontal rule -->
+    <div class="border-t border-mag-border">
+      <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-center space-x-8 text-xs font-mono uppercase tracking-wider text-mag-muted">
+        <a href="#cover" class="hover:text-mag-rust transition-colors">Cover Essay</a>
+        <a href="#curriculum" class="hover:text-mag-rust transition-colors">Curriculum Vitae</a>
+        <a href="#pillars" class="hover:text-mag-rust transition-colors">Four Theses</a>
+        <a href="#dispatches" class="hover:text-mag-rust transition-colors">Field Dispatches</a>
+        <a href="#connect" class="hover:text-mag-rust transition-colors">Correspondence</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- COVER ESSAY SECTION -->
+    <section id="cover" class="mb-20">
+      
+      <!-- Big Editorial Header -->
+      <div class="text-center max-w-4xl mx-auto mb-12 space-y-4">
+        <div class="inline-block px-3 py-1 bg-mag-cream rounded-full font-mono text-xs text-mag-rust uppercase tracking-widest">
+          Lead Feature & Interview
+        </div>
+        <h1 class="font-title text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.08] text-mag-ink">
+          The Architecture of Enduring Social Transformation
+        </h1>
+        <p class="font-body text-xl sm:text-2xl italic text-mag-charcoal font-normal max-w-2xl mx-auto">
+          How fifteen years navigating complex LMIC governance, planetary boundaries, and multilateral consortia shaped a rigorous new standard for advisory leadership.
+        </p>
+        <div class="pt-4 flex items-center justify-center gap-4 text-xs font-mono text-mag-muted">
+          <span>By Taniya D’silva, PMP®</span>
+          <span>·</span>
+          <span>Wise Impact Consulting Solutions</span>
+          <span>·</span>
+          <span>New Delhi & Regional Desks</span>
+        </div>
+      </div>
+
+      <!-- Editorial Magazine Grid (Image + Longform Article) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start border-t border-b border-mag-border py-12">
+        
+        <!-- Left: Double Photography Block -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-mag-cream p-4 rounded-xl border border-mag-border shadow-sm">
+            <div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+              <img src="../public/taniya_headshot_2.png" alt="Taniya D'silva Strategy Desk" class="w-full h-full object-cover">
+            </div>
+            <div class="pt-3 font-body text-xs italic text-mag-muted text-center">
+              Taniya D'silva in strategic consultation. With 15+ years across multilateral portfolios, she advises executive leadership on policy execution.
+            </div>
+          </div>
+
+          <!-- Secondary Inset: Vector Likeness Art Plate -->
+          <div class="p-6 rounded-xl bg-white border border-mag-border flex items-center gap-5">
+            <img src="../public/taniya_animated_likeness.png" alt="Vector Art Plate" class="w-20 h-20 rounded-full object-cover border-2 border-mag-olive shrink-0">
+            <div>
+              <div class="font-title text-base font-bold text-mag-ink">Likeness Plate 02</div>
+              <div class="font-body text-xs text-mag-muted italic">Illustrated identity commission honoring field leadership & executive strategy.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Article Layout -->
+        <div class="lg:col-span-7 space-y-6">
+          <p class="font-body text-lg leading-relaxed text-mag-charcoal drop-cap">
+            Cross-sector social transformation is rarely halted by a lack of capital or noble intent. Rather, systemic programmes falter at the fragile seams between macro-policy rhetoric and frontline operational realities. Over the past fifteen years, across the Himalayan mountain watersheds to national manufacturing belts, our practice has focused on bridging this exact institutional void.
+          </p>
+
+          <p class="font-body text-base leading-relaxed text-mag-charcoal">
+            Through <strong class="font-bold text-mag-ink">Wise Impact Consulting Solutions</strong>, Taniya D’silva provides boards, UN agencies, bilateral missions, and non-profit leaders with the rigorous analytical scaffolding required to convert complex philanthropic goals into durable institutional realities.
+          </p>
+
+          <!-- Pull Quote -->
+          <div class="my-8 p-6 border-l-4 border-mag-rust bg-mag-cream/60 rounded-r-lg">
+            <blockquote class="font-title text-xl sm:text-2xl italic text-mag-ink leading-snug">
+              “True systemic resilience requires aligning high-level ministerial policy with the lived experience of frontline women workers and rural watershed stewards.”
+            </blockquote>
+            <cite class="block font-mono text-xs text-mag-muted mt-3 uppercase tracking-wider">— Taniya D’silva, Programme Director</cite>
+          </div>
+
+          <p class="font-body text-base leading-relaxed text-mag-charcoal">
+            Whether architecting multi-million dollar public health rollouts under PMP® disciplines or publishing peer-reviewed climate dispatches with French national outlets like <em>L’Express</em>, every engagement is anchored in unshakeable empirical integrity.
+          </p>
+
+          <!-- Key Stats Ribbon -->
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-mag-border text-center">
+            <div>
+              <span class="block font-title text-3xl font-bold text-mag-rust">15</span>
+              <span class="font-mono text-xs text-mag-muted uppercase">Years Experience</span>
+            </div>
+            <div>
+              <span class="block font-title text-3xl font-bold text-mag-olive">4</span>
+              <span class="font-mono text-xs text-mag-muted uppercase">Strategic Pillars</span>
+            </div>
+            <div>
+              <span class="block font-title text-3xl font-bold text-mag-gold">PMP®</span>
+              <span class="font-mono text-xs text-mag-muted uppercase">Project Management</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOUR THESES (PILLARS IN EDITORIAL COLUMNS) -->
+    <section id="pillars" class="mb-20">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="font-mono text-xs uppercase tracking-widest text-mag-rust">The Analytical Core</span>
+        <h2 class="font-title text-3xl sm:text-5xl font-bold text-mag-ink">Four Pillars of Practice</h2>
+        <div class="w-16 h-0.5 bg-mag-charcoal mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Column 1 -->
+        <div class="space-y-4 p-6 bg-mag-cream/50 rounded-xl border border-mag-border">
+          <span class="font-mono text-xs text-mag-olive font-bold">ESSAY I</span>
+          <h3 class="font-title text-xl font-bold text-mag-ink">Strategic Impact Advisory & Organisational Strategy</h3>
+          <p class="font-body text-sm leading-relaxed text-mag-charcoal">
+            Guiding boards and executive teams through institutional pivots, theory of change structuring, governance realignment, and multi-donor consortium architecture.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="space-y-4 p-6 bg-mag-cream/50 rounded-xl border border-mag-border">
+          <span class="font-mono text-xs text-mag-olive font-bold">ESSAY II</span>
+          <h3 class="font-title text-xl font-bold text-mag-ink">Programme Design, Directorship & PMO</h3>
+          <p class="font-body text-sm leading-relaxed text-mag-charcoal">
+            Operationalising multi-million dollar portfolios with PMP® certified discipline. Harmonising multi-partner consortia across government line departments.
+          </p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="space-y-4 p-6 bg-mag-cream/50 rounded-xl border border-mag-border">
+          <span class="font-mono text-xs text-mag-olive font-bold">ESSAY III</span>
+          <h3 class="font-title text-xl font-bold text-mag-ink">Research, Evidence Synthesis & Policy Translation</h3>
+          <p class="font-body text-sm leading-relaxed text-mag-charcoal">
+            Translating complex primary epidemiological, economic, and climate research into high-impact ministerial white papers and accessible public briefs.
+          </p>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="space-y-4 p-6 bg-mag-cream/50 rounded-xl border border-mag-border">
+          <span class="font-mono text-xs text-mag-olive font-bold">ESSAY IV</span>
+          <h3 class="font-title text-xl font-bold text-mag-ink">Executive Communications & Coalition Building</h3>
+          <p class="font-body text-sm leading-relaxed text-mag-charcoal">
+            High-trust convenor uniting adversarial stakeholders across civil society, state actors, and private capital into aligned action agendas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FIELD DISPATCHES & PUBLICATIONS -->
+    <section id="dispatches" class="mb-20 border-t border-mag-border pt-12">
+      <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-8">
+        <h2 class="font-title text-3xl font-bold text-mag-ink">Dispatches from the Field</h2>
+        <span class="font-mono text-xs text-mag-muted">Verified Fieldwork, Research Papers & Published Commentary</span>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Dispatch 1 -->
+        <div class="p-6 bg-white rounded-xl border border-mag-border flex flex-col md:flex-row md:items-center justify-between gap-6 hover:shadow-md transition-shadow">
+          <div class="space-y-2">
+            <span class="font-mono text-xs text-mag-rust font-bold uppercase tracking-wider">Climate & Food Systems · L'Express France</span>
+            <h3 class="font-title text-xl font-bold text-mag-ink">In the Indian Himalayas, Climate Change Threatens Agriculture and Beyond</h3>
+            <p class="font-body text-sm text-mag-charcoal">In-depth field dispatch documenting precipitation volatility, agrarian displacement, and mountain ecology vulnerability in northern India.</p>
+          </div>
+          <a href="#" class="shrink-0 font-mono text-xs px-4 py-2 rounded border border-mag-charcoal hover:bg-mag-ink hover:text-white transition-colors">
+            Read Article ↗
+          </a>
+        </div>
+
+        <!-- Dispatch 2 -->
+        <div class="p-6 bg-white rounded-xl border border-mag-border flex flex-col md:flex-row md:items-center justify-between gap-6 hover:shadow-md transition-shadow">
+          <div class="space-y-2">
+            <span class="font-mono text-xs text-mag-olive font-bold uppercase tracking-wider">Labour Markets & Equity · National Survey</span>
+            <h3 class="font-title text-xl font-bold text-mag-ink">Women’s Informal Work: Diagnostic on Social Protection Deficits</h3>
+            <p class="font-body text-sm text-mag-charcoal">Multi-state analysis examining informal subcontracting chains, care work burdens, and social security design for home-based female workers.</p>
+          </div>
+          <a href="#" class="shrink-0 font-mono text-xs px-4 py-2 rounded border border-mag-charcoal hover:bg-mag-ink hover:text-white transition-colors">
+            View Briefing ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORRESPONDENCE & ENGAGEMENT FORM -->
+    <section id="connect" class="max-w-3xl mx-auto p-10 bg-mag-cream rounded-2xl border border-mag-border">
+      <div class="text-center space-y-3 mb-8">
+        <span class="font-mono text-xs uppercase tracking-widest text-mag-rust">Executive Desk</span>
+        <h2 class="font-title text-3xl font-bold text-mag-ink">Initiate Correspondence</h2>
+        <p class="font-body text-sm text-mag-charcoal">Direct advisory queries to Taniya D'silva at <span class="font-mono font-semibold">its.taniya.dsilva@gmail.com</span>.</p>
+      </div>
+
+      <form action="mailto:its.taniya.dsilva@gmail.com" method="POST" enctype="text/plain" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block font-mono text-xs text-mag-muted uppercase mb-1">Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-2.5 rounded border border-mag-border bg-white text-mag-ink font-sans text-sm focus:border-mag-rust focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-mono text-xs text-mag-muted uppercase mb-1">Organisation</label>
+            <input type="text" name="organisation" required class="w-full px-4 py-2.5 rounded border border-mag-border bg-white text-mag-ink font-sans text-sm focus:border-mag-rust focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block font-mono text-xs text-mag-muted uppercase mb-1">Email</label>
+            <input type="email" name="email" required class="w-full px-4 py-2.5 rounded border border-mag-border bg-white text-mag-ink font-sans text-sm focus:border-mag-rust focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-mono text-xs text-mag-muted uppercase mb-1">Area of Inquiry</label>
+            <select name="scope" class="w-full px-4 py-2.5 rounded border border-mag-border bg-white text-mag-ink font-sans text-sm focus:border-mag-rust focus:outline-none">
+              <option value="strategic_advisory">Strategic Impact Advisory & Organisational Strategy</option>
+              <option value="programme_directorship">Programme Design, Directorship & PMO</option>
+              <option value="research_synthesis">Research, Evidence Synthesis & Policy Translation</option>
+              <option value="executive_communications">Executive Communications & Coalition Building</option>
+              <option value="other">General Strategic Inquiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-mono text-xs text-mag-muted uppercase mb-1">Message</label>
+          <textarea name="message" rows="4" class="w-full px-4 py-2.5 rounded border border-mag-border bg-white text-mag-ink font-sans text-sm focus:border-mag-rust focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded bg-mag-ink hover:bg-mag-rust text-white font-mono text-xs uppercase tracking-widest font-semibold transition-colors">
+          Transmit Correspondence →
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-mag-border py-8 bg-mag-cream/40 text-center font-mono text-xs text-mag-muted">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Taniya D’silva · Wise Impact Consulting Solutions</div>
+      <div>New Delhi, India · Available for Global & Regional Missions</div>
+      <div>its.taniya.dsilva@gmail.com</div>
+    </div>
+  </footer>
+
+</body>
+</html>
