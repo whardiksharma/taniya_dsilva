@@ -9,10 +9,15 @@ app_license = "mit"
 before_request = ["taniya_dsilva.routing.set_home_page"]
 
 website_route_rules = [
-    {"from_route": "/monograph", "to_route": "designs/design-1-editorial-monograph"},
-    {"from_route": "/nordic", "to_route": "designs/design-2-nordic-warm-minimal"},
-    {"from_route": "/bento", "to_route": "designs/design-3-evidence-bento"},
-    {"from_route": "/swiss", "to_route": "designs/design-4-swiss-high-grid"},
-    {"from_route": "/split-canvas", "to_route": "designs/design-5-split-canvas"},
-    {"from_route": "/dossier", "to_route": "designs/design-6-strategic-dossier"},
+    {"from_route": "/design-2", "to_route": "design-2"},
+    {"from_route": "/design-3", "to_route": "design-3"},
+    {"from_route": "/design-4", "to_route": "design-4"},
+    {"from_route": "/work", "to_route": "work"},
+    {"from_route": "/pillars", "to_route": "pillars"},
+    {"from_route": "/ledger", "to_route": "ledger"},
+    {"from_route": "/connect", "to_route": "connect"},
+    {"from_route": "/about", "to_route": "about"},
+    {"from_route": "/wise-impact", "to_route": "wise-impact"},
+    {"from_route": "/what-others-say", "to_route": "what-others-say"},
+    {"from_route": "/blog", "to_route": "blog"},
 ]
