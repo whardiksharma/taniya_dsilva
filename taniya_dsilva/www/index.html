@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taniya D’silva — Living Ecosystem Atlas | Systems & Social Impact</title>
+  <title>Taniya D’silva — Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management</title>
   <meta name="description" content="15 years translating evidence and strategic vision into ground reality across climate resilience, gender equity in industry, informal labour markets, and rural public health across India.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
   </script>
   <style>
     /* ------------------------------------------------------------- */
-    /* FINAL DEDICATED THEME: SANDSTONE & TERRACOTTA EARTH           */
+    /* DEDICATED THEME: SANDSTONE & TERRACOTTA EARTH                */
     /* Agrarian Systems, Mountain Ecology, High Contrast & Warmth   */
     /* ------------------------------------------------------------- */
     :root {
@@ -65,7 +65,6 @@
       --card-shadow: 0 10px 25px -5px rgba(38, 27, 22, 0.06), 0 0 0 1px #E5D9C8;
     }
 
-    /* Dynamic Bindings & High Contrast Typography Engine */
     body {
       background-color: var(--bg-canvas) !important;
       color: var(--text-body) !important;
@@ -84,7 +83,6 @@
     .border-atlas-border { border-color: var(--border-color) !important; }
     .border-atlas-bright { border-color: var(--accent-bright) !important; }
 
-    /* Bulletproof Typography: Always High-Contrast in Light & Dark */
     h1, h2, h3, h4, h5, h6 {
       color: var(--text-heading) !important;
     }
@@ -97,7 +95,6 @@
     .text-atlas-amber { color: var(--accent-amber) !important; }
     .text-atlas-copper { color: var(--accent-copper) !important; }
 
-    /* Solid CTA buttons must strictly have crisp white text */
     .bg-atlas-olive,
     .bg-atlas-olive *,
     button.bg-atlas-olive,
@@ -116,17 +113,31 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-canvas); }
     ::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 3px; }
+
+    /* Search highlight styling */
+    .search-highlight {
+      background-color: #FDE68A !important;
+      color: #78350F !important;
+      padding: 0 3px;
+      border-radius: 3px;
+      box-shadow: 0 0 0 1px #F59E0B;
+    }
+    .search-target-active {
+      outline: 3px solid #B65A3A !important;
+      outline-offset: 4px;
+      transition: outline 0.3s ease;
+    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
 
   <!-- ========================================================================= -->
-  <!-- TOP RUNNING ATLAS HEADER (LIGHT THEMES BY DEFAULT + ALWAYS VISIBLE TABS) -->
+  <!-- TOP RUNNING HEADER WITH KEYWORD SEARCH ENGINE & NAVIGATION                -->
   <!-- ========================================================================= -->
   <header class="sticky top-0 z-50 bg-atlas-canvas/95 backdrop-blur-md border-b border-atlas-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-4">
       
-      <!-- Brand Lockup -->
+      <!-- Brand Lockup: Taniya D'silva as Primary Identity -->
       <a href="#hero" class="flex items-center gap-3 group">
         <div class="w-10 h-10 rounded-full border border-atlas-bright/50 flex items-center justify-center bg-atlas-surface text-atlas-bright font-serif font-bold text-base shadow-sm">
           TD
@@ -136,17 +147,38 @@
             Taniya D’silva
           </span>
           <span class="font-mono text-[10px] tracking-widest text-atlas-charcoal uppercase block mt-1">
-            Living Systems Atlas · Strategy Leadership
+            Social Impact Advisory · Research · Programme Leadership
           </span>
         </div>
       </a>
 
+      <!-- Quick Nav Links -->
+      <nav class="hidden lg:flex items-center gap-6 font-mono text-xs uppercase tracking-wider text-atlas-charcoal">
+        <a href="#about" class="hover:text-atlas-bright transition-colors">About</a>
+        <a href="#work" class="hover:text-atlas-bright transition-colors">My Work</a>
+        <a href="#affiliations" class="hover:text-atlas-bright transition-colors">Affiliations</a>
+        <a href="#pillars" class="hover:text-atlas-bright transition-colors">Wise Impact</a>
+        <a href="#endorsements" class="hover:text-atlas-bright transition-colors">Endorsements</a>
+        <a href="#connect" class="hover:text-atlas-bright transition-colors">Connect</a>
+      </nav>
 
-
-      <!-- Right CTAs -->
+      <!-- Live Keyword Search Bar & Primary CTA -->
       <div class="flex items-center gap-3">
+        <!-- Interactive Keyword Search Input -->
+        <div class="relative flex items-center">
+          <input 
+            type="text" 
+            id="pageSearchInput" 
+            placeholder="Search keywords (e.g. Climate, PMP, EV, ILSS)..." 
+            class="pl-8 pr-16 py-1.5 text-xs rounded-full border border-atlas-border bg-atlas-surface text-atlas-cream placeholder-atlas-charcoal/60 focus:outline-none focus:border-atlas-bright w-48 sm:w-64 transition-all shadow-sm"
+          >
+          <span class="absolute left-2.5 text-atlas-charcoal text-xs pointer-events-none">🔍</span>
+          <span id="searchResultCount" class="absolute right-7 font-mono text-[10px] text-atlas-bright hidden font-bold"></span>
+          <button id="searchClearBtn" class="absolute right-2.5 text-atlas-charcoal hover:text-atlas-bright text-xs hidden" title="Clear Search">✕</button>
+        </div>
+
         <a href="#connect" class="px-5 py-2.5 rounded-full bg-atlas-olive hover:opacity-90 text-white font-mono text-xs uppercase tracking-wider transition-all shadow-md font-semibold">
-          Discuss Requirement ↗
+          Get in Touch ↗
         </a>
       </div>
 
@@ -156,7 +188,7 @@
   <main>
 
     <!-- ========================================================================= -->
-    <!-- 1. HERO: LIVING ATLAS DUAL-CHAMBER SYSTEM -->
+    <!-- 1. HERO: CAREER PORTFOLIO (HOME)                                          -->
     <!-- ========================================================================= -->
     <section id="hero" class="py-16 sm:py-24 border-b border-atlas-border">
       <div class="max-w-7xl mx-auto px-6">
@@ -164,48 +196,74 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-atlas-surface border border-atlas-border font-mono text-xs text-atlas-bright">
+            <!-- Badges -->
+            <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-atlas-surface border border-atlas-border font-mono text-xs text-atlas-bright">
               <span class="w-2 h-2 rounded-full bg-atlas-bright animate-ping"></span>
-              <span>15 YEARS INTERSECTORAL PRAXIS · PAN-INDIA & REGIONAL ECOSYSTEMS</span>
+              <span class="font-semibold">TANIYA D'SILVA</span>
               <span>·</span>
-              <span class="text-atlas-amber">PMP® CERTIFIED</span>
+              <span class="text-atlas-charcoal">STRATEGIC SOCIAL IMPACT ADVISORY</span>
+              <span>·</span>
+              <span class="text-atlas-amber font-semibold">PMP® CERTIFIED</span>
             </div>
 
             <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal leading-[1.08] tracking-tight">
               Translating evidence and grand vision into <span class="italic text-atlas-bright font-normal">ground reality.</span>
             </h1>
 
-            <p class="text-atlas-cream/80 text-base sm:text-lg font-light leading-relaxed max-w-xl">
-              15 years driving organisational strategy, multi-stakeholder programmes, executive communications, and donor and government partnerships across climate, gender equity, labour markets and public health across pan-India ecosystems and grassroots landscapes.
+            <p class="font-mono text-xs uppercase tracking-widest text-atlas-amber font-medium">
+              Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management
             </p>
 
-            <div class="flex flex-wrap items-center gap-4 pt-2">
-              <a href="#connect" class="px-7 py-3.5 rounded-full bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg">
-                Discuss a Project Requirement
+            <p class="text-atlas-cream/80 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+              15 years driving strategy development, programme design, evidence-to-action research, and multi-stakeholder partnerships across climate, gender equity, labour markets, and public health.
+            </p>
+
+            <div class="p-3.5 rounded-2xl bg-atlas-surface/80 border border-atlas-border text-xs text-atlas-charcoal flex items-center justify-between">
+              <div>
+                <span class="font-mono uppercase text-[10px] text-atlas-bright block font-semibold">Current Consulting Practice</span>
+                <span class="font-serif text-white text-sm font-semibold">Wise Impact Consulting Solutions</span>
+                <span class="block text-[11px] text-atlas-charcoal">Strategy & Programme/Portfolio Leadership for Social Impact</span>
+              </div>
+              <a href="#pillars" class="font-mono text-[11px] text-atlas-bright hover:underline font-semibold">
+                Explore Practice →
               </a>
-              <a href="#landscape" class="px-7 py-3.5 rounded-full border border-atlas-border hover:border-atlas-bright text-atlas-cream font-mono text-xs uppercase tracking-widest transition-all">
-                Explore 4 Corridors
+            </div>
+
+            <!-- Primary and Secondary CTAs -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#work" class="px-7 py-3.5 rounded-full bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg hover:opacity-90">
+                Explore My Work
+              </a>
+              <a href="#about" class="px-7 py-3.5 rounded-full border border-atlas-border hover:border-atlas-bright text-atlas-cream font-mono text-xs uppercase tracking-widest transition-all">
+                Know More About Me
+              </a>
+              <a href="#connect" class="px-7 py-3.5 rounded-full border border-atlas-bright text-atlas-bright hover:bg-atlas-bright hover:text-white font-mono text-xs uppercase tracking-widest transition-all font-semibold">
+                Get in Touch
               </a>
             </div>
 
             <!-- Credentials Telemetry Bar -->
-            <div class="pt-8 border-t border-atlas-border grid grid-cols-3 gap-6 font-mono text-xs">
+            <div class="pt-8 border-t border-atlas-border grid grid-cols-2 sm:grid-cols-4 gap-6 font-mono text-xs">
               <div>
                 <span class="font-serif text-3xl sm:text-4xl text-white block">15+</span>
-                <span class="text-atlas-charcoal text-[11px] uppercase">Years Leadership</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">Years Strategy & Impact</span>
               </div>
               <div>
                 <span class="font-serif text-3xl sm:text-4xl text-atlas-bright block">₹10.5 Cr</span>
-                <span class="text-atlas-charcoal text-[11px] uppercase">National EV & Gender Scope</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">USD 1.3M EV & Gender</span>
               </div>
               <div>
                 <span class="font-serif text-3xl sm:text-4xl text-atlas-amber block">PMP®</span>
                 <span class="text-atlas-charcoal text-[11px] uppercase">Certified 2026</span>
               </div>
+              <div>
+                <span class="font-serif text-3xl sm:text-4xl text-atlas-copper block">Fellow</span>
+                <span class="text-atlas-charcoal text-[11px] uppercase">Terra.do & RegenIntel</span>
+              </div>
             </div>
           </div>
 
-          <!-- Dual Portrait & Animated Likeness Composition -->
+          <!-- Dual Portrait & Likeness Composition -->
           <div class="lg:col-span-5 relative">
             <div class="p-3.5 rounded-3xl bg-atlas-surface border border-atlas-border shadow-xl relative group">
               <div class="aspect-[4/5] rounded-2xl overflow-hidden relative">
@@ -213,13 +271,13 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-white">
                   <div class="font-serif text-xl font-bold">Taniya D’silva</div>
-                  <div class="font-mono text-xs text-white/90">Principal · Wise Impact Consulting Solutions</div>
+                  <div class="font-mono text-xs text-white/90">Strategic Social Impact Advisory</div>
                   <div class="font-mono text-[10px] text-white/70 mt-0.5">Primary Professional & Advisory Identity</div>
                 </div>
               </div>
             </div>
 
-            <!-- Custom Vector Likeness Badge Inset -->
+            <!-- Vector Likeness Badge Inset -->
             <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl overflow-hidden border-2 border-atlas-amber shadow-2xl bg-atlas-card hidden sm:block p-1">
               <img src="/assets/taniya_dsilva/taniya_animated_likeness.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/taniya_animated_likeness.png';}" alt="Vector Portrait Likeness Plate" class="w-full h-full object-cover rounded-xl">
               <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 text-[8px] font-mono text-atlas-amber uppercase">Likeness</div>
@@ -232,105 +290,329 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- 2. THE 4 THEMATIC ECOSYSTEM CORRIDORS (EVIDENCE-BASED PRACTICE) -->
+    <!-- 2. ABOUT TANIYA (FULL EDITORIAL NARRATIVE & CREDENTIALS AT A GLANCE)      -->
     <!-- ========================================================================= -->
-    <section id="landscape" class="py-20 border-b border-atlas-border bg-atlas-surface/50">
+    <section id="about" class="py-20 border-b border-atlas-border bg-atlas-surface/60">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">About Taniya</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal leading-tight">
+              Hi! I’m Taniya
+            </h2>
+
+            <div class="space-y-4 text-atlas-cream/90 text-base font-light leading-relaxed">
+              <p class="font-medium text-white text-lg">
+                I’m a strategy and programme leader who works with organisations trying to turn ideas for a more just and equitable world into action.
+              </p>
+
+              <p>
+                Over the past 15 years, I’ve worked across climate, gender equity, labour markets and public health, partnering with nonprofits, philanthropies, governments, academia and industry. Through <strong>Wise Impact Consulting Solutions</strong>, I advise social impact organisations on strategy, programme design, organisational capability and partnerships. I also design practical frameworks, tools and learning programmes that help teams make sense of complex challenges and move from evidence to action.
+              </p>
+
+              <p>
+                My work has taken me from public health and behavioural insights to climate philanthropy, gender-responsive workforce programmes and organisational strategy. I’ve led a USD 1.3 million national programme on women’s participation in India’s automotive and EV sector, designed strategic planning programmes for climate leaders, and helped organisations strengthen their capabilities, partnerships and pathways to impact. I’ve also worked on initiatives spanning financial inclusion, livelihoods, organisational development and innovation — often bringing together research, strategy and diverse stakeholders to move an idea from paper into practice.
+              </p>
+
+              <p>
+                I tend to work where the questions are complex, the stakeholders are many, and the path forward isn’t obvious. I bring structure, curiosity and an evidence-based approach to help make that path clearer and, importantly, actionable.
+              </p>
+            </div>
+
+            <!-- Callout Card -->
+            <div class="p-6 rounded-2xl bg-atlas-card border border-atlas-border space-y-3">
+              <p class="font-serif italic text-white text-base">
+                “If you’re working through a strategic, organisational or programme challenge, I’d love to hear from you on what you’re trying to solve.”
+              </p>
+              <div class="pt-2">
+                <a href="#connect" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-atlas-bright font-semibold hover:underline">
+                  Get in touch and let’s explore whether I can help ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credentials at a Glance: 10 Core Proof Points Grid -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-6 shadow-md">
+              <div class="border-b border-atlas-border pb-4">
+                <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Executive Portfolio</span>
+                <h3 class="font-serif text-2xl text-white font-normal mt-1">Credentials at a Glance</h3>
+              </div>
+
+              <ul class="space-y-4 font-mono text-xs text-atlas-cream/90">
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">15 Years Leadership</strong>
+                    Across strategy, programmes and social impact.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">PMP®-Certified, 2026</strong>
+                    Rigorous Project Management Professional standards.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">Terra.do & RegenIntel Fellow, 2026</strong>
+                    Global climate action, regeneration and systems thinking.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">Surge Climate Talent Fellow (2025–26)</strong>
+                    Studying impacts of coal-to-renewable transition on women and informal workers.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">USD 1.3M / ₹10.5 Cr National Programme</strong>
+                    Directed gender equity programme in automotive & EV manufacturing.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">Led 30+ Member Teams</strong>
+                    Interdisciplinary teams across research, engineering & operations.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">3–5 Year Investment Strategies</strong>
+                    Resourcing and portfolio roadmaps for emerging philanthropies.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">USD 1M+ / ₹8+ Cr Mobilised</strong>
+                    Secured through philanthropic partnerships across social organisations.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">300+ Proposals Worth €1.3M</strong>
+                    Developed as Pre-Sales Lead at Sattva.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-atlas-bright font-bold">✓</span>
+                  <div>
+                    <strong class="text-white block font-sans">Multi-Sectoral Ecosystem Delivery</strong>
+                    Nonprofits, private sector, government bodies, foundations and civil society.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. MY WORK: RECENT WORK & SELECTED ENGAGEMENTS (COMPLETE 8 CLIENT ITEMS)    -->
+    <!-- ========================================================================= -->
+    <section id="work" class="py-20 border-b border-atlas-border">
       <div class="max-w-7xl mx-auto px-6">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
           <div>
-            <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Thematic Landscape</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mt-1">Four Intersectoral Corridors</h2>
+            <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Selected Portfolio</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mt-1">My Work & Recent Projects</h2>
           </div>
-          <p class="font-mono text-xs text-atlas-charcoal mt-2 md:mt-0">15 Years Bridging Planetary Boundaries & Social Equity</p>
+          <p class="font-mono text-xs text-atlas-charcoal mt-2 md:mt-0">Evidence-to-Action Initiatives across Climate, Gender, Labour & Health</p>
         </div>
 
-        <!-- 4 Grid Corridors with Rich Photography & Proof Points -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <!-- Corridor 1: Climate & Mountain Watersheds -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
-            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1707721690544-781fe6ede937?auto=format&fit=crop&w=1200&q=80" alt="Indian Agricultural Watersheds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
-                Corridor 01 · Climate & Ecology
+          <!-- Item 1: What Mauritius can learn from the Himalayas -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1707721690544-781fe6ede937?auto=format&fit=crop&w=1200&q=80" alt="Himalayas and Agrarian Landscapes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Published Op-Ed · L’express.mu
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="font-serif text-2xl text-white font-normal mb-2">Climate Resilience, Watersheds & Agrarian Systems</h3>
+              <h3 class="font-serif text-2xl text-white font-normal">What Mauritius can learn from the Himalayas</h3>
               <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
-                Advising on climate adaptation and agrarian transitions across rain-fed agricultural corridors. Synthesizing rural groundwater depletion, soil resilience, and community water management across Indian agrarian landscapes.
+                Op-ed published in <em>L’express.mu</em> on 26 Aug 2026. Exploring climate vulnerability, mountain watershed governance, ecological resilience, and institutional lessons connecting small island states with fragile high-altitude ecosystems.
               </p>
             </div>
             <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
-              <span class="text-atlas-charcoal">Policy & Field Analysis</span>
-              <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline flex items-center gap-1 font-semibold">
-                <span>View Dispatch</span> ↗
+              <span class="text-atlas-charcoal">Author & Published Contributor</span>
+              <a href="https://lexpress.mu/node/561910" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                Read on L’Express ↗
               </a>
             </div>
           </div>
 
-          <!-- Corridor 2: Gender Equity & Clean Mobility (₹10.5 Cr EV) -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
-            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1698752821934-28bd5ce6fd42?auto=format&fit=crop&w=1200&q=80" alt="Clean Energy & Solar Grid Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-amber font-mono text-[10px] uppercase font-bold shadow-sm">
-                Corridor 02 · Gender & Manufacturing
+          <!-- Item 2: Strategic Planning for Climate Nonprofits -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1698752821934-28bd5ce6fd42?auto=format&fit=crop&w=1200&q=80" alt="Clean Energy and Climate Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-amber font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Learning Resource · Philanthropy
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="font-serif text-2xl text-white font-normal mb-2">₹10.5 Cr National Gender Equity in Automotive & EV</h3>
+              <h3 class="font-serif text-2xl text-white font-normal">Strategic Planning for Climate Nonprofits</h3>
               <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
-                Directed national multi-stakeholder programme accelerating female workforce participation, technical skilling, and retention across India's automotive and electric vehicle manufacturing ecosystems.
+                A structured learning resource developed for an international climate philanthropic organisation, enabling leaders of climate organizations looking to build, stress-test, or upgrade their strategic plans and impact pathways.
               </p>
             </div>
             <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
-              <span class="text-atlas-charcoal">Scope: ₹10.5 Cr National Portfolio</span>
-              <span class="text-atlas-bright font-semibold">Line Ministries & OEMs</span>
+              <span class="text-atlas-charcoal">Strategic Capacity Building</span>
+              <a href="https://strategic-planning-for-climate-nonprofits.teachable.com/p/strategic-planning-for-climate-change-organizations" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                Explore Curriculum ↗
+              </a>
             </div>
           </div>
 
-          <!-- Corridor 3: Labour Markets & Informal Sector -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
-            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1759738099669-d64b0656f6cf?auto=format&fit=crop&w=1200&q=80" alt="Indian Women Artisans & Loom Weavers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-copper font-mono text-[10px] uppercase font-bold shadow-sm">
-                Corridor 03 · Labour Markets
+          <!-- Item 3: Women, Informal Workers and Just Energy Transition -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1759738099669-d64b0656f6cf?auto=format&fit=crop&w=1200&q=80" alt="Informal Sector Women Artisans" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-copper font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Surge Climate Talent Fellowship
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="font-serif text-2xl text-white font-normal mb-2">Informal Labour, Social Security & Care Economies</h3>
+              <h3 class="font-serif text-2xl text-white font-normal">Women, Informal Workers & Just Energy Transition</h3>
               <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
-                Deep empirical field diagnostics across Indian industrial clusters uncovering structural wage penalties, e-Shram deficits, and social security architectures for home-based craftswomen and informal workers.
+                Exploring how the shift from coal to renewable energy will reshape women’s work, informal workers’ livelihoods, and community resilience, identifying tangible policy and market pathways to create gender-just, equitable opportunities.
               </p>
             </div>
             <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
-              <span class="text-atlas-charcoal">Method: Qualitative Field Synthesis</span>
-              <span class="text-atlas-bright font-semibold">Policy Reform</span>
+              <span class="text-atlas-charcoal">Focus: Coal-to-Renewable Shift</span>
+              <a href="https://share.google/HJGnm6liGEbnwpYxg" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                View Brief ↗
+              </a>
             </div>
           </div>
 
-          <!-- Corridor 4: Public Health & Primary Delivery -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group">
-            <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1719594546260-0039e7ca88c1?auto=format&fit=crop&w=1200&q=80" alt="Frontline Healthcare & Medical Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
-                Corridor 04 · Public Health
+          <!-- Item 4: ILSS People Practices Programme -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80" alt="Development Sector Leadership" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Executive Capability · ILSS
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="font-serif text-2xl text-white font-normal mb-2">Primary Healthcare Systems & Frontline Delivery</h3>
+              <h3 class="font-serif text-2xl text-white font-normal">ILSS People Practices Programme</h3>
               <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
-                Strategic evaluations of last-mile maternal health distribution chains, community health worker empowerment, and frontline healthcare governance across primary healthcare centres, ASHA networks, and district health cadres in India.
+                Designed and launched a sectoral capability-building initiative for senior leaders in the Indian development sector, equipping organizations with progressive talent strategies, culture architectures, and governance practices.
               </p>
             </div>
             <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
-              <span class="text-atlas-charcoal">Consortiums: UN & Foundations</span>
-              <span class="text-atlas-bright font-semibold">Scale Implementation</span>
+              <span class="text-atlas-charcoal">India Leaders for Social Sector</span>
+              <a href="https://indialeadersforsocialsector.com/ilss-people-practices-program/" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                View Programme ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5: Women's Participation in Automotive & EV Manufacturing -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Automotive and Clean Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-amber font-mono text-[10px] uppercase font-bold shadow-sm">
+                  National Innovation · USD 1.3M / ₹10.5 Cr
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl text-white font-normal">Women's Participation in Automotive & EV</h3>
+              <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
+                Directed strategic vision and execution for a USD 1.3M (₹10.5 Cr) nationwide innovation programme focused on women's workforce participation, technical skilling, and shopfloor retention in India's automotive and EV manufacturing sector, leading a 30+ member team.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Team: 30+ Interdisciplinary</span>
+              <span class="text-atlas-bright font-semibold">National Industrial Scale</span>
+            </div>
+          </div>
+
+          <!-- Item 6: The Resilience Collaborative -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1719594546260-0039e7ca88c1?auto=format&fit=crop&w=1200&q=80" alt="Global Health Frontline Practice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Community of Practice · Global Health
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl text-white font-normal">The Resilience Collaborative</h3>
+              <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
+                Designed the end-to-end engagement strategy for a global health Community of Practice, defining its core value proposition, member journey, partner pipeline, and multi-channel marketing and dissemination approach.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Global Community Strategy</span>
+              <a href="https://trc.community/" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                Explore TRC Community ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7: Uttar Pradesh Behavioural Insights Unit -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Public Health and Policy Research" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-copper font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Policy Innovation · Governance
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl text-white font-normal">Uttar Pradesh Behavioural Insights Unit</h3>
+              <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
+                Served as Interim Lead of the Uttar Pradesh Behavioural Insights Unit, bridging cutting-edge academic research, state government policy needs, and frontline behavioral innovation across pressing public-health priorities.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Role: Interim Unit Lead</span>
+              <span class="text-atlas-bright font-semibold">Health Policy & Government</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Research, Strategy & Innovation Clients -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border hover:border-atlas-bright transition-all space-y-6 group flex flex-col justify-between">
+            <div class="space-y-5">
+              <div class="aspect-[16/9] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80" alt="Strategy and Innovation Ideation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-white/90 text-atlas-bright font-mono text-[10px] uppercase font-bold shadow-sm">
+                  Institutional Portfolio
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl text-white font-normal">Research, Strategy & Innovation Portfolio</h3>
+              <p class="text-sm text-atlas-cream/80 font-light leading-relaxed">
+                Designed and delivered high-impact research, innovation, and strategic advisory projects for premier institutions including <strong>World YWCA</strong>, <strong>ILSS</strong>, <strong>HDFC Bank</strong>, and the <strong>RBI Innovation Hub</strong>.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-atlas-border flex items-center justify-between font-mono text-xs">
+              <span class="text-atlas-charcoal">Institutions: RBI Hub, HDFC, YWCA</span>
+              <span class="text-atlas-bright font-semibold">Institutional Advisory</span>
             </div>
           </div>
 
@@ -340,114 +622,117 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- 3. THE 4 PILLARS OF PRACTICE -->
+    <!-- 4. AFFILIATIONS, FELLOWSHIPS & ALUMNI NETWORKS                             -->
+    <!-- ========================================================================= -->
+    <section id="affiliations" class="py-20 border-b border-atlas-border bg-atlas-surface/50">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Global Community & Fellowships</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Affiliations & Fellowships</h2>
+          <p class="text-sm text-atlas-charcoal font-light">Accreditations and global fellowship networks advancing climate, regeneration, and systems thinking.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- RegenIntel -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-4 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-xl font-bold shadow-sm">
+                RI
+              </div>
+              <h3 class="font-serif text-xl text-white font-normal">RegenIntel Fellow, 2026</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
+                Regenerative intelligence, ecological systemic economics, and nature-positive systems transition.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-atlas-border">
+              <a href="https://www.regenintel.earth/" target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                regenintel.earth ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Terra.do -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-4 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-amber text-xl font-bold shadow-sm">
+                TD
+              </div>
+              <h3 class="font-serif text-xl text-white font-normal">Terra.do Fellow, 2026</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
+                Climate Fellowship — Learning for Action. Core methodologies in mitigation, adaptation, and finance.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-atlas-border">
+              <a href="https://www.terra.do/climate-fellowship-learning-for-action/" target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                terra.do ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Surge Climate Talent -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-4 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-copper text-xl font-bold shadow-sm">
+                SC
+              </div>
+              <h3 class="font-serif text-xl text-white font-normal">Surge Climate Talent Fellow</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
+                Fellowship (2025–26) studying the impacts of a coal-to-renewable transition on women and informal workers.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-atlas-border">
+              <span class="font-mono text-[11px] text-atlas-charcoal">Just Transition Research</span>
+            </div>
+          </div>
+
+          <!-- PMP -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-4 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-xl font-bold shadow-sm">
+                PM
+              </div>
+              <h3 class="font-serif text-xl text-white font-normal">PMP® Certified, 2026</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
+                Project Management Professional certification by Project Management Institute (PMI).
+              </p>
+            </div>
+            <div class="pt-3 border-t border-atlas-border">
+              <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-atlas-bright hover:underline font-semibold flex items-center gap-1">
+                Verify on LinkedIn ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. WISE IMPACT CONSULTING SOLUTIONS & THE 5 PILLARS OF PRACTICE           -->
     <!-- ========================================================================= -->
     <section id="pillars" class="py-20 border-b border-atlas-border">
       <div class="max-w-7xl mx-auto px-6">
         
-        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
-          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Capabilities & Solutions</span>
-          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Four Pillars of Practice</h2>
-          <p class="text-sm text-atlas-charcoal font-light">End-to-end advisory solutions for foundations and leadership teams.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Node 1 -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
-            <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
-              01
-            </div>
-            <h3 class="font-serif text-xl text-white font-semibold">Strategy & Organisational Advisory</h3>
-            <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
-              Helping organisations translate ambition into clear strategic choices, priorities and roadmaps.
-            </p>
-            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
-              <li>✓ Organisational & portfolio strategy</li>
-              <li>✓ Strategic planning & foresight</li>
-              <li>✓ Investment theses & priorities</li>
-              <li>✓ Multi-year operational roadmaps</li>
-              <li>✓ Decision support for C-suite</li>
-            </ul>
-          </div>
-
-          <!-- Node 2 -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
-            <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
-              02
-            </div>
-            <h3 class="font-serif text-xl text-white font-semibold">Research & Strategy</h3>
-            <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
-              Turning evidence, research and stakeholder insights into actionable strategic direction.
-            </p>
-            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
-              <li>✓ Landscape & ecosystem research</li>
-              <li>✓ Qualitative fieldwork methodologies</li>
-              <li>✓ Sector and market analysis</li>
-              <li>✓ Research synthesis for ministers</li>
-              <li>✓ Evidence-to-action strategy</li>
-            </ul>
-          </div>
-
-          <!-- Node 3 -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
-            <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
-              03
-            </div>
-            <h3 class="font-serif text-xl text-white font-semibold">Programme Design & PMO</h3>
-            <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
-              Design and strengthen programmes that move from strategic intent to effective implementation.
-            </p>
-            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
-              <li>✓ Programme strategy & implementation</li>
-              <li>✓ PMP® portfolio management & PMO</li>
-              <li>✓ Multi-stakeholder design</li>
-              <li>✓ Pilot and innovation blueprints</li>
-              <li>✓ Bottleneck & governance reviews</li>
-            </ul>
-          </div>
-
-          <!-- Node 4 -->
-          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all">
-            <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
-              04
-            </div>
-            <h3 class="font-serif text-xl text-white font-semibold">Partnerships & Capability</h3>
-            <p class="text-xs text-atlas-cream/80 font-light leading-relaxed">
-              Strengthening relationships, capabilities and systems needed to deliver impact on the ground.
-            </p>
-            <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
-              <li>✓ Multi-stakeholder partnerships</li>
-              <li>✓ Government & institutional pacts</li>
-              <li>✓ Donor & philanthropic relations</li>
-              <li>✓ Leadership capability building</li>
-              <li>✓ Executive briefings & alignment</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 4. PRACTICE VEHICLE: WISE IMPACT CONSULTING SOLUTIONS -->
-    <!-- ========================================================================= -->
-    <section id="practice" class="py-20 border-b border-atlas-border bg-atlas-surface/60">
-      <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="p-8 sm:p-14 rounded-3xl bg-atlas-card border border-atlas-border space-y-6">
+        <!-- Practice Introduction -->
+        <div class="p-8 sm:p-12 rounded-3xl bg-atlas-surface border border-atlas-border mb-16 space-y-4 shadow-sm">
           <div class="flex items-center gap-3 font-mono text-xs text-atlas-bright uppercase tracking-widest">
             <span class="w-2.5 h-2.5 rounded-full bg-atlas-bright"></span>
-            <span>Current Consulting Practice Vehicle</span>
+            <span>Current Consulting Practice</span>
           </div>
 
           <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal leading-tight">
             Wise Impact Consulting Solutions
           </h2>
 
+          <p class="font-mono text-xs uppercase tracking-widest text-atlas-amber font-medium">
+            Tagline / Descriptor: Strategy and Programme/Portfolio Leadership for Social Impact
+          </p>
+
           <p class="text-atlas-cream/80 text-base sm:text-lg font-light leading-relaxed max-w-4xl">
-            WISE understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.
+            Wise Impact understands the demands made of social sector leaders to straddle the twin responsibilities of being the vision bearers of their ideas for a just and equitable world and that of rallying the team and the organization to translate the grand vision to programs on the ground.
           </p>
 
           <p class="text-atlas-cream/80 text-base font-light leading-relaxed max-w-4xl">
@@ -459,18 +744,141 @@
           </div>
         </div>
 
+        <!-- 5 Pillars Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Advisory Solutions</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Five Pillars of Practice</h2>
+          <p class="text-sm text-atlas-charcoal font-light">Comprehensive advisory, design, capability building, and thought leadership solutions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
+                01
+              </div>
+              <h3 class="font-serif text-xl text-white font-semibold">Strategy & Organisational Advisory</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed font-serif italic">
+                Helping organisations translate ambition into clear strategic choices, priorities and roadmaps.
+              </p>
+              <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+                <li>✓ Organisational & portfolio strategy</li>
+                <li>✓ Strategic planning & foresight</li>
+                <li>✓ Investment theses & portfolio priorities</li>
+                <li>✓ Multi-year strategic & operational roadmaps</li>
+                <li>✓ Organisational positioning</li>
+                <li>✓ Strategic decision support for senior leadership</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
+                02
+              </div>
+              <h3 class="font-serif text-xl text-white font-semibold">Evidence-to-Action</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed font-serif italic">
+                Turning evidence, research and stakeholder insights into actionable strategic direction.
+              </p>
+              <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+                <li>✓ Landscape & ecosystem research</li>
+                <li>✓ Qualitative research methodologies</li>
+                <li>✓ Sector and market analysis</li>
+                <li>✓ Research synthesis</li>
+                <li>✓ Evidence-to-action strategy</li>
+                <li>✓ Research reports & strategic recommendations</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
+                03
+              </div>
+              <h3 class="font-serif text-xl text-white font-semibold">Programme & Portfolio Design</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed font-serif italic">
+                Design and strengthen programmes that move from strategic intent to effective implementation.
+              </p>
+              <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+                <li>✓ Programme design & implementation planning</li>
+                <li>✓ Portfolio management</li>
+                <li>✓ Fractional Program Management & Delivery</li>
+                <li>✓ Pilot and innovation design</li>
+                <li>✓ Programme reviews & strategic problem-solving</li>
+                <li>✓ Monitoring strategic priorities & delivery</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
+                04
+              </div>
+              <h3 class="font-serif text-xl text-white font-semibold">Partnerships & Capability</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed font-serif italic">
+                Strengthening relationships, capabilities and systems needed to deliver impact on the ground.
+              </p>
+              <ul class="space-y-2 font-mono text-[11px] text-atlas-charcoal border-t border-atlas-border pt-4">
+                <li>✓ Multi-stakeholder partnerships</li>
+                <li>✓ Government & institutional engagement</li>
+                <li>✓ Donor & philanthropic partnerships</li>
+                <li>✓ Fractional Partnerships & OD Leadership</li>
+                <li>✓ Leadership & capability building</li>
+                <li>✓ Executive communications & briefings</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 5 (NEW) -->
+          <div class="p-8 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div class="space-y-4">
+              <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold">
+                05
+              </div>
+              <h3 class="font-serif text-xl text-white font-semibold">Speaking, Facilitation & Thought Leadership</h3>
+              <p class="text-xs text-atlas-cream/80 font-light leading-relaxed font-serif italic">
+                Sharing practical insights and facilitating conversations on strategy, social impact and themes at the intersection of climate, gender, labour, and public health.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-atlas-border pt-4 font-mono text-[11px] text-atlas-charcoal">
+                <ul class="space-y-2">
+                  <li>✓ Keynotes and conference talks</li>
+                  <li>✓ Panel discussions & moderated conversations</li>
+                  <li>✓ Fireside chats</li>
+                </ul>
+                <ul class="space-y-2">
+                  <li>✓ Workshops and learning sessions</li>
+                  <li>✓ Roundtables & facilitated stakeholder dialogues</li>
+                  <li>✓ Guest lectures / academic & practitioner sessions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
     <!-- ========================================================================= -->
-    <!-- 5. WHAT OTHERS SAY (ENDORSEMENTS) -->
+    <!-- 6. WHAT OTHERS SAY (ENDORSEMENTS & LINKEDIN REVIEWS)                      -->
     <!-- ========================================================================= -->
-    <section id="endorsements" class="py-20 border-b border-atlas-border">
+    <section id="endorsements" class="py-20 border-b border-atlas-border bg-atlas-surface/50">
       <div class="max-w-7xl mx-auto px-6">
         
         <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
-          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Verified Endorsements</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">What It’s Like to Work Together</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">What Others Say</h2>
+          <p class="text-sm text-atlas-charcoal font-light">
+            Verified feedback from partners, directors, and institutional trustees.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -507,11 +915,17 @@
 
         </div>
 
+        <div class="text-center mt-10">
+          <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-atlas-border hover:border-atlas-bright text-atlas-bright font-mono text-xs uppercase tracking-wider font-semibold transition-all">
+            See more recommendations on LinkedIn ↗
+          </a>
+        </div>
+
       </div>
     </section>
 
     <!-- ========================================================================= -->
-    <!-- 6. CONNECT / INQUIRY FORM (COMPLETE CLIENT SRS) -->
+    <!-- 7. CONNECT / INQUIRY FORM (COMPLETE CLIENT SRS - 9 FIELDS)                -->
     <!-- ========================================================================= -->
     <section id="connect" class="py-24 bg-atlas-surface/80">
       <div class="max-w-4xl mx-auto px-6">
@@ -522,7 +936,7 @@
             <span class="font-mono text-xs uppercase tracking-widest text-atlas-bright font-semibold">Strategic Collaboration</span>
             <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Discuss a Project Requirement</h2>
             <p class="text-sm text-atlas-cream/80 max-w-xl mx-auto font-light leading-relaxed">
-              Inquiries route directly to Taniya D’silva at <span class="font-mono text-atlas-bright font-medium">its.taniya.dsilva@gmail.com</span> for independent advisory, programme directorship, or research commissions.
+              Inquiries route directly to Taniya D’silva at <span class="font-mono text-atlas-bright font-medium">its.taniya.dsilva@gmail.com</span> for independent advisory assignments, collaborations, research, fellowships, speaking, or institutional advisory.
             </p>
           </div>
 
@@ -530,23 +944,23 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="space-y-1.5">
-                <label class="block font-mono text-xs text-atlas-charcoal uppercase">1. Full Name *</label>
-                <input type="text" name="name" required placeholder="Ananya Sen" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">1. Name *</label>
+                <input type="text" name="name" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
                 <label class="block font-mono text-xs text-atlas-charcoal uppercase">2. Organisation *</label>
-                <input type="text" name="organisation" required placeholder="Development Alternatives / CEEW / Tata Trusts" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <input type="text" name="organisation" required placeholder="Organization / Foundation / Ministry" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="space-y-1.5">
-                <label class="block font-mono text-xs text-atlas-charcoal uppercase">3. Email Address *</label>
-                <input type="email" name="email" required placeholder="ananya.sen@foundation.org.in" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <label class="block font-mono text-xs text-atlas-charcoal uppercase">3. Email *</label>
+                <input type="email" name="email" required placeholder="name@organisation.org" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
                 <label class="block font-mono text-xs text-atlas-charcoal uppercase">4. Role / Designation *</label>
-                <input type="text" name="designation" required placeholder="Executive Director" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <input type="text" name="designation" required placeholder="Executive Director / CEO / Trustee" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
@@ -566,27 +980,27 @@
 
             <div class="space-y-1.5">
               <label class="block font-mono text-xs text-atlas-charcoal uppercase">6. Brief description of the challenge/opportunity *</label>
-              <textarea name="challenge" rows="4" required placeholder="Describe the strategic challenge, context, and desired outcomes..." class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none"></textarea>
+              <textarea name="challenge" rows="4" required placeholder="Describe the strategic question, project context, and desired outcomes..." class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none"></textarea>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="space-y-1.5">
                 <label class="block font-mono text-xs text-atlas-charcoal uppercase">7. Expected Timeline</label>
-                <input type="text" name="timeline" placeholder="e.g. Q3 2026 / 6 Months" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <input type="text" name="timeline" placeholder="e.g. Q3 2026 / 3–6 Months / Immediate" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
                 <label class="block font-mono text-xs text-atlas-charcoal uppercase">8. How did you hear about Taniya?</label>
-                <input type="text" name="referral" placeholder="e.g. Recommendation / LinkedIn / CEEW / Indian Development Network" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+                <input type="text" name="referral" placeholder="e.g. LinkedIn / Peer Referral / Published Op-Ed / Event" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
             <div class="space-y-1.5">
               <label class="block font-mono text-xs text-atlas-charcoal uppercase">9. Optional: Relevant documents / website</label>
-              <input type="text" name="docs" placeholder="https://yourorganisation.in or link to project brief" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
+              <input type="text" name="docs" placeholder="https://organisation.org or link to brief" class="w-full px-4 py-3 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-sm focus:border-atlas-bright focus:outline-none">
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg">
-              Submit Project Requirement →
+            <button type="submit" class="w-full py-4 rounded-xl bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg hover:opacity-95">
+              Discuss a Project Requirement →
             </button>
           </form>
 
@@ -597,20 +1011,177 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
   <footer class="border-t border-atlas-border py-12 bg-atlas-canvas text-atlas-charcoal font-mono text-xs">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
-        <span class="text-white font-semibold">Taniya D’silva</span> · Wise Impact Consulting Solutions
+        <span class="text-white font-semibold">Taniya D’silva</span> · Strategic Social Impact Advisory
       </div>
       <div>
-        India Based · Available for Global & Regional Missions
+        Current Consulting Practice: <span class="text-white">Wise Impact Consulting Solutions</span>
       </div>
-      <div class="text-atlas-bright">
-        its.taniya.dsilva@gmail.com
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/taniyadsilva" target="_blank" rel="noopener noreferrer" class="text-atlas-bright hover:underline">
+          LinkedIn ↗
+        </a>
+        <span>·</span>
+        <a href="mailto:its.taniya.dsilva@gmail.com" class="text-atlas-bright hover:underline">
+          its.taniya.dsilva@gmail.com
+        </a>
       </div>
     </div>
   </footer>
+
+  <!-- ========================================================================= -->
+  <!-- KEYWORD SEARCH & LOCATION ENGINE (CLIENT REQUIREMENT)                     -->
+  <!-- ========================================================================= -->
+  <script>
+    (function initPortfolioSearch() {
+      const searchInput = document.getElementById('pageSearchInput');
+      const countBadge = document.getElementById('searchResultCount');
+      const clearBtn = document.getElementById('searchClearBtn');
+      if (!searchInput) return;
+
+      let currentMatches = [];
+      let currentIndex = -1;
+
+      // Keyboard shortcut '/' to focus search
+      window.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+          e.preventDefault();
+          searchInput.focus();
+        }
+      });
+
+      function clearHighlights() {
+        document.querySelectorAll('.search-highlight').forEach(el => {
+          const parent = el.parentNode;
+          parent.replaceChild(document.createTextNode(el.textContent), el);
+          parent.normalize();
+        });
+        document.querySelectorAll('.search-target-active').forEach(el => {
+          el.classList.remove('search-target-active');
+        });
+        currentMatches = [];
+        currentIndex = -1;
+        countBadge.classList.add('hidden');
+        clearBtn.classList.add('hidden');
+      }
+
+      function highlightInElement(root, keyword) {
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        const nodesToReplace = [];
+        const regex = new RegExp('(' + keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (node.parentNode && !['SCRIPT', 'STYLE', 'INPUT', 'TEXTAREA', 'SELECT'].includes(node.parentNode.tagName)) {
+            if (regex.test(node.nodeValue)) {
+              nodesToReplace.push(node);
+            }
+          }
+        }
+
+        nodesToReplace.forEach(node => {
+          const frag = document.createDocumentFragment();
+          let lastIdx = 0;
+          const text = node.nodeValue;
+          regex.lastIndex = 0;
+          let match;
+
+          while ((match = regex.exec(text)) !== null) {
+            if (match.index > lastIdx) {
+              frag.appendChild(document.createTextNode(text.substring(lastIdx, match.index)));
+            }
+            const span = document.createElement('span');
+            span.className = 'search-highlight';
+            span.textContent = match[0];
+            frag.appendChild(span);
+            currentMatches.push(span);
+            lastIdx = regex.lastIndex;
+          }
+
+          if (lastIdx < text.length) {
+            frag.appendChild(document.createTextNode(text.substring(lastIdx)));
+          }
+
+          if (node.parentNode) {
+            node.parentNode.replaceChild(frag, node);
+          }
+        });
+      }
+
+      function performSearch() {
+        const query = searchInput.value.trim();
+        clearHighlights();
+
+        if (query.length < 2) return;
+
+        clearBtn.classList.remove('hidden');
+        const mainContent = document.querySelector('main');
+        if (!mainContent) return;
+
+        highlightInElement(mainContent, query);
+
+        if (currentMatches.length > 0) {
+          countBadge.textContent = currentMatches.length;
+          countBadge.classList.remove('hidden');
+          jumpToNextMatch();
+        } else {
+          countBadge.textContent = '0';
+          countBadge.classList.remove('hidden');
+        }
+      }
+
+      function jumpToNextMatch() {
+        if (currentMatches.length === 0) return;
+        if (currentIndex >= 0 && currentMatches[currentIndex]) {
+          currentMatches[currentIndex].closest('.rounded-3xl, .rounded-2xl, section')?.classList.remove('search-target-active');
+        }
+
+        currentIndex = (currentIndex + 1) % currentMatches.length;
+        const target = currentMatches[currentIndex];
+        if (target) {
+          const card = target.closest('.rounded-3xl, .rounded-2xl, section');
+          if (card) {
+            card.classList.add('search-target-active');
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+
+      let debounceTimer;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(performSearch, 250);
+      });
+
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          if (currentMatches.length > 0) {
+            jumpToNextMatch();
+          } else {
+            performSearch();
+          }
+        } else if (e.key === 'Escape') {
+          searchInput.value = '';
+          clearHighlights();
+          searchInput.blur();
+        }
+      });
+
+      clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        clearHighlights();
+        searchInput.focus();
+      });
+    })();
+  </script>
 
 </body>
 </html>
