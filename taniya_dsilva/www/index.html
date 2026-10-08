@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" data-theme="sage">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,71 +43,10 @@
   </script>
   <style>
     /* ------------------------------------------------------------- */
-    /* ALL LIGHT PALETTES (ACCORDING TO TANIYA'S SOCIAL IMPACT PRACTICE) */
+    /* FINAL DEDICATED THEME: SANDSTONE & TERRACOTTA EARTH           */
+    /* Agrarian Systems, Mountain Ecology, High Contrast & Warmth   */
     /* ------------------------------------------------------------- */
-
-    /* 1. Sage & Olive Light (DEFAULT - Natural Systems Linen) */
-    :root, [data-theme="sage"] {
-      --bg-canvas: #FAF7F2;
-      --bg-surface: #FFFFFF;
-      --bg-card: #FFFFFF;
-      --border-color: #E6E0D5;
-      --border-active: #3F5E3B;
-      --text-heading: #1B241A;
-      --text-body: #333F32;
-      --text-muted: #6B7669;
-      --accent-bright: #3F5E3B;
-      --accent-primary: #3F5E3B;
-      --accent-hover: #2E472A;
-      --accent-amber: #B88B32;
-      --accent-copper: #B25838;
-      --badge-bg: #EDF3EC;
-      --contour-dot: rgba(63, 94, 59, 0.12);
-      --card-shadow: 0 10px 25px -5px rgba(27, 36, 26, 0.05), 0 0 0 1px #E6E0D5;
-    }
-
-    /* 2. Warm Ivory Editorial (Clean Warm Alabaster Paper) */
-    [data-theme="ivory"] {
-      --bg-canvas: #FBF9F5;
-      --bg-surface: #FFFFFF;
-      --bg-card: #F6F2EB;
-      --border-color: #E4DCD0;
-      --border-active: #4A6B48;
-      --text-heading: #1C211B;
-      --text-body: #394238;
-      --text-muted: #727B70;
-      --accent-bright: #4A6B48;
-      --accent-primary: #4A6B48;
-      --accent-hover: #365034;
-      --accent-amber: #C29B48;
-      --accent-copper: #BA5D3E;
-      --badge-bg: #EEF3ED;
-      --contour-dot: rgba(74, 107, 72, 0.12);
-      --card-shadow: 0 10px 25px -5px rgba(28, 33, 27, 0.06), 0 0 0 1px #E4DCD0;
-    }
-
-    /* 3. Diplomatic Policy Navy (Crisp White Canvas with Policy Navy Ink) */
-    [data-theme="policy"] {
-      --bg-canvas: #F8FAFC;
-      --bg-surface: #FFFFFF;
-      --bg-card: #FFFFFF;
-      --border-color: #E2E8F0;
-      --border-active: #0284C7;
-      --text-heading: #0F172A;
-      --text-body: #334155;
-      --text-muted: #64748B;
-      --accent-bright: #0284C7;
-      --accent-primary: #0369A1;
-      --accent-hover: #075985;
-      --accent-amber: #D97706;
-      --accent-copper: #E11D48;
-      --badge-bg: #F0F9FF;
-      --contour-dot: rgba(2, 132, 199, 0.12);
-      --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 0 0 1px #E2E8F0;
-    }
-
-    /* 4. Sandstone & Terracotta Earth (Agrarian Mountain Systems) */
-    [data-theme="terracotta"] {
+    :root {
       --bg-canvas: #F7F3ED;
       --bg-surface: #FFFFFF;
       --bg-card: #FFFFFF;
@@ -122,28 +61,8 @@
       --accent-amber: #C58B35;
       --accent-copper: #9E3618;
       --badge-bg: #F8ECE6;
-      --contour-dot: rgba(182, 90, 58, 0.12);
+      --contour-dot: rgba(182, 90, 58, 0.14);
       --card-shadow: 0 10px 25px -5px rgba(38, 27, 22, 0.06), 0 0 0 1px #E5D9C8;
-    }
-
-    /* 5. The 1 Dark Option: Obsidian Forest (For comparison only) */
-    [data-theme="dark"] {
-      --bg-canvas: #0D110D;
-      --bg-surface: #141A14;
-      --bg-card: #1B241B;
-      --border-color: rgba(255, 255, 255, 0.1);
-      --border-active: #8EC271;
-      --text-heading: #FFFFFF;
-      --text-body: #E8F2E2;
-      --text-muted: #7A8C7A;
-      --accent-bright: #8EC271;
-      --accent-primary: #456834;
-      --accent-hover: #9ED67E;
-      --accent-amber: #DEAB52;
-      --accent-copper: #C96D46;
-      --badge-bg: rgba(142, 194, 113, 0.14);
-      --contour-dot: rgba(142, 194, 113, 0.14);
-      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
     }
 
     /* Dynamic Bindings & High Contrast Typography Engine */
@@ -197,12 +116,6 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-canvas); }
     ::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 3px; }
-
-    .theme-pill.active {
-      background-color: var(--accent-primary) !important;
-      color: #FFFFFF !important;
-      font-weight: 700;
-    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
@@ -228,37 +141,7 @@
         </div>
       </a>
 
-      <!-- ===================================================================== -->
-      <!-- LIGHT PALETTES SWITCHER BAR (PRESENTATION READY) -->
-      <!-- ===================================================================== -->
-      <div class="flex items-center gap-1.5 p-1 rounded-full bg-atlas-surface border border-atlas-border font-mono text-[11px] shadow-sm">
-        <span class="px-2 text-atlas-charcoal uppercase text-[10px] font-semibold hidden md:inline">🎨 Light Palette:</span>
-        
-        <button onclick="applyTheme('sage')" id="tb-sage" class="theme-pill active px-3 py-1 rounded-full bg-[#EDF3EC] text-[#3F5E3B] border border-[#3F5E3B]/30 flex items-center gap-1.5 transition-all">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#3F5E3B]"></span>
-          <span>Sage Olive</span>
-        </button>
 
-        <button onclick="applyTheme('ivory')" id="tb-ivory" class="theme-pill px-3 py-1 rounded-full bg-[#FAF7F2] text-[#4A6B48] border border-[#4A6B48]/30 flex items-center gap-1.5 transition-all">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#C29B48]"></span>
-          <span>Warm Ivory</span>
-        </button>
-
-        <button onclick="applyTheme('policy')" id="tb-policy" class="theme-pill px-3 py-1 rounded-full bg-[#F0F9FF] text-[#0369A1] border border-[#0369A1]/30 flex items-center gap-1.5 transition-all">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#0284C7]"></span>
-          <span>Policy Navy</span>
-        </button>
-
-        <button onclick="applyTheme('terracotta')" id="tb-terracotta" class="theme-pill px-3 py-1 rounded-full bg-[#F8ECE6] text-[#944226] border border-[#944226]/30 flex items-center gap-1.5 transition-all">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#B65A3A]"></span>
-          <span>Terracotta</span>
-        </button>
-
-        <button onclick="applyTheme('dark')" id="tb-dark" class="theme-pill px-3 py-1 rounded-full bg-[#1B241B] text-[#8EC271] border border-[#8EC271]/30 flex items-center gap-1.5 transition-all" title="1 Dark Option for Comparison">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#8EC271]"></span>
-          <span>Dark (1 Opt)</span>
-        </button>
-      </div>
 
       <!-- Right CTAs -->
       <div class="flex items-center gap-3">
@@ -269,33 +152,6 @@
 
     </div>
   </header>
-
-  <!-- ========================================================================= -->
-  <!-- FLOATING QUICK LIGHT PALETTE DOCK (BOTTOM-RIGHT) -->
-  <!-- ========================================================================= -->
-  <aside class="fixed bottom-6 right-6 z-50 p-2.5 rounded-2xl bg-atlas-surface/95 backdrop-blur-md border border-atlas-border shadow-xl flex items-center gap-2 font-mono text-xs" aria-label="Palette Switcher">
-    <span class="text-atlas-charcoal text-[10px] uppercase font-bold pl-1 hidden sm:inline">Theme:</span>
-    
-    <button onclick="applyTheme('sage')" title="Sage & Olive Light" class="w-8 h-8 rounded-xl bg-[#FAF7F2] border-2 border-[#3F5E3B] flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-      <span class="w-3.5 h-3.5 rounded-full bg-[#3F5E3B]"></span>
-    </button>
-
-    <button onclick="applyTheme('ivory')" title="Warm Ivory Paper" class="w-8 h-8 rounded-xl bg-[#FBF9F5] border-2 border-[#C29B48] flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-      <span class="w-3.5 h-3.5 rounded-full bg-[#C29B48]"></span>
-    </button>
-
-    <button onclick="applyTheme('policy')" title="Diplomatic Policy Navy" class="w-8 h-8 rounded-xl bg-[#F8FAFC] border-2 border-[#0284C7] flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-      <span class="w-3.5 h-3.5 rounded-full bg-[#0284C7]"></span>
-    </button>
-
-    <button onclick="applyTheme('terracotta')" title="Sandstone Terracotta Earth" class="w-8 h-8 rounded-xl bg-[#F7F3ED] border-2 border-[#B65A3A] flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-      <span class="w-3.5 h-3.5 rounded-full bg-[#B65A3A]"></span>
-    </button>
-
-    <button onclick="applyTheme('dark')" title="1 Dark Comparison Option" class="w-8 h-8 rounded-xl bg-[#0D110D] border-2 border-[#8EC271] flex items-center justify-center hover:scale-110 transition-transform shadow-sm">
-      <span class="w-3.5 h-3.5 rounded-full bg-[#8EC271]"></span>
-    </button>
-  </aside>
 
   <main>
 
@@ -755,28 +611,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ========================================================================= -->
-  <!-- CLIENT THEME SWITCHER JAVASCRIPT ENGINE                                   -->
-  <!-- ========================================================================= -->
-  <script>
-    function applyTheme(themeName) {
-      document.documentElement.setAttribute('data-theme', themeName);
-      localStorage.setItem('taniya_theme_preference', themeName);
-
-      // Update button active state
-      const buttons = document.querySelectorAll('.theme-pill');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      const activeBtn = document.getElementById('tb-' + themeName);
-      if (activeBtn) activeBtn.classList.add('active');
-    }
-
-    // Auto-restore saved theme on page load if present, default to sage (LIGHT)
-    document.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('taniya_theme_preference') || 'sage';
-      applyTheme(saved);
-    });
-  </script>
 
 </body>
 </html>
