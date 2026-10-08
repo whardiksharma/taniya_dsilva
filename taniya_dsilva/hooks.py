@@ -2,7 +2,7 @@ app_name = "taniya_dsilva"
 app_title = "Taniya Dsilva Portfolio"
 app_publisher = "OmmNoMi Automation LLP"
 app_description = "Strategic Social Impact Advisory Portfolio for Taniya D'silva"
-app_email = "info@ommnomi.in"
+app_email = "nomeshwer@ommnomi.in"
 app_license = "mit"
 
 # Default Home Page for the entire website

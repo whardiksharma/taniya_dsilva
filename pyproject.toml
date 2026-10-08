@@ -1,7 +1,7 @@
 [project]
 name = "taniya_dsilva"
 authors = [
-    { name = "OmmNoMi Automation LLP", email = "info@ommnomi.in"}
+    { name = "OmmNoMi Automation LLP", email = "nomeshwer@ommnomi.in"}
 ]
 description = "Strategic Social Impact Advisory Portfolio for Taniya D'silva"
 requires-python = ">=3.10"
