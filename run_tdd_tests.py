@@ -27,7 +27,7 @@ test("Header: Direct LinkedIn Pill CTA", "https://www.linkedin.com/in/taniyadsil
 test("Hero: Likeness Word Label Removed & Illustrated Artwork Integrated", "Likeness" not in content.split("<!-- Vector Illustration Badge Inset")[1].split("</div>")[0] and "taniya_laptop_illustration.png" in content)
 test("Hero: Subtitle Descriptor Bold & Enriched", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in content and "font-bold" in content)
 test("Hero: Metric ₹10.5 Cr Formatted", "₹10.5 Cr" in content and "Program size managed in Gender x Automotive industry" in content)
-test("Hero: CV Download Action Present", "Download CV / Bio (PDF) ↗" in content)
+test("Hero: CV & Resume Download Action Present", ("Download CV / Resume (PDF)" in content or "Download CV / Bio (PDF)" in content) and "taniya_dsilva_resume.pdf" in content)
 
 # 3. About Taniya Section Tests
 test("About: Secondary Headshot Integrated", "client_md_image5.png" in content)
