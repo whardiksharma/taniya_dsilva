@@ -17,67 +17,121 @@ def test(name, condition, details=""):
         "details": details
     })
 
-# 1. Header Navigation Tests
-nav_block = content.split("<nav")[1].split("</nav>")[0]
-test("Header: Bold Navigation Tabs", "font-bold" in nav_block and "text-white" in nav_block)
-test("Header: Zero Redundant Connect Tab", 'href="#connect"' not in content.split("<nav")[1].split("</nav>")[0])
-test("Header: Direct LinkedIn Pill CTA", "https://www.linkedin.com/in/taniyadsilva" in content.split("<header")[1].split("</header>")[0])
+# ═══════════════════════════════════════════════════════════════════════════
+# 1. HEADER & GLOBAL NAVIGATION (BUTTONS, LINKS & CONTROLS)
+# ═══════════════════════════════════════════════════════════════════════════
+nav_block = content.split("<nav")[1].split("</nav>")[0] if "<nav" in content else ""
+header_block = content.split("<header")[1].split("</header>")[0] if "<header" in content else ""
 
-# 2. Hero Section Tests
-test("Hero: Likeness Word Label Removed & Illustrated Artwork Integrated", "Likeness" not in content.split("<!-- Vector Illustration Badge Inset")[1].split("</div>")[0] and "taniya_laptop_illustration.png" in content)
-test("Hero: Subtitle Descriptor Bold & Enriched", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in content and "font-bold" in content)
-test("Hero: Metric ₹10.5 Cr Formatted", "₹10.5 Cr" in content and "Program size managed in Gender x Automotive industry" in content)
-test("Hero: CV & Resume Download Action Present", ("Download CV / Resume (PDF)" in content or "Download CV / Bio (PDF)" in content) and "taniya_dsilva_resume.pdf" in content)
+test("01. Nav: Bold Typography & High Contrast", "font-bold" in nav_block and "text-white" in nav_block)
+test("02. Nav Link: About Section Target", 'href="#about"' in nav_block)
+test("03. Nav Link: My Work Section Target", 'href="#work"' in nav_block)
+test("04. Nav Link: Affiliations Section Target", 'href="#affiliations"' in nav_block)
+test("05. Nav Link: Wise Impact Section Target", 'href="#pillars"' in nav_block)
+test("06. Nav Link: Endorsements Section Target", 'href="#endorsements"' in nav_block)
+test("07. Nav Link: Redundant Connect Removed", 'href="#connect"' not in nav_block)
+test("08. Header: Brand Logo & Title Link to Hero", 'href="#hero"' in header_block and "Taniya D’silva" in header_block)
+test("09. Header: Direct LinkedIn Pill CTA", "https://www.linkedin.com/in/taniyadsilva" in header_block and "LinkedIn ↗" in header_block)
+test("10. Header: Interactive Search Input & Clear Control", 'id="pageSearchInput"' in header_block and 'id="searchClearBtn"' in header_block)
 
-# 3. About Taniya Section Tests
-test("About: Secondary Headshot Integrated", "client_md_image5.png" in content)
-test("About: Exact Rewritten CTA Link", "Get in touch and let’s explore how I can help ↗" in content)
-test("About: PMP Typo Removed (No Hyphen)", "PMP® Certified, 2026" in content)
-test("About: 30+ Member Teams Credential Updated", "research, design, partnerships & operations" in content)
-test("About: Philanthropies Credential Updated", "Built 3–5 year investment and resourcing strategies for emerging and established philanthropies" in content)
+# ═══════════════════════════════════════════════════════════════════════════
+# 2. HERO SECTION (BUTTONS, CTAs, METRICS & PORTRAIT COMPOSITION)
+# ═══════════════════════════════════════════════════════════════════════════
+hero_block = content.split('id="hero"')[1].split('id="about"')[0] if 'id="hero"' in content else ""
 
-# 4. My Work & Recent Projects (8 Cards)
-test("Work Card 1: Mauritius Op-Ed", "What Mauritius can learn from the Himalayas" in content)
-test("Work Card 2: Climate Nonprofits Headliner Image", "climate_course_headliner.jpg" in content and "Learning & Development · Strategic Capacity Building" in content)
-test("Work Card 3: Just Energy Transition Image & Tag", "just_transition_coal.jpg" in content and "Just Energy Transition" in content)
-test("Work Card 4: ILSS Banner & Tag Positioned", "ilss_people_practices_banner.png" in content and "Program Design · Strategic Capacity Building" in content)
-test("Work Card 5: Automotive EV Shopfloor Image & Tags", "women_automotive_ev.png" in content and "Gender, Labour" in content and "Nation-wide Program Leadership" in content)
-test("Work Card 6: The Resilience Collaborative", "trc_landing_page.png" in content and "https://trc.community/" in content)
-test("Work Card 7: UP BIU Authentic Healthcare Image", "up_behavioural_health.jpg" in content and "Uttar Pradesh Behavioural Insights Unit" in content)
-test("Work Card 8: Research Portfolio Fintech Setting & RBI/HDFC", "institutional_research.jpg" in content and "RBI Innovation Hub, HDFC, World YWCA" in content and "ILSS" not in content.split("<!-- Item 8:")[1].split("<!--")[0])
+test("11. Hero CTA 1: 'Explore My Work' Button", 'href="#work"' in hero_block and "Explore My Work" in hero_block)
+test("12. Hero CTA 2: 'Download CV / Resume (PDF)' Button", "Download CV / Resume (PDF) ↗" in hero_block and "taniya_dsilva_resume.pdf" in hero_block and 'download="Taniya_Dsilva_Resume.pdf"' in hero_block)
+test("13. Hero CTA 3: 'Get in Touch' Button", 'href="#connect"' in hero_block and "Get in Touch" in hero_block)
+test("14. Hero Subtitle: Strategic Social Impact Descriptor (Bold)", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in hero_block and "font-bold" in hero_block)
+test("15. Hero Metric: ₹10.5 Cr Gender x Automotive Program", "₹10.5 Cr" in hero_block and "Program size managed in Gender x Automotive industry" in hero_block)
+test("16. Hero Portrait: RHS LinkedIn Direct Button", 'class="absolute top-4 right-4' in hero_block and "https://www.linkedin.com/in/taniyadsilva" in hero_block)
+test("17. Hero Portrait: High-Contrast Frosted Nameplate", "Taniya D’silva" in hero_block and "Strategic Social Impact Advisory" in hero_block and "ssional & Advisory Identity" not in hero_block)
+test("18. Hero Badge: LHS Illustrated Avatar (Zero Likeness Tag)", "taniya_laptop_illustration.png" in hero_block and "Likeness" not in hero_block.split("taniya_laptop_illustration.png")[0].split("<!--")[0])
 
-# 5. Affiliations Section Tests
-test("Affiliations: RegenIntel Official Logo Mark", "regenintel_mark.png" in content)
-test("Affiliations: Terra.do Official Logo Mark", "terrado_mark.png" in content or "terrado_logo" in content)
-test("Affiliations: Surge Climate Talent Official Logo", "surge_logo.png" in content)
-test("Affiliations: PMI PMP Official Round Badge", "client_md_image3.png" in content.split("<!-- PMP -->")[1].split("</section>")[0])
+# ═══════════════════════════════════════════════════════════════════════════
+# 3. ABOUT TANIYA SECTION (NARRATIVE, CREDENTIALS & CV LINK)
+# ═══════════════════════════════════════════════════════════════════════════
+about_block = content.split('id="about"')[1].split('id="work"')[0] if 'id="about"' in content else ""
 
-# 6. Wise Impact & 5 Pillars Tests
-test("Wise Impact: Tagline Descriptor Label Removed", "Tagline / Descriptor:" not in content)
-test("Wise Impact: Centered 3-over-2 Symmetrical Grid", "lg:w-[calc(33.333%-22px)]" in content)
-test("Wise Impact: Increased Bullet Font Size", "text-xs sm:text-[13px]" in content)
+test("19. About: Secondary Desk Headshot Integrated", "client_md_image5.png" in about_block)
+test("20. About CTA: Exact Rewritten Collaboration Link", "Get in touch and let’s explore how I can help ↗" in about_block and 'href="#connect"' in about_block)
+test("21. About: PMP Typo Removed (No Hyphen)", "PMP® Certified, 2026" in about_block)
+test("22. About: 30+ Member Teams Interdisciplinary Credential", "research, design, partnerships & operations" in about_block)
+test("23. About: Philanthropies 3-5 Year Investment Strategy", "Built 3–5 year investment and resourcing strategies for emerging and established philanthropies" in about_block)
+test("24. About: Direct Complete CV & Resume Download Link", ("Download Complete CV" in about_block) and "taniya_dsilva_resume.pdf" in about_block)
 
-# 7. Testimonials (What Others Say)
-test("Testimonials: Arjav Chakravarthi (Svarya) Verbatim", "Arjav Chakravarthi" in content and "Leadership Coach at Svarya" in content and "innovative and engaging course material" in content)
-test("Testimonials: Bhumi Fellowship Verbatim", "Bhumi Fellowship" in content and "holistic inquiry, creates spaces for collective reflection" in content)
+# ═══════════════════════════════════════════════════════════════════════════
+# 4. MY WORK & RECENT PROJECTS (ALL 8 CARDS & LINKS)
+# ═══════════════════════════════════════════════════════════════════════════
+work_block = content.split('id="work"')[1].split('id="affiliations"')[0] if 'id="work"' in content else ""
 
-# 8. Inquiry Form & Acknowledgement Tests
-test("Form: Exact Inbox Routing Subtitle", "Have an idea, opportunity, or problem worth talking through? Inquiries route directly to Taniya. She actually reads her inbox—and replies." in content)
-test("Form: 8 Scope Options in Sentence Case", "Strategy and organisational advisory" in content and "Research and landscape analysis" in content)
-test("Form: Submit Button Strict Label", "<button type=\"submit\"" in content and "Submit" in content)
-test("Form: ConvertKit Acknowledgement Modal", "convertkit_email.gif" in content and "Thank you! I’ve received your note." in content and "I promise 🙂" in content)
+test("25. Work Card 1: Mauritius Op-Ed Article & Link", "What Mauritius can learn from the Himalayas" in work_block and "lexpress.mu" in work_block)
+test("26. Work Card 2: Climate Nonprofits Headline Image & Tags", "climate_course_headliner.jpg" in work_block and "Learning & Development · Strategic Capacity Building" in work_block)
+test("27. Work Card 3: Just Energy Transition Image & Tag", "just_transition_coal.jpg" in work_block and "Just Energy Transition" in work_block)
+test("28. Work Card 4: ILSS People Practices Banner & Tag", "ilss_people_practices_banner.png" in work_block and "Program Design · Strategic Capacity Building" in work_block)
+test("29. Work Card 5: Automotive & EV Sector Leadership", "women_automotive_ev.png" in work_block and "Gender, Labour" in work_block and "Nation-wide Program Leadership" in work_block)
+test("30. Work Card 6: The Resilience Collaborative", "trc_landing_page.png" in work_block and "https://trc.community/" in work_block)
+test("31. Work Card 7: UP BIU Grassroots Healthcare Image", "up_behavioural_health.jpg" in work_block and "Uttar Pradesh Behavioural Insights Unit" in work_block)
+test("32. Work Card 8: Research Portfolio (RBI / HDFC & ILSS Removed)", "institutional_research.jpg" in work_block and "RBI Innovation Hub, HDFC, World YWCA" in work_block and "ILSS" not in work_block.split("<!-- Item 8:")[1].split("<!--")[0])
 
-# 9. Footer & Architecture Tests
-test("Footer: Raw Email Removed from Footer", "mailto:its.taniya.dsilva@gmail.com" not in content.split("<footer")[1].split("</footer>")[0])
-test("Footer: Verified LinkedIn Link in Footer", "https://www.linkedin.com/in/taniyadsilva" in content.split("<footer")[1].split("</footer>")[0])
+# ═══════════════════════════════════════════════════════════════════════════
+# 5. AFFILIATIONS SECTION (AUTHENTIC LOGOS & MARKS)
+# ═══════════════════════════════════════════════════════════════════════════
+aff_block = content.split('id="affiliations"')[1].split('id="pillars"')[0] if 'id="affiliations"' in content else ""
 
-# Output Results
+test("33. Affiliations: RegenIntel Official Logo Mark", "regenintel_mark.png" in aff_block)
+test("34. Affiliations: Terra.do Official Logo Mark", "terrado_mark.png" in aff_block or "terrado_logo" in aff_block)
+test("35. Affiliations: Surge Climate Talent Official Logo", "surge_logo.png" in aff_block)
+test("36. Affiliations: PMI PMP Official Round Badge", "client_md_image3.png" in aff_block)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 6. WISE IMPACT SOLUTIONS & 5 PRACTICE PILLARS
+# ═══════════════════════════════════════════════════════════════════════════
+pillars_block = content.split('id="pillars"')[1].split('id="endorsements"')[0] if 'id="pillars"' in content else ""
+
+test("37. Wise Impact: Tagline Descriptor Label Removed", "Tagline / Descriptor:" not in pillars_block)
+test("38. Wise Impact: Centered 3-over-2 Symmetrical Grid", "lg:w-[calc(33.333%-22px)]" in pillars_block)
+test("39. Wise Impact: Bullet Font Size Improved", "text-xs sm:text-[13px]" in pillars_block)
+test("40. Wise Impact Pillar 5: Speaking & Thought Leadership", "Speaking, Facilitation & Thought Leadership" in pillars_block and "Keynotes and conference talks" in pillars_block)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 7. ENDORSEMENTS & TESTIMONIALS
+# ═══════════════════════════════════════════════════════════════════════════
+endorse_block = content.split('id="endorsements"')[1].split('id="connect"')[0] if 'id="endorsements"' in content else ""
+
+test("41. Testimonial 1: Arjav Chakravarthi (Svarya) Verbatim", "Arjav Chakravarthi" in endorse_block and "Leadership Coach at Svarya" in endorse_block and "innovative and engaging course material" in endorse_block)
+test("42. Testimonial 2: Bhumi Fellowship (2020) Verbatim", "Bhumi Fellowship" in endorse_block and "holistic inquiry, creates spaces for collective reflection" in endorse_block)
+test("43. Testimonials CTA: 'See more recommendations on LinkedIn ↗'", "https://www.linkedin.com/in/taniyadsilva" in endorse_block and "See more recommendations on LinkedIn ↗" in endorse_block)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 8. CONTACT FORM & INSTANT ACKNOWLEDGEMENT MODAL
+# ═══════════════════════════════════════════════════════════════════════════
+form_block = content.split('id="connect"')[1].split("<footer")[0] if 'id="connect"' in content else ""
+
+test("44. Form: Direct Inbox Routing Subtitle", "Have an idea, opportunity, or problem worth talking through? Inquiries route directly to Taniya. She actually reads her inbox—and replies." in form_block)
+test("45. Form: 8 Scope Dropdown Options in Sentence Case", "Strategy and organisational advisory" in form_block and "Research and landscape analysis" in form_block and "Programme and portfolio management" in form_block)
+test("46. Form: Submit Button Strict Label", "<button type=\"submit\"" in form_block and "Submit" in form_block)
+test("47. Form: ConvertKit Acknowledgement Modal & Animation", "convertkit_email.gif" in form_block and "Thank you! I’ve received your note." in form_block and "I promise 🙂" in form_block)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 9. FOOTER & UI INTERACTION GUARDS
+# ═══════════════════════════════════════════════════════════════════════════
+footer_block = content.split("<footer")[1].split("</footer>")[0] if "<footer" in content else ""
+
+test("48. Footer: Raw Email Address Removed", "mailto:its.taniya.dsilva@gmail.com" not in footer_block)
+test("49. Footer: Verified LinkedIn & Get in Touch Links", "https://www.linkedin.com/in/taniyadsilva" in footer_block and 'href="#connect"' in footer_block)
+test("50. UI Guard: .btn-resume Hover White Text CSS Enforced", ".btn-resume:hover *" in content and "color: #FFFFFF !important" in content)
+test("51. Asset Guard: Valid Resume PDF File on Disk", os.path.exists(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf")) and open(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf"), "rb").read(4) == b"%PDF")
+
+# ═══════════════════════════════════════════════════════════════════════════
+# OUTPUT RESULTS
+# ═══════════════════════════════════════════════════════════════════════════
 total = len(tests)
 passed = sum(1 for t in tests if t["passed"])
 failed = total - passed
 
 print(f"\n==========================================")
-print(f"      TDD++ AUTOMATED VERIFICATION SUITE   ")
+print(f"      TDD++ COMPREHENSIVE UI VERIFICATION ")
 print(f"==========================================")
 print(f"Total Test Cases : {total}")
 print(f"Passed           : {passed}")
@@ -90,4 +144,4 @@ for i, t in enumerate(tests, 1):
 
 if failed > 0:
     sys.exit(1)
-print("\n>>> ALL CRITICAL UI TESTS PASSED 100% <<<")
+print("\n>>> ALL 51 UI BUTTON, LINK & INTERACTION TESTS PASSED 100% <<<")

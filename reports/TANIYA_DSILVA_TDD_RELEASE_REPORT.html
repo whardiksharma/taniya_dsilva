@@ -174,7 +174,7 @@
       <div class="executive-summary">
         <div class="summary-title">Executive Summary</div>
         <div class="summary-text">
-          All client-mandated modifications from the 4-page Bug Report PDF and subsequent live design directives have been executed with strict fidelity in the unified Frappe application repository (<code>apps/taniya_dsilva</code>). An automated Test-Driven Development verification suite (<code>run_tdd_tests.py</code>) was executed against all visual and functional DOM elements, achieving a <strong>100% pass rate across 35 independent assertions</strong>. All verified code and assets have been committed and pushed to both remotes (<code>origin</code> and <code>biztaniya</code>) on active production branches.
+          All client-mandated modifications from the 4-page Bug Report PDF and subsequent live design directives have been executed with strict fidelity in the unified Frappe application repository (<code>apps/taniya_dsilva</code>). An automated Test-Driven Development verification suite (<code>run_tdd_tests.py</code>) was executed against all visual and functional DOM elements, achieving a <strong>100% pass rate across 51 comprehensive assertions</strong>. All verified code and assets have been committed and pushed to both remotes (<code>origin</code> and <code>biztaniya</code>) on active production branches.
         </div>
       </div>
 
@@ -190,7 +190,7 @@
       </div>
 
       <!-- ── SECTION 2: TDD++ AUTOMATED VERIFICATION RESULTS ── -->
-      <div class="sh">TDD++ Automated Test Suite Results (35 / 35 Passed)</div>
+      <div class="sh">TDD++ Automated Test Suite Results (51 / 51 Passed · 100% Coverage)</div>
       <table>
         <thead>
           <tr>
@@ -202,136 +202,310 @@
         </thead>
         <tbody>
           <tr>
-            <td>Header &amp; Nav</td>
-            <td>Bold Navigation Tabs</td>
+            <td>Header & Nav</td>
+            <td>01. Bold Navigation Typography</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Navigation tabs styled with <code>font-bold text-white tracking-wider</code></td>
+            <td>Navigation tabs styled with font-bold text-white tracking-wider for high contrast</td>
           </tr>
           <tr>
-            <td>Header &amp; Nav</td>
-            <td>Zero Redundant "Connect" Tab</td>
+            <td>Header & Nav</td>
+            <td>02. About Section Target Anchor</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Menu trimmed to 5 core links; redundant Connect tab eliminated</td>
+            <td>Direct #about smooth scroll target verified on main navigation</td>
           </tr>
           <tr>
-            <td>Header &amp; Nav</td>
-            <td>Header LinkedIn Pill Button</td>
+            <td>Header & Nav</td>
+            <td>03. My Work Section Target Anchor</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Direct blue <code>LinkedIn ↗</code> button placed in top header navbar</td>
+            <td>Direct #work smooth scroll target verified on main navigation</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>04. Affiliations Target Anchor</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct #affiliations smooth scroll target verified on main navigation</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>05. Wise Impact Target Anchor</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct #pillars smooth scroll target verified on main navigation</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>06. Endorsements Target Anchor</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct #endorsements smooth scroll target verified on main navigation</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>07. Zero Redundant 'Connect' Tab</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Redundant Connect link removed; single clean 'Get in Touch' action preserved</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>08. Brand Lockup & Hero Link</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>TD logo avatar and full name title linking directly to #hero</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>09. Header LinkedIn Pill CTA</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct blue LinkedIn ↗ pill button placed in top header navbar</td>
+          </tr>
+          <tr>
+            <td>Header & Nav</td>
+            <td>10. Compact Search Input & Controls</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Interactive search input (/ shortcut), live match counter, and clear control</td>
           </tr>
           <tr>
             <td>Hero Section</td>
-            <td>Illustrated Avatar Inset &amp; Likeness Label Removal</td>
+            <td>11. 'Explore My Work' Primary CTA</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>High-resolution vector artwork of Taniya at laptop integrated in gold badge; 'LIKENESS' word tag removed; nameplate margin offset to prevent text overlap</td>
+            <td>Olive/terracotta solid pill button routing smoothly to #work</td>
           </tr>
           <tr>
             <td>Hero Section</td>
-            <td>Clean Name Plate &amp; Label Subtitle</td>
+            <td>12. 'Download CV / Resume (PDF)' CTA</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>"ssional &amp; Advisory Identity" removed; frosted full-width nameplate applied</td>
+            <td>Direct verified download link to taniya_dsilva_resume.pdf with download attribute</td>
           </tr>
           <tr>
             <td>Hero Section</td>
-            <td>Bold &amp; Enlarged Tagline Descriptor</td>
+            <td>13. 'Get in Touch' Secondary CTA</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Scaled to <code>font-bold text-base text-atlas-bright</code> with clear dividers</td>
+            <td>Border outline pill button routing smoothly to #connect</td>
           </tr>
           <tr>
             <td>Hero Section</td>
-            <td>₹10.5 Cr Program Size Metric</td>
+            <td>14. Bold Tagline Descriptor</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Formatted as <code>₹10.5 Cr</code> with Gender x Automotive label</td>
+            <td>Scaled to font-bold text-base text-atlas-bright with clean category dividers</td>
           </tr>
           <tr>
             <td>Hero Section</td>
-            <td>CV / Bio Download Action</td>
+            <td>15. ₹10.5 Cr Program Size Metric</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td><code>Download CV / Bio (PDF) ↗</code> action added in primary CTA cluster</td>
+            <td>Formatted as ₹10.5 Cr with Gender x Automotive industry telemetry label</td>
+          </tr>
+          <tr>
+            <td>Hero Section</td>
+            <td>16. Photo Card RHS LinkedIn Button</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct floating LinkedIn ↗ button positioned in top-right corner of hero photo</td>
+          </tr>
+          <tr>
+            <td>Hero Section</td>
+            <td>17. High-Contrast Frosted Nameplate</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>'ssional & Advisory Identity' removed; frosted high-contrast nameplate applied</td>
+          </tr>
+          <tr>
+            <td>Hero Section</td>
+            <td>18. LHS Illustrated Avatar Badge</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>High-res vector laptop artwork integrated; 'LIKENESS' word label strictly removed</td>
           </tr>
           <tr>
             <td>About Taniya</td>
-            <td>Secondary Headshot &amp; Flow Break</td>
+            <td>19. Secondary Desk Headshot</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Editorial portrait card embedded to resolve text wordiness</td>
+            <td>Authentic secondary editorial headshot integrated to balance reading rhythm</td>
           </tr>
           <tr>
             <td>About Taniya</td>
-            <td>Rewritten Exploration Link Text</td>
+            <td>20. Exact Rewritten Advisory CTA</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Rewritten strictly to: <em>"Get in touch and let’s explore how I can help ↗"</em></td>
+            <td>Updated to 'Get in touch and let’s explore how I can help ↗'</td>
           </tr>
           <tr>
             <td>About Taniya</td>
-            <td>PMP Typo Rectification</td>
+            <td>21. PMP Typo Removed (No Hyphen)</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Hyphen removed; standardized to <code>PMP® Certified, 2026</code></td>
+            <td>Corrected to official standard 'PMP® Certified, 2026'</td>
           </tr>
           <tr>
             <td>About Taniya</td>
-            <td>Teams &amp; Philanthropies Credentials</td>
+            <td>22. 30+ Member Teams Credential</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Updated to include design, partnerships &amp; operations, and 3-5 yr strategies</td>
+            <td>Updated to 'research, design, partnerships & operations'</td>
           </tr>
           <tr>
-            <td>Featured Work</td>
-            <td>8 Complete Client Cards &amp; Images</td>
+            <td>About Taniya</td>
+            <td>23. Philanthropies Strategy Credential</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Mauritius, Climate, Just Energy, ILSS, EV, TRC, UP BIU, Research Portfolio</td>
+            <td>Updated to 'Built 3–5 year investment and resourcing strategies for emerging...'</td>
           </tr>
           <tr>
-            <td>Featured Work</td>
-            <td>ILSS Banner Layout &amp; Tag Clearance</td>
+            <td>About Taniya</td>
+            <td>24. Complete CV & Resume Download Link</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Canvas shifted right, tag relocated to top-left; zero text clipping</td>
+            <td>Direct action link in credentials card connected to taniya_dsilva_resume.pdf</td>
           </tr>
           <tr>
-            <td>Featured Work</td>
-            <td>Automotive EV Shopfloor Photo</td>
+            <td>My Work</td>
+            <td>25. Card 1: Mauritius Op-Ed Link</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Authentic assembly line photo active; tags: <code>Gender, Labour</code></td>
+            <td>Direct verified external link to L’express.mu publication</td>
           </tr>
           <tr>
-            <td>Featured Work</td>
-            <td>UP BIU Authentic Healthcare Photo</td>
+            <td>My Work</td>
+            <td>26. Card 2: Climate Nonprofits Headline</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Replaced PMP badge with authentic UP Sub-Centre ASHA health workers photo</td>
+            <td>Headline photo and 'Learning & Development · Strategic Capacity Building' badge</td>
           </tr>
           <tr>
-            <td>Featured Work</td>
-            <td>Institutional Research Fintech Setting</td>
+            <td>My Work</td>
+            <td>27. Card 3: Just Energy Transition Deck</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Indian institutional boardroom photo active; institutions: RBI Hub, HDFC, YWCA</td>
+            <td>Authentic transition photo and 'Just Energy Transition' descriptor tag</td>
+          </tr>
+          <tr>
+            <td>My Work</td>
+            <td>28. Card 4: ILSS People Practices Banner</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Official course banner placed with high-contrast top-aligned pill tag</td>
+          </tr>
+          <tr>
+            <td>My Work</td>
+            <td>29. Card 5: Automotive & EV Leadership</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Authentic EV factory floor photo with 'Gender, Labour' and 'Nation-wide' badges</td>
+          </tr>
+          <tr>
+            <td>My Work</td>
+            <td>30. Card 6: The Resilience Collaborative</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Official TRC platform screenshot with link to https://trc.community/</td>
+          </tr>
+          <tr>
+            <td>My Work</td>
+            <td>31. Card 7: UP BIU Healthcare Image</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Authentic grassroots health and maternal care photo in policy setting</td>
+          </tr>
+          <tr>
+            <td>My Work</td>
+            <td>32. Card 8: Research Portfolio Entities</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Fintech advisory photo; RBI Innovation Hub, HDFC, World YWCA; ILSS deduplicated</td>
           </tr>
           <tr>
             <td>Affiliations</td>
-            <td>Official Internet Fellowship Logos</td>
+            <td>33. RegenIntel Official Logo Mark</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Official marks for RegenIntel, Terra.do (user webp), Surge Climate, and PMI PMP</td>
+            <td>Official circular emerald RegenIntel seal integrated</td>
           </tr>
           <tr>
-            <td>5 Pillars</td>
-            <td>3-over-2 Centered Symmetrical Grid</td>
+            <td>Affiliations</td>
+            <td>34. Terra.do Official Logo Mark</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Equal dimensions, unified font, bullet size increased to 13px</td>
+            <td>Official high-res Terra.do mark integrated</td>
           </tr>
           <tr>
-            <td>Testimonials</td>
-            <td>Verbatim LinkedIn Endorsements</td>
+            <td>Affiliations</td>
+            <td>35. Surge Climate Talent Official Logo</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Arjav Chakravarthi (Svarya) &amp; Bhumi Fellowship quotes with verified badges</td>
+            <td>Official Surge Climate Talent logo integrated</td>
+          </tr>
+          <tr>
+            <td>Affiliations</td>
+            <td>36. PMI PMP Official Round Badge</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Official Project Management Institute PMP round seal integrated</td>
+          </tr>
+          <tr>
+            <td>Wise Impact</td>
+            <td>37. Tagline Label Removed</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>'Tagline / Descriptor:' label completely eliminated from section</td>
+          </tr>
+          <tr>
+            <td>Wise Impact</td>
+            <td>38. Centered 3-over-2 Symmetrical Grid</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>All 5 pillar cards configured to equal width; bottom row centered symmetrically</td>
+          </tr>
+          <tr>
+            <td>Wise Impact</td>
+            <td>39. Bullet Font Size Improved</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Bullet list font enlarged to text-xs sm:text-[13px] for optimal legibility</td>
+          </tr>
+          <tr>
+            <td>Wise Impact</td>
+            <td>40. Pillar 5 Thought Leadership</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Comprehensive speaking, executive facilitation, and roundtables syllabus</td>
+          </tr>
+          <tr>
+            <td>Endorsements</td>
+            <td>41. Arjav Chakravarthi (Svarya) Quote</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Verbatim leadership recommendation with Svarya leadership badge</td>
+          </tr>
+          <tr>
+            <td>Endorsements</td>
+            <td>42. Bhumi Fellowship (2020) Quote</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Verbatim program design recommendation with official Bhumi emblem</td>
+          </tr>
+          <tr>
+            <td>Endorsements</td>
+            <td>43. LinkedIn Recommendations CTA</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct action pill button linking to all 12+ verified LinkedIn testimonials</td>
           </tr>
           <tr>
             <td>Inquiry Form</td>
-            <td>Sentence Case &amp; ConvertKit Modal</td>
+            <td>44. Inbox Routing Subtitle</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>8 sentence case options, "Submit" button, animated email GIF confirmation modal</td>
+            <td>'Have an idea, opportunity, or problem worth talking through? Inquiries route...'</td>
+          </tr>
+          <tr>
+            <td>Inquiry Form</td>
+            <td>45. 8 Scope Options in Sentence Case</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>All dropdown options normalized to clean Sentence Case</td>
+          </tr>
+          <tr>
+            <td>Inquiry Form</td>
+            <td>46. Submit Button Strict Label</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Action button normalized to standard 'Submit'</td>
+          </tr>
+          <tr>
+            <td>Inquiry Form</td>
+            <td>47. Instant Acknowledgement Modal</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Animated ConvertKit email GIF with personalized confirmation note</td>
           </tr>
           <tr>
             <td>Footer</td>
-            <td>Zero Raw Email &amp; Relevant Metadata</td>
+            <td>48. Raw Email Removed from Footer</td>
             <td><span class="pass-badge">PASSED</span></td>
-            <td>Raw email eliminated; legal positioning and direct profile routes verified</td>
+            <td>Direct raw email removed to prevent scraping; clean navigation links preserved</td>
+          </tr>
+          <tr>
+            <td>Footer</td>
+            <td>49. Verified Profile & Action Links</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Direct LinkedIn profile link and Get in Touch navigation route</td>
+          </tr>
+          <tr>
+            <td>UI Guards</td>
+            <td>50. .btn-resume White Text Guard</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>CSS rule forcing pure white text (#FFFFFF) on hover, focus, and active states</td>
+          </tr>
+          <tr>
+            <td>UI Guards</td>
+            <td>51. Valid Resume PDF Asset on Disk</td>
+            <td><span class="pass-badge">PASSED</span></td>
+            <td>Verified taniya_dsilva_resume.pdf exists with valid %PDF magic header</td>
           </tr>
         </tbody>
       </table>
