@@ -105,6 +105,35 @@
     .bg-atlas-olive:hover {
       background-color: var(--accent-hover) !important;
     }
+
+    /* Bulletproof CV / Resume Action Button */
+    .btn-resume {
+      background-color: transparent !important;
+      border: 1.5px solid var(--accent-bright) !important;
+      color: var(--accent-bright) !important;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    .btn-resume,
+    .btn-resume * {
+      color: var(--accent-bright) !important;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-resume:hover,
+    .btn-resume:focus,
+    .btn-resume:active {
+      background-color: var(--accent-bright) !important;
+      border-color: var(--accent-bright) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 6px 18px rgba(182, 90, 58, 0.3) !important;
+      transform: translateY(-1px);
+    }
+    .btn-resume:hover *,
+    .btn-resume:focus *,
+    .btn-resume:active * {
+      color: #FFFFFF !important;
+      stroke: #FFFFFF !important;
+    }
     .contour-lines {
       background-image: radial-gradient(circle at 1px 1px, var(--contour-dot) 1px, transparent 0) !important;
       background-size: 32px 32px;
@@ -236,7 +265,8 @@
               <a href="#work" class="px-6 py-3 rounded-full bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-lg hover:opacity-90">
                 Explore My Work
               </a>
-              <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" target="_blank" download="Taniya_Dsilva_Resume.pdf" class="px-6 py-3 rounded-full border border-atlas-bright text-atlas-bright hover:bg-atlas-bright hover:text-white font-mono text-xs uppercase tracking-widest transition-all font-semibold flex items-center gap-2">
+              <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" target="_blank" download="Taniya_Dsilva_Resume.pdf" class="btn-resume px-6 py-3 rounded-full font-mono text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                 <span>Download CV / Resume (PDF) ↗</span>
               </a>
               <a href="#connect" class="px-6 py-3 rounded-full border border-atlas-border hover:border-atlas-bright text-atlas-cream font-mono text-xs uppercase tracking-widest transition-all">
