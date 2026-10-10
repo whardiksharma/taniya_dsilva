@@ -193,45 +193,6 @@
       stroke-dasharray: 5 4;
       animation: wiseDashTravel 12s linear infinite reverse;
     }
-
-    /* Planetary Orbit & Rotation Animation (Wise Impact Earth Systems) */
-    @keyframes planetHover {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-5px) scale(1.015); }
-    }
-    @keyframes orbitSpinContinuous {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    @keyframes orbitSpinRevContinuous {
-      0% { transform: rotate(360deg); }
-      100% { transform: rotate(0deg); }
-    }
-    @keyframes orbitDashMove {
-      0% { stroke-dashoffset: 160; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes orbitDashMoveRev {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 160; }
-    }
-    .animate-planet-hover {
-      animation: planetHover 7s ease-in-out infinite;
-    }
-    .animate-orbit-spin {
-      animation: orbitSpinContinuous 26s linear infinite;
-    }
-    .animate-orbit-spin-rev {
-      animation: orbitSpinRevContinuous 34s linear infinite;
-    }
-    .animate-orbit-dash {
-      stroke-dasharray: 8 6;
-      animation: orbitDashMove 12s linear infinite;
-    }
-    .animate-orbit-dash-rev {
-      stroke-dasharray: 6 5;
-      animation: orbitDashMoveRev 15s linear infinite;
-    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
@@ -936,16 +897,16 @@
                   Core System Intersections:
                 </span>
                 <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
-                  <span id="wiseBadgeClimate" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-all duration-300">
+                  <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-colors">
                     <span>🌍</span> Climate Action
                   </span>
-                  <span id="wiseBadgeGender" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-all duration-300">
+                  <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-colors">
                     <span>⚖️</span> Gender Equality
                   </span>
-                  <span id="wiseBadgeLabour" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-all duration-300">
+                  <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-colors">
                     <span>🤝</span> Labour Rights
                   </span>
-                  <span id="wiseBadgeHealth" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-all duration-300">
+                  <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5EFE6] border border-[#DFCFC0] text-xs text-[#3C2D24] font-medium shadow-2xs hover:border-[#B65A3A] transition-colors">
                     <span>🌱</span> Public Health
                   </span>
                 </div>
@@ -958,94 +919,30 @@
 
             </div>
 
-            <!-- Right Column: Illustrated Inset Card (People & Planet Systems Network with Rotating Orbit Physics) -->
+            <!-- Right Column: Illustrated Inset Card (People & Planet Systems Network) -->
             <div class="lg:col-span-5 flex justify-center lg:justify-end">
               <div class="relative w-full max-w-[420px] bg-white rounded-[28px] border border-[#E4DACB] p-4 sm:p-5 shadow-xl overflow-hidden group hover:shadow-2xl transition-all" style="background-image: linear-gradient(to right, rgba(182, 90, 58, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(182, 90, 58, 0.05) 1px, transparent 1px); background-size: 22px 22px;">
                 
                 <!-- Floating Badge Top Left: People & Planet -->
-                <div class="absolute top-4 left-4 z-30 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
+                <div class="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#B65A3A]"></span>
                   <span>People &amp; Planet</span>
                 </div>
 
-                <!-- Globe & Rotating Planetary Systems Visual Container (Interactive Drag to Spin) -->
-                <div id="wiseGlobeContainer" class="relative rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2 cursor-grab active:cursor-grabbing select-none">
-                  
-                  <!-- Canvas 3D Orthographic Rotating Sphere -->
-                  <canvas id="wiseGlobeCanvas" width="340" height="340" class="w-full h-full object-contain rounded-full shadow-inner relative z-10">
-                    <img src="/assets/taniya_dsilva/extracted_pdf_images/wise_impact_globe.png" alt="Wise Impact Systems Network" class="w-full h-full object-contain">
-                  </canvas>
-                  
-                  <!-- People Layers Overlay (Dynamically Positioned & Blended on Curvature) -->
-                  <div id="wisePeopleOverlay" class="absolute inset-0 pointer-events-none z-20 overflow-hidden rounded-full">
-                    <!-- South Asia Cluster -->
-                    <div id="personClusterAsia" class="absolute transition-opacity duration-300 will-change-transform" style="opacity: 0;">
-                      <img src="/assets/taniya_dsilva/images/trans_people_cluster_asia.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/images/trans_people_cluster_asia.png';}" alt="South Asia Changemakers" class="w-28 sm:w-32 h-auto drop-shadow-md">
-                      <div class="px-2 py-0.5 mt-0.5 rounded-full bg-black/75 text-[9px] font-mono text-emerald-300 text-center whitespace-nowrap shadow-xs backdrop-blur-xs">
-                        ● South Asia · Gender &amp; Labour
-                      </div>
-                    </div>
-
-                    <!-- Africa & Middle East Cluster -->
-                    <div id="personClusterAfrica" class="absolute transition-opacity duration-300 will-change-transform" style="opacity: 0;">
-                      <img src="/assets/taniya_dsilva/images/trans_people_cluster_africa.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/images/trans_people_cluster_africa.png';}" alt="Africa Grassroots Leaders" class="w-28 sm:w-32 h-auto drop-shadow-md">
-                      <div class="px-2 py-0.5 mt-0.5 rounded-full bg-black/75 text-[9px] font-mono text-amber-300 text-center whitespace-nowrap shadow-xs backdrop-blur-xs">
-                        ● Africa · Community Health
-                      </div>
-                    </div>
-
-                    <!-- Europe & Global Leaders Cluster -->
-                    <div id="personClusterEurope" class="absolute transition-opacity duration-300 will-change-transform" style="opacity: 0;">
-                      <img src="/assets/taniya_dsilva/images/trans_people_cluster_top.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/images/trans_people_cluster_top.png';}" alt="Europe & Global Impact Leaders" class="w-36 sm:w-40 h-auto drop-shadow-md">
-                      <div class="px-2 py-0.5 mt-0.5 rounded-full bg-black/75 text-[9px] font-mono text-sky-300 text-center whitespace-nowrap shadow-xs backdrop-blur-xs">
-                        ● Europe &amp; Global · Systems Strategy
-                      </div>
-                    </div>
-
-                    <!-- Americas Cluster -->
-                    <div id="personClusterAmericas" class="absolute transition-opacity duration-300 will-change-transform" style="opacity: 0;">
-                      <img src="/assets/taniya_dsilva/images/trans_people_cluster_americas.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/images/trans_people_cluster_americas.png';}" alt="Americas Climate Advocates" class="w-28 sm:w-32 h-auto drop-shadow-md">
-                      <div class="px-2 py-0.5 mt-0.5 rounded-full bg-black/75 text-[9px] font-mono text-[#F8B49B] text-center whitespace-nowrap shadow-xs backdrop-blur-xs">
-                        ● Americas · Climate &amp; Innovation
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Dynamic SVG Connecting Arcs Overlay -->
-                  <svg id="wiseArcsSvg" class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 340 340" fill="none">
-                    <path id="wiseArc1" d="" stroke="#B65A3A" stroke-width="2" stroke-dasharray="6 4" class="animate-orbit-dash transition-opacity duration-300" opacity="0" />
-                    <path id="wiseArc2" d="" stroke="#34A853" stroke-width="2" stroke-dasharray="5 4" class="animate-orbit-dash-rev transition-opacity duration-300" opacity="0" />
-                  </svg>
-
-                  <!-- 3D Planetary Atmospheric Rim Lighting -->
-                  <div class="absolute inset-2 pointer-events-none rounded-full shadow-[inset_0_0_24px_rgba(182,90,58,0.22)] z-25 border border-[#E4DACB]/40"></div>
-
-                  <!-- Continuous 3D Planetary Orbit Ring 1 (Terracotta) -->
-                  <div class="absolute inset-2 pointer-events-none flex items-center justify-center animate-orbit-spin z-15" style="transform-origin: center center;">
-                    <div class="w-[94%] h-[94%] rounded-full border border-dashed border-[#B65A3A]/40 relative">
-                      <!-- Satellite / Network Node Blip 1 -->
-                      <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#B65A3A] shadow-[0_0_8px_#B65A3A] flex items-center justify-center">
-                        <span class="w-1 h-1 rounded-full bg-white"></span>
-                      </span>
-                    </div>
-                  </div>
-
-                  <!-- Counter-Rotating Planetary Orbit Ring 2 (Emerald Systems) -->
-                  <div class="absolute inset-6 pointer-events-none flex items-center justify-center animate-orbit-spin-rev z-15" style="transform-origin: center center;">
-                    <div class="w-[90%] h-[90%] rounded-full border border-dashed border-[#34A853]/35 relative" style="transform: rotate(45deg);">
-                      <!-- Green Satellite Node Blip -->
-                      <span class="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-[#34A853] shadow-[0_0_8px_#34A853] flex items-center justify-center">
-                        <span class="w-1 h-1 rounded-full bg-white"></span>
-                      </span>
-                    </div>
-                  </div>
-
+                <!-- Illustration Image -->
+                <div class="rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2">
+                  <img 
+                    src="/assets/taniya_dsilva/extracted_pdf_images/wise_impact_globe.png" 
+                    onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/extracted_pdf_images/wise_impact_globe.png';}" 
+                    alt="Wise Impact Systems Network" 
+                    class="w-full h-full object-contain group-hover:scale-103 transition-transform duration-500"
+                  >
                 </div>
 
-                <!-- Floating Badge Bottom Right: Active Region & Systems Network -->
-                <div class="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#34A853] animate-ping"></span>
-                  <span id="wiseActiveRegionLabel">Systems Network · Active</span>
+                <!-- Floating Badge Bottom Right: Systems Network -->
+                <div class="absolute bottom-4 right-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#34A853]"></span>
+                  <span>Systems Network</span>
                 </div>
 
               </div>
@@ -1516,298 +1413,6 @@
         clearHighlights();
         searchInput.focus();
       });
-    })();
-  </script>
-
-  <!-- ========================================================================= -->
-  <!-- WISE IMPACT: 3D ROTATING GLOBE & DYNAMIC PEOPLE HORIZON BLENDING ENGINE   -->
-  <!-- ========================================================================= -->
-  <script>
-    (function initWiseRotatingGlobe() {
-      try {
-        var canvas = document.getElementById('wiseGlobeCanvas');
-        if (!canvas) return;
-        var ctx = canvas.getContext('2d');
-        var container = document.getElementById('wiseGlobeContainer');
-        var regionLabel = document.getElementById('wiseActiveRegionLabel');
-
-        var badgeClimate = document.getElementById('wiseBadgeClimate');
-        var badgeGender = document.getElementById('wiseBadgeGender');
-        var badgeLabour = document.getElementById('wiseBadgeLabour');
-        var badgeHealth = document.getElementById('wiseBadgeHealth');
-
-        var clusters = [
-          {
-            id: 'personClusterAsia',
-            name: 'South Asia · Gender & Labour',
-            lat: 22,
-            lon: 78,
-            el: document.getElementById('personClusterAsia'),
-            badges: [badgeGender, badgeLabour],
-            themeColor: '#B65A3A'
-          },
-          {
-            id: 'personClusterAfrica',
-            name: 'Africa · Community Health',
-            lat: 4,
-            lon: 22,
-            el: document.getElementById('personClusterAfrica'),
-            badges: [badgeHealth],
-            themeColor: '#34A853'
-          },
-          {
-            id: 'personClusterEurope',
-            name: 'Europe & Global · Systems Strategy',
-            lat: 48,
-            lon: 12,
-            el: document.getElementById('personClusterEurope'),
-            badges: [badgeClimate],
-            themeColor: '#4285F4'
-          },
-          {
-            id: 'personClusterAmericas',
-            name: 'Americas · Climate & Resilience',
-            lat: 32,
-            lon: -82,
-            el: document.getElementById('personClusterAmericas'),
-            badges: [badgeClimate, badgeHealth],
-            themeColor: '#B65A3A'
-          }
-        ];
-
-        var CW = canvas.width, CH = canvas.height;
-        var cx = CW / 2, cy = CH / 2, R = CW / 2 - 12;
-
-        var texture = new Image();
-        texture.crossOrigin = 'anonymous';
-        texture.src = '/assets/taniya_dsilva/images/world_map_texture.png';
-        texture.onerror = function() {
-          if (!this.dataset.retried) {
-            this.dataset.retried = '1';
-            this.src = 'public/images/world_map_texture.png';
-          }
-        };
-
-        var lut = null;
-        var circlePixels = null;
-        var texWidth = 1440, texHeight = 720;
-        var texData = null;
-        var outputImageData = ctx.createImageData(CW, CH);
-
-        texture.onload = function() {
-          texWidth = texture.width;
-          texHeight = texture.height;
-          var offCanvas = document.createElement('canvas');
-          offCanvas.width = texWidth;
-          offCanvas.height = texHeight;
-          var offCtx = offCanvas.getContext('2d');
-          offCtx.drawImage(texture, 0, 0);
-          texData = offCtx.getImageData(0, 0, texWidth, texHeight).data;
-
-          var countPixels = [];
-          var lutArr = [];
-          var R2 = R * R;
-          for (var y = 0; y < CH; y++) {
-            var dy = y - cy;
-            for (var x = 0; x < CW; x++) {
-              var dx = x - cx;
-              var d2 = dx * dx + dy * dy;
-              if (d2 <= R2) {
-                var u = dx / R;
-                var v = -dy / R;
-                var z = Math.sqrt(Math.max(0, 1 - u * u - v * v));
-                var lat = Math.asin(v);
-                var deltaLon = Math.atan2(u, z);
-
-                var texY = Math.floor((Math.PI / 2 - lat) / Math.PI * texHeight);
-                var deltaX = Math.floor(deltaLon / (2 * Math.PI) * texWidth);
-
-                countPixels.push((y * CW + x) * 4);
-                lutArr.push(Math.max(0, Math.min(texHeight - 1, texY)));
-                lutArr.push(deltaX);
-              }
-            }
-          }
-          circlePixels = new Int32Array(countPixels);
-          lut = new Int32Array(lutArr);
-        };
-
-        var rotAngle = 80;
-        var isDragging = false;
-        var startX = 0;
-        var speed = 0.22;
-        var isHovered = false;
-
-        if (container) {
-          container.addEventListener('mousedown', function(e) {
-            isDragging = true;
-            startX = e.clientX;
-          });
-          window.addEventListener('mousemove', function(e) {
-            if (!isDragging) return;
-            var dx = e.clientX - startX;
-            startX = e.clientX;
-            rotAngle -= dx * 0.6;
-          });
-          window.addEventListener('mouseup', function() {
-            isDragging = false;
-          });
-
-          container.addEventListener('touchstart', function(e) {
-            if (e.touches && e.touches.length === 1) {
-              isDragging = true;
-              startX = e.touches[0].clientX;
-            }
-          }, { passive: true });
-          window.addEventListener('touchmove', function(e) {
-            if (!isDragging || !e.touches || e.touches.length !== 1) return;
-            var dx = e.touches[0].clientX - startX;
-            startX = e.touches[0].clientX;
-            rotAngle -= dx * 0.6;
-          }, { passive: true });
-          window.addEventListener('touchend', function() {
-            isDragging = false;
-          });
-
-          container.addEventListener('mouseenter', function() { isHovered = true; });
-          container.addEventListener('mouseleave', function() { isHovered = false; });
-        }
-
-        function renderGlobe() {
-          requestAnimationFrame(renderGlobe);
-
-          if (!isDragging) {
-            rotAngle += (isHovered ? 0.08 : speed);
-            if (rotAngle >= 360) rotAngle -= 360;
-            if (rotAngle < 0) rotAngle += 360;
-          }
-
-          // 1. Draw Globe Sphere Surface
-          if (lut && texData && circlePixels) {
-            var rotPixels = Math.floor(rotAngle / 360 * texWidth);
-            var outData = outputImageData.data;
-            var numPixels = circlePixels.length;
-
-            for (var i = 0; i < numPixels; i++) {
-              var p = circlePixels[i];
-              var texY = lut[i * 2];
-              var deltaX = lut[i * 2 + 1];
-              var texX = (deltaX + rotPixels) % texWidth;
-              if (texX < 0) texX += texWidth;
-              var s = (texY * texWidth + texX) * 4;
-
-              outData[p] = texData[s];
-              outData[p + 1] = texData[s + 1];
-              outData[p + 2] = texData[s + 2];
-              outData[p + 3] = 255;
-            }
-            ctx.putImageData(outputImageData, 0, 0);
-
-            var grad = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.35, R * 0.2, cx, cy, R);
-            grad.addColorStop(0, 'rgba(255, 255, 255, 0.25)');
-            grad.addColorStop(0.7, 'rgba(0, 0, 0, 0)');
-            grad.addColorStop(1, 'rgba(60, 40, 30, 0.35)');
-            ctx.fillStyle = grad;
-            ctx.beginPath();
-            ctx.arc(cx, cy, R, 0, Math.PI * 2);
-            ctx.fill();
-          }
-
-          // 2. Position People Clusters & Calculate Horizon Blending
-          var dominantCluster = null;
-          var maxZ = -1;
-          var visibleCoords = [];
-
-          clusters.forEach(function(c) {
-            if (!c.el) return;
-
-            var dLon = (c.lon - rotAngle) % 360;
-            if (dLon > 180) dLon -= 360;
-            if (dLon < -180) dLon += 360;
-
-            var radLat = c.lat * Math.PI / 180;
-            var radDLon = dLon * Math.PI / 180;
-            var z = Math.cos(radLat) * Math.cos(radDLon);
-
-            if (z > 0.05) {
-              var u = Math.cos(radLat) * Math.sin(radDLon);
-              var v = Math.sin(radLat);
-              var screenX = cx + R * u;
-              var screenY = cy - R * v;
-
-              var opacity = Math.min(1, Math.max(0, (z - 0.05) / 0.35));
-              var scale = 0.8 + 0.3 * z;
-              var tiltDeg = u * 15;
-
-              c.el.style.display = 'block';
-              c.el.style.opacity = opacity.toFixed(3);
-              c.el.style.transform = 'translate(' + (screenX - 55) + 'px, ' + (screenY - 65) + 'px) scale(' + scale.toFixed(2) + ') rotate(' + tiltDeg.toFixed(1) + 'deg)';
-
-              visibleCoords.push({ x: screenX, y: screenY, z: z, color: c.themeColor });
-
-              if (z > maxZ) {
-                maxZ = z;
-                dominantCluster = c;
-              }
-            } else {
-              c.el.style.opacity = '0';
-              c.el.style.display = 'none';
-            }
-          });
-
-          // 3. Dynamic Arcs between visible clusters
-          var arc1 = document.getElementById('wiseArc1');
-          var arc2 = document.getElementById('wiseArc2');
-          if (arc1 && arc2) {
-            if (visibleCoords.length >= 2) {
-              var p1 = visibleCoords[0];
-              var p2 = visibleCoords[1];
-              var midX = (p1.x + p2.x) / 2;
-              var midY = (p1.y + p2.y) / 2 - 25;
-              arc1.setAttribute('d', 'M ' + p1.x + ' ' + p1.y + ' Q ' + midX + ' ' + midY + ' ' + p2.x + ' ' + p2.y);
-              arc1.setAttribute('opacity', '0.75');
-            } else {
-              arc1.setAttribute('opacity', '0');
-            }
-
-            if (visibleCoords.length >= 3) {
-              var q1 = visibleCoords[1];
-              var q2 = visibleCoords[2];
-              var qMidX = (q1.x + q2.x) / 2;
-              var qMidY = (q1.y + q2.y) / 2 - 25;
-              arc2.setAttribute('d', 'M ' + q1.x + ' ' + q1.y + ' Q ' + qMidX + ' ' + qMidY + ' ' + q2.x + ' ' + q2.y);
-              arc2.setAttribute('opacity', '0.7');
-            } else {
-              arc2.setAttribute('opacity', '0');
-            }
-          }
-
-          // 4. Highlight Dominant Region & Sync Left Badges
-          if (dominantCluster && maxZ > 0.35) {
-            if (regionLabel && regionLabel.textContent !== dominantCluster.name) {
-              regionLabel.textContent = dominantCluster.name;
-            }
-
-            [badgeClimate, badgeGender, badgeLabour, badgeHealth].forEach(function(b) {
-              if (b) {
-                b.classList.remove('ring-2', 'ring-[#B65A3A]', 'bg-[#FBEFE9]', 'scale-105', 'font-bold');
-              }
-            });
-
-            if (dominantCluster.badges) {
-              dominantCluster.badges.forEach(function(b) {
-                if (b) {
-                  b.classList.add('ring-2', 'ring-[#B65A3A]', 'bg-[#FBEFE9]', 'scale-105', 'font-bold');
-                }
-              });
-            }
-          }
-        }
-
-        requestAnimationFrame(renderGlobe);
-      } catch (err) {
-        console.warn('Wise globe animation self-healed:', err);
-      }
     })();
   </script>
 
