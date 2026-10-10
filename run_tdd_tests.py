@@ -102,6 +102,7 @@ test("40. Wise Impact Pillar 5: Speaking & Thought Leadership", "Speaking, Facil
 # ═══════════════════════════════════════════════════════════════════════════
 endorse_block = content.split('id="endorsements"')[1].split('id="connect"')[0] if 'id="endorsements"' in content else ""
 
+test("40b. Endorsements: 'What It’s Like to Work Together' Bold Eyebrow", "What It’s Like to Work Together" in endorse_block and "font-bold" in endorse_block)
 test("41. Testimonial 1: Arjav Chakravarthi (Svarya) Verbatim", "Arjav Chakravarthi" in endorse_block and "Leadership Coach at Svarya" in endorse_block and "innovative and engaging course material" in endorse_block)
 test("42. Testimonial 2: Bhumi Fellowship (2020) Verbatim", "Bhumi Fellowship" in endorse_block and "holistic inquiry, creates spaces for collective reflection" in endorse_block)
 test("43. Testimonials CTA: 'See more recommendations on LinkedIn ↗'", "https://www.linkedin.com/in/taniyadsilva" in endorse_block and "See more recommendations on LinkedIn ↗" in endorse_block)
