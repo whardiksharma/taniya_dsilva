@@ -181,34 +181,37 @@
         </div>
       </a>
 
-      <!-- Quick Nav Links: Bolded in Terracotta Theme Color -->
-      <nav class="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 font-mono text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#944226] shrink-0">
-        <a href="#about" class="text-[#944226] hover:text-[#B65A3A] transition-colors">About</a>
-        <a href="#work" class="text-[#944226] hover:text-[#B65A3A] transition-colors">My Work</a>
-        <a href="#affiliations" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Affiliations</a>
-        <a href="#pillars" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Wise Impact</a>
-        <a href="#endorsements" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Endorsements</a>
-      </nav>
+      <!-- Nav & Controls Grouped Right (Eliminating dead space between Endorsements and Search) -->
+      <div class="flex items-center gap-4 lg:gap-6 shrink-0">
+        <!-- Quick Nav Links: Bolded in Terracotta Theme Color -->
+        <nav class="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 font-mono text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#944226]">
+          <a href="#about" class="text-[#944226] hover:text-[#B65A3A] transition-colors">About</a>
+          <a href="#work" class="text-[#944226] hover:text-[#B65A3A] transition-colors">My Work</a>
+          <a href="#affiliations" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Affiliations</a>
+          <a href="#pillars" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Wise Impact</a>
+          <a href="#endorsements" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Endorsements</a>
+        </nav>
 
-      <!-- Right Controls: Compact Search & Get in Touch -->
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <!-- Interactive Compact Search Input -->
-        <div class="relative flex items-center">
-          <input 
-            type="text" 
-            id="pageSearchInput" 
-            placeholder="Search (/) ..." 
-            class="pl-7 pr-12 py-1 text-[11px] rounded-full border border-atlas-border bg-atlas-surface text-atlas-cream placeholder-atlas-charcoal/60 focus:outline-none focus:border-atlas-bright w-28 sm:w-36 md:w-40 lg:w-48 transition-all shadow-sm"
-          >
-          <span class="absolute left-2 text-atlas-charcoal text-[10px] pointer-events-none">🔍</span>
-          <span id="searchResultCount" class="absolute right-6 font-mono text-[9px] text-atlas-bright hidden font-bold"></span>
-          <button id="searchClearBtn" class="absolute right-2 text-atlas-charcoal hover:text-atlas-bright text-[10px] hidden" title="Clear Search">✕</button>
+        <!-- Right Controls: Compact Search & Get in Touch -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- Interactive Compact Search Input -->
+          <div class="relative flex items-center">
+            <input 
+              type="text" 
+              id="pageSearchInput" 
+              placeholder="Search (/) ..." 
+              class="pl-7 pr-12 py-1 text-[11px] rounded-full border border-atlas-border bg-atlas-surface text-atlas-cream placeholder-atlas-charcoal/60 focus:outline-none focus:border-atlas-bright w-28 sm:w-36 md:w-40 lg:w-48 transition-all shadow-sm"
+            >
+            <span class="absolute left-2 text-atlas-charcoal text-[10px] pointer-events-none">🔍</span>
+            <span id="searchResultCount" class="absolute right-6 font-mono text-[9px] text-atlas-bright hidden font-bold"></span>
+            <button id="searchClearBtn" class="absolute right-2 text-atlas-charcoal hover:text-atlas-bright text-[10px] hidden" title="Clear Search">✕</button>
+          </div>
+
+          <!-- Right Header CTA: Get in Touch in Theme Color -->
+          <a href="#connect" class="px-3.5 sm:px-4 py-1.5 rounded-full bg-atlas-olive hover:bg-atlas-bright text-white font-mono text-[10px] sm:text-[11px] uppercase tracking-wider transition-all shadow-sm font-semibold shrink-0">
+            Get in Touch ↗
+          </a>
         </div>
-
-        <!-- Right Header CTA: Get in Touch in Theme Color -->
-        <a href="#connect" class="px-3.5 sm:px-4 py-1.5 rounded-full bg-atlas-olive hover:bg-atlas-bright text-white font-mono text-[10px] sm:text-[11px] uppercase tracking-wider transition-all shadow-sm font-semibold shrink-0">
-          Get in Touch ↗
-        </a>
       </div>
 
     </div>
