@@ -408,7 +408,7 @@
               <a href="#work" class="px-5 py-3 rounded-full bg-atlas-olive text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-md hover:opacity-90 shrink-0 whitespace-nowrap">
                 Explore My Work
               </a>
-              <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shrink-0 whitespace-nowrap">
+              <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" onclick="openCvViewer(event);" class="btn-resume px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shrink-0 whitespace-nowrap cursor-pointer" role="button" aria-haspopup="dialog">
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                 <span>View CV / Resume (PDF) ↗</span>
               </a>
@@ -607,7 +607,7 @@
 
               <!-- Direct CV Action Link in Credentials Card -->
               <div class="pt-4 border-t border-atlas-border">
-                <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-mono text-[11px] text-atlas-bright hover:underline font-semibold">
+                <a href="/assets/taniya_dsilva/taniya_dsilva_resume.pdf" onclick="openCvViewer(event);" class="inline-flex items-center gap-2 font-mono text-[11px] text-atlas-bright hover:underline font-semibold cursor-pointer" role="button" aria-haspopup="dialog">
                   <span>View Complete CV &amp; Resume (PDF) ↗</span>
                 </a>
               </div>
@@ -1490,7 +1490,88 @@
         searchInput.focus();
       });
     })();
+
+    // In-Website CV / Resume Viewer Modal Controls (Read-Only, No Download)
+    window.openCvViewer = function(e) {
+      if (e) e.preventDefault();
+      const modal = document.getElementById('cvViewerModal');
+      const frame = document.getElementById('cvViewerFrame');
+      if (modal && frame) {
+        if (!frame.src || frame.src === 'about:blank' || frame.src.endsWith('about:blank')) {
+          frame.src = frame.dataset.src || '/assets/taniya_dsilva/taniya_dsilva_resume.pdf#toolbar=0&navpanes=0&scrollbar=1';
+        }
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+      }
+      return false;
+    };
+
+    window.closeCvViewer = function() {
+      const modal = document.getElementById('cvViewerModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+      }
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('cvViewerModal');
+        if (modal && !modal.classList.contains('hidden')) {
+          closeCvViewer();
+        }
+      }
+    });
   </script>
+
+  <!-- ========================================================================= -->
+  <!-- IN-WEBSITE INTERACTIVE CV / RESUME VIEWER MODAL (READ-ONLY, NO DOWNLOAD)  -->
+  <!-- ========================================================================= -->
+  <div id="cvViewerModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden flex-col p-3 sm:p-5 md:p-6 transition-all duration-300" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer">
+    
+    <!-- Viewer Top Navigation Bar -->
+    <div class="w-full max-w-6xl mx-auto flex items-center justify-between gap-3 pb-3 border-b border-white/20 shrink-0">
+      
+      <!-- Prominent "← Back to Website" Action Button -->
+      <button type="button" onclick="closeCvViewer()" class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#FAF6F0] hover:bg-white text-[#1C140F] border border-[#DFCFC0] font-mono text-xs uppercase tracking-wider font-bold shadow-md hover:scale-105 transition-all cursor-pointer" style="color: #1C140F !important;">
+        <svg class="w-4 h-4 stroke-[#1C140F]" fill="none" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        <span style="color: #1C140F !important;">← Back to Website</span>
+      </button>
+
+      <!-- Center Title & Security Badge -->
+      <div class="hidden sm:flex flex-col items-center text-center">
+        <span class="font-serif text-white text-sm sm:text-base font-semibold tracking-tight" style="color: #FFFFFF !important;">Taniya D’silva — Curriculum Vitae &amp; Credentials</span>
+        <span class="font-mono text-[10.5px] uppercase tracking-widest font-semibold flex items-center gap-1.5 mt-0.5" style="color: #FDE68A !important;">
+          <span class="w-2 h-2 rounded-full bg-[#34A853] inline-block animate-pulse"></span>
+          In-Website Read-Only Viewer (Download Protected)
+        </span>
+      </div>
+
+      <!-- Close X Button -->
+      <button type="button" onclick="closeCvViewer()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-all cursor-pointer border border-white/25 shadow-sm" title="Back to Website (Esc)">
+        <svg class="w-5 h-5 stroke-white" fill="none" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Protected PDF Display Frame -->
+    <div class="flex-1 w-full max-w-6xl mx-auto mt-3 rounded-2xl overflow-hidden bg-[#1E1E1E] border border-white/20 shadow-2xl relative flex flex-col">
+      <iframe 
+        id="cvViewerFrame" 
+        src="about:blank" 
+        data-src="/assets/taniya_dsilva/taniya_dsilva_resume.pdf#toolbar=0&navpanes=0&scrollbar=1" 
+        class="w-full h-full flex-1 border-0 bg-white rounded-2xl" 
+        title="Taniya D'silva Curriculum Vitae"
+        oncontextmenu="return false;"
+      ></iframe>
+    </div>
+
+  </div>
 
 </body>
 </html>

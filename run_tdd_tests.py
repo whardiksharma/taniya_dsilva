@@ -126,6 +126,7 @@ test("48. Footer: Raw Email Address Removed", "mailto:its.taniya.dsilva@gmail.co
 test("49. Footer: Verified LinkedIn & Get in Touch Links", "https://www.linkedin.com/in/taniyadsilva" in footer_block and 'href="#connect"' in footer_block)
 test("50. UI Guard: .btn-resume Hover White Text CSS Enforced", ".btn-resume:hover *" in content and "color: #FFFFFF !important" in content)
 test("51. Asset Guard: Valid Resume PDF File on Disk", os.path.exists(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf")) and open(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf"), "rb").read(4) == b"%PDF")
+test("52. CV In-Website Viewer: Modal, Back to Website CTA & No-Download Guard", 'id="cvViewerModal"' in content and "← Back to Website" in content and "openCvViewer" in content and "#toolbar=0&navpanes=0" in content)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # OUTPUT RESULTS
