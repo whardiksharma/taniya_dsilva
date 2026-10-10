@@ -106,6 +106,7 @@ test("40b. Endorsements: 'What It’s Like to Work Together' Bold Eyebrow", "Wha
 test("41. Testimonial 1: Arjav Chakravarthi (Svarya) Verbatim", "Arjav Chakravarthi" in endorse_block and "Leadership Coach at Svarya" in endorse_block and "innovative and engaging course material" in endorse_block)
 test("42. Testimonial 2: Bhumi Fellowship (2020) Verbatim", "Bhumi Fellowship" in endorse_block and "holistic inquiry, creates spaces for collective reflection" in endorse_block)
 test("43. Testimonials CTA: 'See more recommendations on LinkedIn ↗'", "https://www.linkedin.com/in/taniyadsilva" in endorse_block and "See more recommendations on LinkedIn ↗" in endorse_block)
+test("43b. Testimonials: In-Card Verified Badges Removed per Client Request", "Verified Recommendation" not in endorse_block)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 8. CONTACT FORM & INSTANT ACKNOWLEDGEMENT MODAL
