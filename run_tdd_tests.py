@@ -95,7 +95,7 @@ test("37. Wise Impact: Tagline Descriptor Label Removed", "Tagline / Descriptor:
 test("38. Wise Impact: Centered 3-over-2 Symmetrical Grid", "lg:w-[calc(33.333%-22px)]" in pillars_block)
 test("39. Wise Impact: Bullet Font Size Improved", "text-xs sm:text-[13px]" in pillars_block)
 test("39b. Wise Impact Pillar 3: 'Fractional Program Management & Delivery' 1st Bullet", "Fractional Program Management" in pillars_block.split("Programme & Portfolio Design")[1].split("<li>")[1])
-test("40. Wise Impact Pillar 5: Speaking & Thought Leadership", "Speaking, Facilitation & Thought Leadership" in pillars_block and "Keynotes and conference talks" in pillars_block)
+test("40. Wise Impact Pillar 5: Speaking & Thought Leadership", "Speaking, Facilitation & Thought Leadership" in pillars_block and (("Panel discussions &amp; moderated conversations" in pillars_block) or ("Panel discussions & moderated conversations" in pillars_block)))
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 7. ENDORSEMENTS & TESTIMONIALS
