@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -156,6 +156,12 @@
       outline-offset: 4px;
       transition: outline 0.3s ease;
     }
+    .header-nav-link {
+      font-weight: 700 !important;
+      -webkit-text-stroke: 0.45px currentColor;
+      text-shadow: 0 0 0.6px rgba(148, 66, 38, 0.5);
+      letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
@@ -184,12 +190,12 @@
       <!-- Nav & Controls Grouped Right (Eliminating dead space between Endorsements and Search) -->
       <div class="flex items-center gap-4 lg:gap-6 shrink-0">
         <!-- Quick Nav Links: Bolded in Terracotta Theme Color -->
-        <nav class="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 font-mono text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#944226]">
-          <a href="#about" class="text-[#944226] hover:text-[#B65A3A] transition-colors">About</a>
-          <a href="#work" class="text-[#944226] hover:text-[#B65A3A] transition-colors">My Work</a>
-          <a href="#affiliations" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Affiliations</a>
-          <a href="#pillars" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Wise Impact</a>
-          <a href="#endorsements" class="text-[#944226] hover:text-[#B65A3A] transition-colors">Endorsements</a>
+        <nav class="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 font-mono text-xs sm:text-[12.5px] uppercase tracking-wider font-bold text-[#944226]">
+          <a href="#about" class="header-nav-link text-[#944226] hover:text-[#B65A3A] transition-colors">About</a>
+          <a href="#work" class="header-nav-link text-[#944226] hover:text-[#B65A3A] transition-colors">My Work</a>
+          <a href="#affiliations" class="header-nav-link text-[#944226] hover:text-[#B65A3A] transition-colors">Affiliations</a>
+          <a href="#pillars" class="header-nav-link text-[#944226] hover:text-[#B65A3A] transition-colors">Wise Impact</a>
+          <a href="#endorsements" class="header-nav-link text-[#944226] hover:text-[#B65A3A] transition-colors">Endorsements</a>
         </nav>
 
         <!-- Right Controls: Compact Search & Get in Touch -->
