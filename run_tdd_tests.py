@@ -45,9 +45,9 @@ test("13. Hero CTA 3: 'Get in Touch' Button", 'href="#connect"' in hero_block an
 test("14. Hero Subtitle: Strategic Social Impact Descriptor (Bold)", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in hero_block and "font-bold" in hero_block)
 test("15. Hero Metric: ₹10.5 Cr Gender x Automotive Program", "₹10.5 Cr" in hero_block and "Program size managed in Gender x Automotive industry" in hero_block)
 test("15b. Hero Metric: '15+ Years in Strategy & Impact'", "15+" in hero_block and (("Years in Strategy &amp; Impact" in hero_block) or ("Years in Strategy & Impact" in hero_block)))
-test("16. Hero Portrait: RHS LinkedIn Direct Button", 'class="absolute top-4 right-4' in hero_block and "https://www.linkedin.com/in/taniyadsilva" in hero_block)
+test("16. Hero Portrait: RHS LinkedIn Direct Button Removed", 'class="absolute top-4 right-4' not in hero_block)
 test("17. Hero Portrait: High-Contrast Frosted Nameplate", "Taniya D’silva" in hero_block and "Strategic Social Impact Advisory" in hero_block and "ssional & Advisory Identity" not in hero_block)
-test("18. Hero Badge: LHS LinkedIn Direct Link & Official Logo", "https://www.linkedin.com/in/taniyadsilva" in hero_block and "Connect ↗" in hero_block and "taniya_laptop_illustration.png" not in hero_block)
+test("18. Hero Badge: LHS LinkedIn Direct Link & Official Logo (High-Contrast White Connect)", "https://www.linkedin.com/in/taniyadsilva" in hero_block and "Connect ↗" in hero_block and "color: #FFFFFF !important" in hero_block and "taniya_laptop_illustration.png" not in hero_block)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 3. ABOUT TANIYA SECTION (NARRATIVE, CREDENTIALS & CV LINK)
