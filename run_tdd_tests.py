@@ -31,7 +31,7 @@ test("05. Nav Link: Wise Impact Section Target", 'href="#pillars"' in nav_block)
 test("06. Nav Link: Endorsements Section Target", 'href="#endorsements"' in nav_block)
 test("07. Nav Link: Redundant Connect Removed", 'href="#connect"' not in nav_block)
 test("08. Header: Brand Logo & Title Link to Hero", 'href="#hero"' in header_block and "Taniya D’silva" in header_block)
-test("09. Header: Direct LinkedIn Pill CTA", "https://www.linkedin.com/in/taniyadsilva" in header_block and "LinkedIn ↗" in header_block)
+test("09. Header: 'Get in Touch' Theme CTA Button", 'href="#connect"' in header_block and "Get in Touch" in header_block and "bg-atlas-olive" in header_block)
 test("10. Header: Interactive Search Input & Clear Control", 'id="pageSearchInput"' in header_block and 'id="searchClearBtn"' in header_block)
 
 # ═══════════════════════════════════════════════════════════════════════════
