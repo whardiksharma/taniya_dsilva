@@ -194,22 +194,55 @@
       animation: wiseDashTravel 12s linear infinite reverse;
     }
 
-    /* 3D Y-Axis Polar Horizon Sway (Zero Corner Tumble, 100% Upright People, Authentic Client Art) */
-    @keyframes globePolarSway {
-      0% {
-        transform: perspective(1000px) rotateY(-14deg);
+    /* Living Earth Organic Float & Ambient Atmosphere (No Rotation, No Distortion) */
+    @keyframes livingGlobeBreathe {
+      0%, 100% {
+        transform: translateY(0px) scale(1);
       }
       50% {
-        transform: perspective(1000px) rotateY(14deg);
-      }
-      100% {
-        transform: perspective(1000px) rotateY(-14deg);
+        transform: translateY(-5px) scale(1.02);
       }
     }
-    .animate-globe-sway {
-      animation: globePolarSway 8s ease-in-out infinite;
-      transform-style: preserve-3d;
+    .animate-living-globe {
+      animation: livingGlobeBreathe 6s ease-in-out infinite;
       will-change: transform;
+    }
+
+    /* Living Sunlight Sheen Sweep across continents */
+    @keyframes sunSheenSweep {
+      0% {
+        transform: translateX(-160%) rotate(25deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.35;
+      }
+      45% {
+        transform: translateX(160%) rotate(25deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(160%) rotate(25deg);
+        opacity: 0;
+      }
+    }
+    .animate-sun-sheen {
+      animation: sunSheenSweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Soft Atmospheric Pulse */
+    @keyframes atmospherePulse {
+      0%, 100% {
+        transform: scale(0.96);
+        opacity: 0.35;
+      }
+      50% {
+        transform: scale(1.04);
+        opacity: 0.65;
+      }
+    }
+    .animate-atmosphere {
+      animation: atmospherePulse 6s ease-in-out infinite;
     }
   </style>
 </head>
@@ -941,25 +974,41 @@
             <div class="lg:col-span-5 flex justify-center lg:justify-end">
               <div class="relative w-full max-w-[420px] bg-white rounded-[28px] border border-[#E4DACB] p-4 sm:p-5 shadow-xl overflow-hidden group hover:shadow-2xl transition-all" style="background-image: linear-gradient(to right, rgba(182, 90, 58, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(182, 90, 58, 0.05) 1px, transparent 1px); background-size: 22px 22px;">
                 
-                <!-- Floating Badge Top Left: People & Planet -->
-                <div class="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#B65A3A]"></span>
+                <!-- Floating Badge Top Left: People & Planet (Active Beacon) -->
+                <div class="absolute top-4 left-4 z-30 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B65A3A] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#B65A3A]"></span>
+                  </span>
                   <span>People &amp; Planet</span>
                 </div>
 
-                <!-- Illustration Image (Authentic Half Globe with 3D Y-Axis Polar Sway - Zero Extra Elements) -->
-                <div class="rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2" style="perspective: 1000px;">
+                <!-- Illustration Image (Authentic Half Globe with Living Atmosphere & Sunlight Sheen) -->
+                <div class="relative rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2 group/living">
+                  
+                  <!-- Soft Living Atmosphere Halo behind the Globe -->
+                  <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-[#B65A3A]/15 via-[#FAF6F0] to-[#34A853]/15 blur-2xl pointer-events-none animate-atmosphere"></div>
+
+                  <!-- Authentic Vector Globe Illustration (Organic Living Breathe) -->
                   <img 
                     src="/assets/taniya_dsilva/extracted_pdf_images/wise_impact_globe.svg" 
                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/extracted_pdf_images/wise_impact_globe.svg';}" 
                     alt="Wise Impact Systems Network" 
-                    class="w-full h-full object-contain animate-globe-sway"
+                    class="w-full h-full object-contain relative z-10 animate-living-globe"
                   >
+
+                  <!-- Living Sunlight Shimmer Beam Sweep -->
+                  <div class="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl z-20">
+                    <div class="w-28 h-[220%] bg-gradient-to-r from-transparent via-white/45 to-transparent absolute -top-[60%] left-0 animate-sun-sheen"></div>
+                  </div>
                 </div>
 
-                <!-- Floating Badge Bottom Right: Systems Network -->
-                <div class="absolute bottom-4 right-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#34A853]"></span>
+                <!-- Floating Badge Bottom Right: Systems Network (Active Beacon) -->
+                <div class="absolute bottom-4 right-4 z-30 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
+                  </span>
                   <span>Systems Network</span>
                 </div>
 
