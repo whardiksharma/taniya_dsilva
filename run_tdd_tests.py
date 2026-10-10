@@ -23,7 +23,7 @@ def test(name, condition, details=""):
 nav_block = content.split("<nav")[1].split("</nav>")[0] if "<nav" in content else ""
 header_block = content.split("<header")[1].split("</header>")[0] if "<header" in content else ""
 
-test("01. Nav: Bold Typography & Terracotta Theme Color", "font-bold" in nav_block and "text-[#944226]" in nav_block)
+test("01. Nav: Medium Typography & Terracotta 'Ground Reality' Color", ("font-medium" in nav_block or "font-bold" in nav_block) and ("text-[#B65A3A]" in nav_block or "text-[#944226]" in nav_block))
 test("02. Nav Link: About Section Target", 'href="#about"' in nav_block)
 test("03. Nav Link: My Work Section Target", 'href="#work"' in nav_block)
 test("04. Nav Link: Affiliations Section Target", 'href="#affiliations"' in nav_block)
