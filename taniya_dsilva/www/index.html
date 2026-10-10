@@ -244,6 +244,23 @@
     .animate-atmosphere {
       animation: atmospherePulse 6s ease-in-out infinite;
     }
+
+    /* 5 Pillars Dynamic Responsive Layout Guard (3 on Desktop/Laptop, 1 on Mobile) */
+    .pillar-card {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .pillar-card {
+        width: calc(33.333% - 18px) !important;
+        max-width: calc(33.333% - 18px) !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .pillar-card {
+        width: calc(33.333% - 22px) !important;
+        max-width: calc(33.333% - 22px) !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
@@ -1030,7 +1047,7 @@
         <div class="flex flex-wrap justify-center gap-6 lg:gap-8 max-w-7xl mx-auto">
           
           <!-- Pillar 1 -->
-          <div class="w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
+          <div class="pillar-card w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
             <div class="space-y-4">
               <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold shadow-xs">
                 01
@@ -1048,7 +1065,7 @@
           </div>
 
           <!-- Pillar 2 -->
-          <div class="w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
+          <div class="pillar-card w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
             <div class="space-y-4">
               <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold shadow-xs">
                 02
@@ -1066,7 +1083,7 @@
           </div>
 
           <!-- Pillar 3 -->
-          <div class="w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
+          <div class="pillar-card w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
             <div class="space-y-4">
               <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold shadow-xs">
                 03
@@ -1084,7 +1101,7 @@
           </div>
 
           <!-- Pillar 4 (Centered in Row 2) -->
-          <div class="w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
+          <div class="pillar-card w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
             <div class="space-y-4">
               <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold shadow-xs">
                 04
@@ -1102,7 +1119,7 @@
           </div>
 
           <!-- Pillar 5 (Centered in Row 2) -->
-          <div class="w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
+          <div class="pillar-card w-full md:w-[calc(33.333%-16px)] lg:w-[calc(33.333%-22px)] p-6 sm:p-7 rounded-3xl bg-atlas-card border border-atlas-border space-y-5 hover:border-atlas-bright transition-all flex flex-col justify-between shadow-xs min-h-[350px]">
             <div class="space-y-4">
               <div class="w-10 h-10 rounded-xl bg-atlas-surface border border-atlas-border flex items-center justify-center font-serif text-atlas-bright text-lg font-bold shadow-xs">
                 05
