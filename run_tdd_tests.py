@@ -40,7 +40,7 @@ test("10. Header: Interactive Search Input & Clear Control", 'id="pageSearchInpu
 hero_block = content.split('id="hero"')[1].split('id="about"')[0] if 'id="hero"' in content else ""
 
 test("11. Hero CTA 1: 'Explore My Work' Button", 'href="#work"' in hero_block and "Explore My Work" in hero_block)
-test("12. Hero CTA 2: 'Download CV / Resume (PDF)' Button", "Download CV / Resume (PDF) ↗" in hero_block and "taniya_dsilva_resume.pdf" in hero_block and 'download="Taniya_Dsilva_Resume.pdf"' in hero_block)
+test("12. Hero CTA 2: 'View CV / Resume (PDF)' Browser Viewer Link", "View CV / Resume (PDF) ↗" in hero_block and "taniya_dsilva_resume.pdf" in hero_block and 'download=' not in hero_block)
 test("13. Hero CTA 3: 'Get in Touch' Button", 'href="#connect"' in hero_block and "Get in Touch" in hero_block)
 test("14. Hero Subtitle: Strategic Social Impact Descriptor (Bold)", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in hero_block and "font-bold" in hero_block)
 test("15. Hero Metric: ₹10.5 Cr Gender x Automotive Program", "₹10.5 Cr" in hero_block and "Program size managed in Gender x Automotive industry" in hero_block)
@@ -58,7 +58,7 @@ test("20. About CTA: Exact Rewritten Collaboration Link", "Get in touch and let�
 test("21. About: PMP Typo Removed (No Hyphen)", "PMP® Certified, 2026" in about_block)
 test("22. About: 30+ Member Teams Interdisciplinary Credential", "research, design, partnerships & operations" in about_block)
 test("23. About: Philanthropies 3-5 Year Investment Strategy", "Built 3–5 year investment and resourcing strategies for emerging and established philanthropies" in about_block)
-test("24. About: Direct Complete CV & Resume Download Link", ("Download Complete CV" in about_block) and "taniya_dsilva_resume.pdf" in about_block)
+test("24. About: Direct Complete CV & Resume Browser Viewer Link", ("View Complete CV" in about_block) and "taniya_dsilva_resume.pdf" in about_block and 'download=' not in about_block)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 4. MY WORK & RECENT PROJECTS (ALL 8 CARDS & LINKS)
