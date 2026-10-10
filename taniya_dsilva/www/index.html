@@ -194,31 +194,22 @@
       animation: wiseDashTravel 12s linear infinite reverse;
     }
 
-    /* Rotating Half-Globe & Fading Orbit Particles */
-    @keyframes globeSpinSlow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    /* 3D Y-Axis Polar Horizon Sway (Zero Corner Tumble, 100% Upright People, Authentic Client Art) */
+    @keyframes globePolarSway {
+      0% {
+        transform: perspective(1000px) rotateY(-14deg);
+      }
+      50% {
+        transform: perspective(1000px) rotateY(14deg);
+      }
+      100% {
+        transform: perspective(1000px) rotateY(-14deg);
+      }
     }
-    .animate-globe-spin {
-      animation: globeSpinSlow 45s linear infinite;
-      transform-origin: center center;
-    }
-    @keyframes orbitFade {
-      0% { transform: rotate(0deg); opacity: 0.85; }
-      35% { opacity: 0.75; }
-      50% { opacity: 0.08; }
-      65% { opacity: 0; }
-      75% { opacity: 0.15; }
-      90% { opacity: 0.75; }
-      100% { transform: rotate(360deg); opacity: 0.85; }
-    }
-    .animate-orbit-fade {
-      animation: orbitFade 24s linear infinite;
-      transform-origin: center center;
-    }
-    .animate-orbit-fade-rev {
-      animation: orbitFade 32s linear infinite reverse;
-      transform-origin: center center;
+    .animate-globe-sway {
+      animation: globePolarSway 8s ease-in-out infinite;
+      transform-style: preserve-3d;
+      will-change: transform;
     }
   </style>
 </head>
@@ -956,32 +947,13 @@
                   <span>People &amp; Planet</span>
                 </div>
 
-                <!-- Illustration Image (Vector SVG with Rotation & Fading Orbit Particles) -->
-                <div class="relative rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2">
-                  
-                  <!-- Atmospheric Orbit Ring with Fading Particles -->
-                  <div class="absolute inset-3 pointer-events-none flex items-center justify-center animate-orbit-fade" style="transform-origin: center center;">
-                    <div class="w-[92%] h-[92%] rounded-full border border-dashed border-[#B65A3A]/30 relative">
-                      <!-- Fading Node 1 -->
-                      <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#B65A3A] shadow-[0_0_6px_#B65A3A]"></span>
-                      <!-- Fading Node 2 -->
-                      <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#E58356] shadow-[0_0_5px_#E58356]"></span>
-                    </div>
-                  </div>
-
-                  <!-- Counter Orbit Ring with Fading Particles -->
-                  <div class="absolute inset-5 pointer-events-none flex items-center justify-center animate-orbit-fade-rev" style="transform-origin: center center;">
-                    <div class="w-[88%] h-[88%] rounded-full border border-dashed border-[#34A853]/25 relative">
-                      <span class="absolute top-1/2 -right-1 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#34A853] shadow-[0_0_6px_#34A853]"></span>
-                    </div>
-                  </div>
-
-                  <!-- Rotating Vector Globe Illustration -->
+                <!-- Illustration Image (Authentic Half Globe with 3D Y-Axis Polar Sway - Zero Extra Elements) -->
+                <div class="rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2" style="perspective: 1000px;">
                   <img 
                     src="/assets/taniya_dsilva/extracted_pdf_images/wise_impact_globe.svg" 
                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/extracted_pdf_images/wise_impact_globe.svg';}" 
                     alt="Wise Impact Systems Network" 
-                    class="w-full h-full object-contain relative z-10 animate-globe-spin"
+                    class="w-full h-full object-contain animate-globe-sway"
                   >
                 </div>
 
