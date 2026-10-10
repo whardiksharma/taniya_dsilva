@@ -68,9 +68,9 @@ test("24b. About: '15+ Years in Strategy & Impact' Credential Title", ("15+ Year
 work_block = content.split('id="work"')[1].split('id="affiliations"')[0] if 'id="work"' in content else ""
 
 test("25. Work Card 1: Mauritius Op-Ed Article & Link", "What Mauritius can learn from the Himalayas" in work_block and "lexpress.mu" in work_block)
-test("26. Work Card 2: Climate Nonprofits Headline Image & Tags", "climate_course_headliner.jpg" in work_block and "Learning & Development · Strategic Capacity Building" in work_block)
+test("26. Work Card 2: Climate Nonprofits Headline Image & Tags", "climate_course_headliner.jpg" in work_block and (("Strategic Capacity Building · Learning &amp; Development" in work_block) or ("Strategic Capacity Building · Learning & Development" in work_block)))
 test("27. Work Card 3: Just Energy Transition Image & Tag", "just_transition_coal.jpg" in work_block and "Just Energy Transition" in work_block)
-test("28. Work Card 4: ILSS People Practices Banner & Tag", "ilss_people_practices_banner.png" in work_block and "Program Design · Strategic Capacity Building" in work_block)
+test("28. Work Card 4: ILSS People Practices Banner & Tag", "ilss_people_practices_banner.png" in work_block and "Strategic Capacity Building · Program Design" in work_block)
 test("29. Work Card 5: Automotive & EV Sector Leadership", "women_automotive_ev.png" in work_block and "Gender, Labour" in work_block and "Nation-wide Program Leadership" in work_block)
 test("30. Work Card 6: The Resilience Collaborative", "trc_landing_page.png" in work_block and "https://trc.community/" in work_block)
 test("31. Work Card 7: UP BIU Grassroots Healthcare Image", "up_behavioural_health.jpg" in work_block and "Uttar Pradesh Behavioural Insights Unit" in work_block)
