@@ -44,6 +44,7 @@ test("12. Hero CTA 2: 'View CV / Resume (PDF)' Browser Viewer Link", "View CV / 
 test("13. Hero CTA 3: 'Get in Touch' Button", 'href="#connect"' in hero_block and "Get in Touch" in hero_block)
 test("14. Hero Subtitle: Strategic Social Impact Descriptor (Bold)", "Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management" in hero_block and "font-bold" in hero_block)
 test("15. Hero Metric: ₹10.5 Cr Gender x Automotive Program", "₹10.5 Cr" in hero_block and "Program size managed in Gender x Automotive industry" in hero_block)
+test("15b. Hero Metric: '15+ Years in Strategy & Impact'", "15+" in hero_block and (("Years in Strategy &amp; Impact" in hero_block) or ("Years in Strategy & Impact" in hero_block)))
 test("16. Hero Portrait: RHS LinkedIn Direct Button", 'class="absolute top-4 right-4' in hero_block and "https://www.linkedin.com/in/taniyadsilva" in hero_block)
 test("17. Hero Portrait: High-Contrast Frosted Nameplate", "Taniya D’silva" in hero_block and "Strategic Social Impact Advisory" in hero_block and "ssional & Advisory Identity" not in hero_block)
 test("18. Hero Badge: LHS LinkedIn Direct Link & Official Logo", "https://www.linkedin.com/in/taniyadsilva" in hero_block and "Connect ↗" in hero_block and "taniya_laptop_illustration.png" not in hero_block)
@@ -59,6 +60,7 @@ test("21. About: PMP Typo Removed (No Hyphen)", "PMP® Certified, 2026" in about
 test("22. About: 30+ Member Teams Interdisciplinary Credential", "research, design, partnerships & operations" in about_block)
 test("23. About: Philanthropies 3-5 Year Investment Strategy", "Built 3–5 year investment and resourcing strategies for emerging and established philanthropies" in about_block)
 test("24. About: Direct Complete CV & Resume Browser Viewer Link", ("View Complete CV" in about_block) and "taniya_dsilva_resume.pdf" in about_block and 'download=' not in about_block)
+test("24b. About: '15+ Years in Strategy & Impact' Credential Title", ("15+ Years in Strategy &amp; Impact" in about_block) or ("15+ Years in Strategy & Impact" in about_block))
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 4. MY WORK & RECENT PROJECTS (ALL 8 CARDS & LINKS)
