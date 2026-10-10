@@ -46,7 +46,7 @@ test("14. Hero Subtitle: Strategic Social Impact Descriptor (Bold)", "Strategic 
 test("15. Hero Metric: ₹10.5 Cr Gender x Automotive Program", "₹10.5 Cr" in hero_block and "Program size managed in Gender x Automotive industry" in hero_block)
 test("16. Hero Portrait: RHS LinkedIn Direct Button", 'class="absolute top-4 right-4' in hero_block and "https://www.linkedin.com/in/taniyadsilva" in hero_block)
 test("17. Hero Portrait: High-Contrast Frosted Nameplate", "Taniya D’silva" in hero_block and "Strategic Social Impact Advisory" in hero_block and "ssional & Advisory Identity" not in hero_block)
-test("18. Hero Badge: LHS Illustrated Avatar (Zero Likeness Tag)", "taniya_laptop_illustration.png" in hero_block and "Likeness" not in hero_block.split("taniya_laptop_illustration.png")[0].split("<!--")[0])
+test("18. Hero Badge: LHS LinkedIn Direct Link & Official Logo", "https://www.linkedin.com/in/taniyadsilva" in hero_block and "Connect ↗" in hero_block and "taniya_laptop_illustration.png" not in hero_block)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 3. ABOUT TANIYA SECTION (NARRATIVE, CREDENTIALS & CV LINK)
