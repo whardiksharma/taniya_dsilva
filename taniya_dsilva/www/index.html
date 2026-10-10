@@ -193,6 +193,45 @@
       stroke-dasharray: 5 4;
       animation: wiseDashTravel 12s linear infinite reverse;
     }
+
+    /* Planetary Orbit & Rotation Animation (Wise Impact Earth Systems) */
+    @keyframes planetHover {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-5px) scale(1.015); }
+    }
+    @keyframes orbitSpinContinuous {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitSpinRevContinuous {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitDashMove {
+      0% { stroke-dashoffset: 160; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes orbitDashMoveRev {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 160; }
+    }
+    .animate-planet-hover {
+      animation: planetHover 7s ease-in-out infinite;
+    }
+    .animate-orbit-spin {
+      animation: orbitSpinContinuous 26s linear infinite;
+    }
+    .animate-orbit-spin-rev {
+      animation: orbitSpinRevContinuous 34s linear infinite;
+    }
+    .animate-orbit-dash {
+      stroke-dasharray: 8 6;
+      animation: orbitDashMove 12s linear infinite;
+    }
+    .animate-orbit-dash-rev {
+      stroke-dasharray: 6 5;
+      animation: orbitDashMoveRev 15s linear infinite;
+    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
@@ -919,28 +958,98 @@
 
             </div>
 
-            <!-- Right Column: Illustrated Inset Card (People & Planet Systems Network) -->
+            <!-- Right Column: Illustrated Inset Card (People & Planet Systems Network with Rotating Orbit Physics) -->
             <div class="lg:col-span-5 flex justify-center lg:justify-end">
               <div class="relative w-full max-w-[420px] bg-white rounded-[28px] border border-[#E4DACB] p-4 sm:p-5 shadow-xl overflow-hidden group hover:shadow-2xl transition-all" style="background-image: linear-gradient(to right, rgba(182, 90, 58, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(182, 90, 58, 0.05) 1px, transparent 1px); background-size: 22px 22px;">
                 
                 <!-- Floating Badge Top Left: People & Planet -->
-                <div class="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
+                <div class="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#8C3D23] shadow-xs backdrop-blur-xs">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#B65A3A]"></span>
                   <span>People &amp; Planet</span>
                 </div>
 
-                <!-- Illustration Image -->
-                <div class="rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2">
+                <!-- Globe & Rotating Planetary Systems Visual Container -->
+                <div class="relative rounded-2xl overflow-hidden aspect-square flex items-center justify-center p-2">
+                  
+                  <!-- Continuous 3D Planetary Orbit Ring 1 (Terracotta) -->
+                  <div class="absolute inset-2 pointer-events-none flex items-center justify-center animate-orbit-spin" style="transform-origin: center center;">
+                    <div class="w-[94%] h-[94%] rounded-full border border-dashed border-[#B65A3A]/40 relative">
+                      <!-- Satellite / Network Node Blip 1 -->
+                      <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#B65A3A] shadow-[0_0_8px_#B65A3A] flex items-center justify-center">
+                        <span class="w-1 h-1 rounded-full bg-white"></span>
+                      </span>
+                      <!-- Satellite Node Blip 2 -->
+                      <span class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#E58356] shadow-[0_0_6px_#E58356]"></span>
+                    </div>
+                  </div>
+
+                  <!-- Counter-Rotating Planetary Orbit Ring 2 (Emerald Systems) -->
+                  <div class="absolute inset-6 pointer-events-none flex items-center justify-center animate-orbit-spin-rev" style="transform-origin: center center;">
+                    <div class="w-[90%] h-[90%] rounded-full border border-dashed border-[#34A853]/35 relative" style="transform: rotate(45deg);">
+                      <!-- Green Satellite Node Blip -->
+                      <span class="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-[#34A853] shadow-[0_0_8px_#34A853] flex items-center justify-center">
+                        <span class="w-1 h-1 rounded-full bg-white"></span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Base Globe Illustration with Gentle Planetary Float -->
                   <img 
                     src="/assets/taniya_dsilva/extracted_pdf_images/wise_impact_globe.png" 
                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='public/extracted_pdf_images/wise_impact_globe.png';}" 
                     alt="Wise Impact Systems Network" 
-                    class="w-full h-full object-contain group-hover:scale-103 transition-transform duration-500"
+                    class="w-full h-full object-contain relative z-10 animate-planet-hover"
                   >
+
+                  <!-- SVG Dynamic Arc Trajectories Overlay -->
+                  <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 400 400" fill="none">
+                    <!-- Elliptical Tilted Orbit Axis (West-to-East Trajectory) -->
+                    <ellipse cx="200" cy="225" rx="175" ry="70" transform="rotate(-18 200 225)" stroke="#B65A3A" stroke-width="1.6" stroke-opacity="0.5" class="animate-orbit-dash" />
+                    <!-- Counter Trajectory Arc -->
+                    <ellipse cx="200" cy="235" rx="180" ry="65" transform="rotate(28 200 235)" stroke="#2E6B4A" stroke-width="1.6" stroke-opacity="0.45" class="animate-orbit-dash-rev" />
+                    
+                    <!-- Network Hub Arcs -->
+                    <path d="M 120 205 Q 180 150 260 215" stroke="#B65A3A" stroke-width="1.4" stroke-opacity="0.6" stroke-dasharray="4 4" class="animate-orbit-dash" />
+                    <path d="M 180 280 Q 240 230 285 240" stroke="#34A853" stroke-width="1.4" stroke-opacity="0.6" stroke-dasharray="4 4" class="animate-orbit-dash-rev" />
+                  </svg>
+
+                  <!-- Active Geospatial Pulsing Nodes on the Globe -->
+                  <!-- South Asia / India Hub -->
+                  <div class="absolute z-20 pointer-events-none" style="top: 64%; left: 70%;">
+                    <div class="relative flex items-center justify-center">
+                      <span class="animate-ping absolute inline-flex h-4 w-4 rounded-full bg-[#34A853] opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#278241] shadow-[0_0_6px_#34A853]"></span>
+                    </div>
+                  </div>
+
+                  <!-- Europe Hub -->
+                  <div class="absolute z-20 pointer-events-none" style="top: 52%; left: 49%;">
+                    <div class="relative flex items-center justify-center">
+                      <span class="animate-ping absolute inline-flex h-3.5 w-3.5 rounded-full bg-[#B65A3A] opacity-75" style="animation-delay: 1s;"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C3D23] shadow-[0_0_6px_#B65A3A]"></span>
+                    </div>
+                  </div>
+
+                  <!-- Africa Hub -->
+                  <div class="absolute z-20 pointer-events-none" style="top: 72%; left: 45%;">
+                    <div class="relative flex items-center justify-center">
+                      <span class="animate-ping absolute inline-flex h-3.5 w-3.5 rounded-full bg-[#F59E0B] opacity-75" style="animation-delay: 2s;"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#D97706] shadow-[0_0_6px_#F59E0B]"></span>
+                    </div>
+                  </div>
+
+                  <!-- Americas Hub -->
+                  <div class="absolute z-20 pointer-events-none" style="top: 48%; left: 24%;">
+                    <div class="relative flex items-center justify-center">
+                      <span class="animate-ping absolute inline-flex h-3.5 w-3.5 rounded-full bg-[#B65A3A] opacity-75" style="animation-delay: 1.5s;"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C3D23] shadow-[0_0_6px_#B65A3A]"></span>
+                    </div>
+                  </div>
+
                 </div>
 
                 <!-- Floating Badge Bottom Right: Systems Network -->
-                <div class="absolute bottom-4 right-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
+                <div class="absolute bottom-4 right-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-[#E4DACB] font-mono text-[10px] uppercase font-bold text-[#206341] shadow-xs backdrop-blur-xs">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#34A853]"></span>
                   <span>Systems Network</span>
                 </div>
