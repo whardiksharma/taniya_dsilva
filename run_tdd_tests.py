@@ -136,6 +136,13 @@ test("49. Footer: Verified LinkedIn & Get in Touch Links", "https://www.linkedin
 test("50. UI Guard: .btn-resume Hover White Text CSS Enforced", ".btn-resume:hover *" in content and "color: #FFFFFF !important" in content)
 test("51. Asset Guard: Valid Resume PDF File on Disk", os.path.exists(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf")) and open(os.path.join(PUBLIC_DIR, "taniya_dsilva_resume.pdf"), "rb").read(4) == b"%PDF")
 test("52. CV In-Website Viewer: Modal, Back to Website CTA & No-Download Guard", 'id="cvViewerModal"' in content and "← Back to Website" in content and "openCvViewer" in content and "#toolbar=0&navpanes=0" in content)
+test("52b. CV Viewer: Zero-Download Canvas Document Engine & Right-Click Lockdown", 
+     'id="cvDocContainer"' in content and 
+     "taniya_cv_page_1.webp" in content and 
+     "taniya_cv_page_2.webp" in content and 
+     os.path.exists(os.path.join(PUBLIC_DIR, "taniya_cv_page_1.webp")) and
+     os.path.exists(os.path.join(PUBLIC_DIR, "taniya_cv_page_2.webp")) and
+     '<iframe' not in content.split('id="cvViewerModal"')[1].split('</div>\n\n  </div>')[0])
 
 # ═══════════════════════════════════════════════════════════════════════════
 # OUTPUT RESULTS
