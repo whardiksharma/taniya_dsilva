@@ -143,6 +143,22 @@ test("52b. CV Viewer: Zero-Download Canvas Document Engine & Right-Click Lockdow
      os.path.exists(os.path.join(PUBLIC_DIR, "taniya_cv_page_1.webp")) and
      os.path.exists(os.path.join(PUBLIC_DIR, "taniya_cv_page_2.webp")) and
      '<iframe' not in content.split('id="cvViewerModal"')[1].split('</div>\n\n  </div>')[0])
+# 10. WCAG 2.1 AA+ ACCESSIBILITY AUDIT SUITE
+# ═══════════════════════════════════════════════════════════════════════════
+test("53. WCAG 2.1 AA: Skip to Main Content Link and Target ID", 
+     'href="#main-content"' in content and 'id="main-content"' in content)
+test("54. WCAG 2.1 AA: High-Visibility Focus Outline & Motion Adaptation", 
+     ":focus-visible" in content and "prefers-reduced-motion" in content)
+test("55. WCAG 2.1 AA: Accessible Search Input aria-label", 
+     'aria-label="Search portfolio and keywords"' in content)
+test("56. WCAG 2.1 AA: Accessible Form Inputs with Explicit for/id & aria-required", 
+     'for="form-name"' in content and 'id="form-name"' in content and
+     'for="form-org"' in content and 'id="form-org"' in content and
+     'for="form-email"' in content and 'id="form-email"' in content and
+     'for="form-role"' in content and 'id="form-role"' in content and
+     'for="form-scope"' in content and 'id="form-scope"' in content and
+     'for="form-challenge"' in content and 'id="form-challenge"' in content and
+     'aria-required="true"' in content)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # OUTPUT RESULTS

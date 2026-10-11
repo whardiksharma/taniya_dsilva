@@ -262,9 +262,39 @@
         max-width: calc(33.333% - 24px) !important;
       }
     }
+
+    /* WCAG 2.1 AA+ Accessibility: High-Visibility Focus Outline & Motion Adaptation */
+    :focus-visible {
+      outline: 2px solid #B65A3A !important;
+      outline-offset: 2px !important;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
   </style>
 </head>
 <body class="bg-atlas-canvas text-atlas-cream font-sans antialiased selection:bg-atlas-olive contour-lines">
+
+  <!-- WCAG 2.1 AA: Skip to Main Content Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:px-4 focus:py-2.5 focus:bg-[#FAF6F0] focus:text-[#1C140F] focus:border focus:border-[#B65A3A] focus:rounded-xl focus:shadow-2xl focus:font-mono focus:text-xs focus:font-bold">
+    Skip to main content ↵
+  </a>
 
   <!-- ========================================================================= -->
   <!-- TOP RUNNING SLIM HEADER (SINGLE ROW, ZERO WRAPPING, COMPACT)              -->
@@ -330,6 +360,7 @@
               type="text" 
               id="pageSearchInput" 
               placeholder="Search (/) ..." 
+              aria-label="Search portfolio and keywords"
               class="pl-7 pr-12 py-1 text-[11px] rounded-full border border-atlas-border bg-atlas-surface text-atlas-cream placeholder-atlas-charcoal/60 focus:outline-none focus:border-atlas-bright w-28 sm:w-36 md:w-40 lg:w-48 transition-all shadow-sm"
             >
             <span class="absolute left-2 text-atlas-charcoal text-[10px] pointer-events-none">🔍</span>
@@ -347,7 +378,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ========================================================================= -->
     <!-- 1. HERO: CAREER PORTFOLIO (HOME)                                          -->
@@ -1214,29 +1245,29 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">1. Name *</label>
-                <input type="text" name="name" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-name" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">1. Name *</label>
+                <input id="form-name" type="text" name="name" required aria-required="true" placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">2. Organisation *</label>
-                <input type="text" name="organisation" required placeholder="Organization / Foundation / Ministry" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-org" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">2. Organisation *</label>
+                <input id="form-org" type="text" name="organisation" required aria-required="true" placeholder="Organization / Foundation / Ministry" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">3. Email *</label>
-                <input type="email" name="email" required placeholder="name@organisation.org" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-email" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">3. Email *</label>
+                <input id="form-email" type="email" name="email" required aria-required="true" placeholder="name@organisation.org" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">4. Role / Designation *</label>
-                <input type="text" name="designation" required placeholder="Executive Director / CEO / Trustee" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-role" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">4. Role / Designation *</label>
+                <input id="form-role" type="text" name="designation" required aria-required="true" placeholder="Executive Director / CEO / Trustee" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
             <div class="space-y-1.5">
-              <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">5. What are you looking for? *</label>
-              <select name="scope" required class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+              <label for="form-scope" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">5. What are you looking for? *</label>
+              <select id="form-scope" name="scope" required aria-required="true" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
                 <option value="Strategy and organisational advisory">Strategy and organisational advisory</option>
                 <option value="Research and landscape analysis">Research and landscape analysis</option>
                 <option value="Programme design">Programme design</option>
@@ -1249,24 +1280,24 @@
             </div>
 
             <div class="space-y-1.5">
-              <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">6. Brief description of the challenge/opportunity *</label>
-              <textarea name="challenge" rows="3" required placeholder="Describe the strategic question, project context, and desired outcomes..." class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none"></textarea>
+              <label for="form-challenge" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">6. Brief description of the challenge/opportunity *</label>
+              <textarea id="form-challenge" name="challenge" rows="3" required aria-required="true" placeholder="Describe the strategic question, project context, and desired outcomes..." class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none"></textarea>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">7. Expected Timeline</label>
-                <input type="text" name="timeline" placeholder="e.g. Q3 2026 / 3–6 Months / Immediate" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-timeline" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">7. Expected Timeline</label>
+                <input id="form-timeline" type="text" name="timeline" placeholder="e.g. Q3 2026 / 3–6 Months / Immediate" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
               <div class="space-y-1.5">
-                <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">8. How did you hear about Taniya?</label>
-                <input type="text" name="referral" placeholder="e.g. LinkedIn / Peer Referral / Published Op-Ed / Event" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+                <label for="form-referral" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">8. How did you hear about Taniya?</label>
+                <input id="form-referral" type="text" name="referral" placeholder="e.g. LinkedIn / Peer Referral / Published Op-Ed / Event" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
               </div>
             </div>
 
             <div class="space-y-1.5">
-              <label class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">9. Optional: Relevant documents / website</label>
-              <input type="text" name="docs" placeholder="https://organisation.org or link to brief" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
+              <label for="form-docs" class="block font-mono text-[11px] sm:text-xs text-atlas-charcoal uppercase">9. Optional: Relevant documents / website</label>
+              <input id="form-docs" type="text" name="docs" placeholder="https://organisation.org or link to brief" class="w-full px-3.5 py-2.5 rounded-xl border border-atlas-border bg-atlas-surface text-atlas-cream text-xs sm:text-sm focus:border-atlas-bright focus:outline-none">
             </div>
 
             <button type="submit" class="w-full py-3 rounded-xl bg-atlas-olive text-white font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:opacity-95">
