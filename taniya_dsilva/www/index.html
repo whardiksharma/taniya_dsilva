@@ -1549,41 +1549,46 @@
   <!-- ========================================================================= -->
   <!-- IN-WEBSITE INTERACTIVE CV / RESUME VIEWER MODAL (READ-ONLY, ZERO DOWNLOAD) -->
   <!-- ========================================================================= -->
-  <div id="cvViewerModal" class="fixed inset-0 z-[100] bg-black/92 backdrop-blur-md hidden flex-col p-2 sm:p-5 transition-all duration-300" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer" oncontextmenu="return false;">
+  <div id="cvViewerModal" class="fixed inset-0 z-[100] bg-[#0E0B09]/95 backdrop-blur-xl hidden flex-col transition-all duration-300" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer" oncontextmenu="return false;">
     
-    <!-- Viewer Top Navigation Bar -->
-    <div class="w-full max-w-5xl mx-auto flex items-center justify-between gap-3 pb-3 border-b border-white/20 shrink-0 select-none">
-      
-      <!-- Prominent "← Back to Website" Action Button -->
-      <button type="button" onclick="closeCvViewer()" class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-[#FAF6F0] hover:bg-white text-[#1C140F] border border-[#DFCFC0] font-mono text-xs uppercase tracking-wider font-bold shadow-md hover:scale-105 transition-all cursor-pointer" style="color: #1C140F !important;">
-        <svg class="w-4 h-4 stroke-[#1C140F]" fill="none" stroke-width="2.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-        </svg>
-        <span style="color: #1C140F !important;">← Back to Website</span>
-      </button>
+    <!-- Viewer Top Navigation Bar (Clean & Minimal) -->
+    <div class="w-full border-b border-white/10 bg-[#140F0D]/90 backdrop-blur-md px-4 sm:px-8 py-3 shrink-0 select-none">
+      <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Left: Official Document Title & Verified Telemetry -->
+        <div class="flex items-center gap-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#34A853] inline-block shadow-[0_0_8px_#34A853] shrink-0 animate-pulse"></span>
+          <div>
+            <h2 class="font-serif text-white text-sm sm:text-base font-medium tracking-tight" style="color: #FFFFFF !important;">
+              Taniya D’silva — Curriculum Vitae
+            </h2>
+            <span class="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider block" style="color: #D6CBC4 !important;">
+              Official Verified Credentials · In-Website Viewer
+            </span>
+          </div>
+        </div>
 
-      <!-- Center Title & Security Badge -->
-      <div class="hidden sm:flex flex-col items-center text-center">
-        <span class="font-serif text-white text-sm sm:text-base font-semibold tracking-tight" style="color: #FFFFFF !important;">Taniya D’silva — Curriculum Vitae &amp; Credentials</span>
-        <span class="font-mono text-[10.5px] uppercase tracking-widest font-semibold flex items-center gap-1.5 mt-0.5" style="color: #FDE68A !important;">
-          <span class="w-2 h-2 rounded-full bg-[#34A853] inline-block animate-pulse"></span>
-          In-Website Read-Only Viewer (Strictly Download Protected)
-        </span>
+        <!-- Right: Dedicated Close Cross Button Only -->
+        <button 
+          type="button" 
+          onclick="closeCvViewer()" 
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 hover:border-white/40 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A84C2D]" 
+          title="Close Viewer (Esc)"
+          aria-label="Close Curriculum Vitae Viewer"
+        >
+          <svg class="w-5 h-5 stroke-white" fill="none" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
       </div>
-
-      <!-- Close X Button -->
-      <button type="button" onclick="closeCvViewer()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-all cursor-pointer border border-white/25 shadow-sm" title="Back to Website (Esc)">
-        <svg class="w-5 h-5 stroke-white" fill="none" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
     </div>
 
     <!-- Protected High-Resolution Document Canvas Viewer (Zero-Download Engine) -->
-    <div class="flex-1 w-full max-w-4xl mx-auto mt-3 rounded-2xl overflow-y-auto bg-[#18181B] border border-white/20 shadow-2xl relative p-3 sm:p-6 flex flex-col items-center gap-6 select-none" id="cvDocContainer" oncontextmenu="return false;" style="user-select: none; -webkit-user-select: none;">
+    <div class="flex-1 w-full overflow-y-auto py-6 sm:py-8 px-3 sm:px-6 flex flex-col items-center gap-8 select-none" id="cvDocContainer" oncontextmenu="return false;" style="user-select: none; -webkit-user-select: none;">
       
       <!-- Page 1 of 2 -->
-      <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden border border-[#E5E7EB] flex flex-col select-none shrink-0" oncontextmenu="return false;">
+      <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-[#E5E7EB] flex flex-col select-none shrink-0" oncontextmenu="return false;">
         <div class="bg-[#F9FAFB] px-4 py-2 border-b border-[#E5E7EB] flex items-center justify-between text-[11px] font-mono text-[#6B7280] select-none">
           <span class="font-bold text-[#1F2937]">PAGE 1 OF 2</span>
           <span class="flex items-center gap-1.5 text-[#059669] font-medium">
@@ -1605,7 +1610,7 @@
       </div>
 
       <!-- Page 2 of 2 -->
-      <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden border border-[#E5E7EB] flex flex-col select-none shrink-0" oncontextmenu="return false;">
+      <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-[#E5E7EB] flex flex-col select-none shrink-0" oncontextmenu="return false;">
         <div class="bg-[#F9FAFB] px-4 py-2 border-b border-[#E5E7EB] flex items-center justify-between text-[11px] font-mono text-[#6B7280] select-none">
           <span class="font-bold text-[#1F2937]">PAGE 2 OF 2</span>
           <span class="flex items-center gap-1.5 text-[#059669] font-medium">
@@ -1626,12 +1631,8 @@
         </div>
       </div>
 
-      <!-- Floating Bottom "Done Viewing" Action Button -->
-      <div class="sticky bottom-4 z-20 pb-2">
-        <button type="button" onclick="closeCvViewer()" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FAF6F0] hover:bg-white text-[#1C140F] border border-[#DFCFC0] font-mono text-xs uppercase tracking-wider font-bold shadow-2xl hover:scale-105 transition-all cursor-pointer" style="color: #1C140F !important;">
-          <span>← Done Viewing · Back to Website</span>
-        </button>
-      </div>
+      <!-- Bottom Spacer for Breathing Room -->
+      <div class="h-6 shrink-0"></div>
 
     </div>
 
