@@ -30,6 +30,7 @@ test("04. Nav Link: Affiliations Section Target", 'href="#affiliations"' in nav_
 test("05. Nav Link: Wise Impact Section Target", 'href="#pillars"' in nav_block)
 test("06. Nav Link: 'What Others Say' Section Target", 'href="#endorsements"' in nav_block and "What Others Say" in nav_block)
 test("07. Nav Link: Redundant Connect Removed", 'href="#connect"' not in nav_block)
+test("07b. Nav Dropdown: Vision & Values and Awards & Distinctions Hidden (Client Content Pending)", "Vision &amp; Values" not in nav_block and "Vision & Values" not in nav_block and "Awards &amp; Distinctions" not in nav_block and "Awards & Distinctions" not in nav_block)
 test("08. Header: Brand Logo & Title Link to Hero", 'href="#hero"' in header_block and "Taniya D’silva" in header_block)
 test("09. Header: 'Get in Touch' Theme CTA Button", 'href="#connect"' in header_block and "Get in Touch" in header_block and "bg-atlas-olive" in header_block)
 test("10. Header: Interactive Search Input & Clear Control", 'id="pageSearchInput"' in header_block and 'id="searchClearBtn"' in header_block)
