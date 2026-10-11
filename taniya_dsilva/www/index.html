@@ -1549,43 +1549,25 @@
   <!-- ========================================================================= -->
   <!-- IN-WEBSITE INTERACTIVE CV / RESUME VIEWER MODAL (READ-ONLY, ZERO DOWNLOAD) -->
   <!-- ========================================================================= -->
-  <div id="cvViewerModal" class="fixed inset-0 z-[100] bg-[#0E0B09]/95 backdrop-blur-xl hidden flex-col transition-all duration-300" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer" oncontextmenu="return false;">
+  <div id="cvViewerModal" onclick="if(event.target === this) closeCvViewer();" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md hidden flex-col transition-all duration-300" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer" oncontextmenu="return false;">
     
-    <!-- Viewer Top Navigation Bar (Clean & Minimal) -->
-    <div class="w-full border-b border-white/10 bg-[#140F0D]/90 backdrop-blur-md px-4 sm:px-8 py-3 shrink-0 select-none">
-      <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
-        
-        <!-- Left: Official Document Title & Verified Telemetry -->
-        <div class="flex items-center gap-3">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#34A853] inline-block shadow-[0_0_8px_#34A853] shrink-0 animate-pulse"></span>
-          <div>
-            <h2 class="font-serif text-white text-sm sm:text-base font-medium tracking-tight" style="color: #FFFFFF !important;">
-              Taniya D’silva — Curriculum Vitae
-            </h2>
-            <span class="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider block" style="color: #D6CBC4 !important;">
-              Official Verified Credentials · In-Website Viewer
-            </span>
-          </div>
-        </div>
-
-        <!-- Right: Dedicated Close Cross Button Only -->
-        <button 
-          type="button" 
-          onclick="closeCvViewer()" 
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 hover:border-white/40 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A84C2D]" 
-          title="Close Viewer (Esc)"
-          aria-label="Close Curriculum Vitae Viewer"
-        >
-          <svg class="w-5 h-5 stroke-white" fill="none" stroke-width="2.2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-
-      </div>
+    <!-- Floating Dedicated Close Cross Button Only (Top Right) -->
+    <div class="fixed top-4 right-4 sm:top-6 sm:right-6 z-[110]">
+      <button 
+        type="button" 
+        onclick="closeCvViewer()" 
+        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/70 hover:bg-black/90 text-white flex items-center justify-center transition-all cursor-pointer border border-white/30 hover:border-white/60 shadow-2xl backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-[#A84C2D]" 
+        title="Close Viewer (Esc)"
+        aria-label="Close Curriculum Vitae Viewer"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 stroke-white" fill="none" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Protected High-Resolution Document Canvas Viewer (Zero-Download Engine) -->
-    <div class="flex-1 w-full overflow-y-auto py-6 sm:py-8 px-3 sm:px-6 flex flex-col items-center gap-8 select-none" id="cvDocContainer" oncontextmenu="return false;" style="user-select: none; -webkit-user-select: none;">
+    <div class="flex-1 w-full overflow-y-auto pt-14 pb-8 sm:py-10 px-3 sm:px-6 flex flex-col items-center gap-8 select-none" id="cvDocContainer" onclick="if(event.target === this) closeCvViewer();" oncontextmenu="return false;" style="user-select: none; -webkit-user-select: none;">
       
       <!-- Page 1 of 2 -->
       <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-[#E5E7EB] flex flex-col select-none shrink-0" oncontextmenu="return false;">
