@@ -57,7 +57,13 @@ about_block = content.split('id="about"')[1].split('id="work"')[0] if 'id="about
 
 test("19. About: Secondary Desk Headshot Integrated", "client_md_image5.png" in about_block)
 test("20. About CTA: Exact Rewritten Collaboration Link", "Get in touch and let’s explore how I can help ↗" in about_block and 'href="#connect"' in about_block)
-test("20b. About: Unbolded Client Bio Text Matching Verbatim", "Wise Impact Consulting Solutions" in about_block and "<strong>Wise Impact" not in about_block and "font-medium text-white text-lg" not in about_block)
+test("20b. About: Unbolded Client Bio Paragraphs All 4 Preserved Verbatim", 
+     "I’m a strategy and programme leader who works with organisations trying to turn ideas for a more just and equitable world into action." in about_block and
+     "Over the past 15 years, I’ve worked across climate" in about_block and
+     "My work has taken me from public health" in about_block and
+     "I tend to work where the questions are complex" in about_block and
+     "font-medium text-white text-lg" not in about_block and
+     "<strong>Wise Impact" not in about_block)
 test("21. About: PMP Typo Removed (No Hyphen)", "PMP® Certified, 2026" in about_block)
 test("22. About: 30+ Member Teams Interdisciplinary Credential", "research, design, partnerships & operations" in about_block)
 test("23. About: Philanthropies 3-5 Year Investment Strategy", "Built 3–5 year investment and resourcing strategies for emerging and established philanthropies" in about_block)
