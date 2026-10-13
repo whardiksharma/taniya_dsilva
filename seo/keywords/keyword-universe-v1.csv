@@ -1,0 +1,49 @@
+id,cluster,keyword,geo_target,language,est_volume,est_difficulty,priority,rank_method,month0_rank,notes
+BR-01,Branded,taniya d'silva,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Primary brand name query
+BR-02,Branded,taniya dsilva,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Common unpunctuated spelling
+BR-03,Branded,taniya d'silva social impact,India,en,Low,Low,3,A-GSC,NEEDS ACCESS,Core entity association
+BR-04,Branded,taniya d'silva pmp,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Professional credential query
+BR-05,Branded,wise impact consulting solutions,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Practice brand name
+BR-06,Branded,wise impact consulting,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Practice shortened query
+BR-07,Branded,taniya d'silva resume,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Direct CV search intent
+BR-08,Branded,taniya d'silva portfolio,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Portfolio intent
+BR-09,Branded,taniadsilva.com,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Navigational exact domain
+BR-10,Branded,taniya d'silva contact,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,High-intent inquiry query
+SI-01,Social Impact Advisory,strategic social impact advisory,Global,en,Med,Med,3,A-GSC,NEEDS ACCESS,Core hero headline term
+SI-02,Social Impact Advisory,evidence to action research,Global,en,Med,Med,3,A-GSC,NEEDS ACCESS,Key methodology term
+SI-03,Social Impact Advisory,social impact consulting india,India,en,Med,Med,3,A-GSC,NEEDS ACCESS,Commercial geographic intent
+SI-04,Social Impact Advisory,evidence to action social impact,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Niche methodology term
+SI-05,Social Impact Advisory,social development consultant new delhi,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Local advisory query
+SI-06,Social Impact Advisory,programme and portfolio management social impact,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Lead title association
+SI-07,Social Impact Advisory,social impact strategy consultant,Global,en,Med,Med,3,A-GSC,NEEDS ACCESS,Executive search intent
+SI-08,Social Impact Advisory,development sector advisory india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Industry term
+SI-09,Social Impact Advisory,strategic advisory philanthropy india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Donor & foundation intent
+SI-10,Social Impact Advisory,evidence based policy implementation india,India,en,Low,Med,2,A-GSC,NEEDS ACCESS,Think tank & policy query
+CR-01,Climate & Agrarian,climate resilience consultant india,India,en,Med,Low,3,A-GSC,NEEDS ACCESS,High-value advisory cluster
+CR-02,Climate & Agrarian,agrarian transitions advisory,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Niche research pillar
+CR-03,Climate & Agrarian,rural climate resilience india,India,en,Low,Low,3,A-GSC,NEEDS ACCESS,Ground reality focus
+CR-04,Climate & Agrarian,climate adaptation strategy rural india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Grant & programme search
+CR-05,Climate & Agrarian,sustainable agriculture programme design,Global,en,Med,Med,2,A-GSC,NEEDS ACCESS,Institutional intent
+CR-06,Climate & Agrarian,evidence to action climate resilience,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Methodology tie-in
+CR-07,Climate & Agrarian,rural livelihoods and climate change india,India,en,Med,Low,2,A-GSC,NEEDS ACCESS,Development sector query
+CR-08,Climate & Agrarian,just transition informal workers india,India,en,Low,Low,3,A-GSC,NEEDS ACCESS,Pillar match
+GE-01,Gender Equity & Labour,gender equity in industry consultant,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Key hero credential
+GE-02,Gender Equity & Labour,informal labour markets research india,India,en,Low,Low,3,A-GSC,NEEDS ACCESS,Academic & advisory query
+GE-03,Gender Equity & Labour,women in manufacturing equity india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Industrial ESG pillar
+GE-04,Gender Equity & Labour,gender lens development consulting,Global,en,Med,Med,3,A-GSC,NEEDS ACCESS,International donor query
+GE-05,Gender Equity & Labour,informal economy social security advisory,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Policy advisory intent
+GE-06,Gender Equity & Labour,women workforce participation strategy india,India,en,Med,Low,3,A-GSC,NEEDS ACCESS,High-profile national policy query
+GE-07,Gender Equity & Labour,gender transformative programme design,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Bilateral funding proposal query
+GE-08,Gender Equity & Labour,labour standards informal sector consulting,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Compliance & equity
+PH-01,Public Health & Delivery,rural public health consultant india,India,en,Low,Low,3,A-GSC,NEEDS ACCESS,Core service vertical
+PH-02,Public Health & Delivery,evidence to action public health,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Pillar match
+PH-03,Public Health & Delivery,community health system strengthening india,India,en,Med,Med,3,A-GSC,NEEDS ACCESS,Government & donor query
+PH-04,Public Health & Delivery,last mile health delivery strategy india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Grassroots impact query
+PH-05,Public Health & Delivery,maternal child health programme management,India,en,Med,Med,2,A-GSC,NEEDS ACCESS,Vertical project query
+PH-06,Public Health & Delivery,public health evidence translation,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Academic to policy bridge
+PM-01,Portfolio Leadership,pmp certified social impact consultant,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Unique differentiator query
+PM-02,Portfolio Leadership,social impact programme leadership,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Executive recruiter query
+PM-03,Portfolio Leadership,fractional social impact director,Global,en,Low,Low,3,A-GSC,NEEDS ACCESS,Fractional executive intent
+PM-04,Portfolio Leadership,multi stakeholder partnership leadership india,India,en,Low,Low,2,A-GSC,NEEDS ACCESS,Bilateral & alliance lead
+PM-05,Portfolio Leadership,monitoring evaluation learning advisory india,India,en,Med,Med,2,A-GSC,NEEDS ACCESS,MEL / evidence evaluation
+PM-06,Portfolio Leadership,large scale programme governance social sector,Global,en,Low,Low,2,A-GSC,NEEDS ACCESS,Enterprise foundation intent

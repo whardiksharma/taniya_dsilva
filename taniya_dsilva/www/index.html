@@ -5,7 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taniya D’silva — Strategic Social Impact Advisory | Research | Evidence-to-Action | Programme & Portfolio Management</title>
   <meta name="description" content="15 years translating evidence and strategic vision into ground reality across climate resilience, gender equity in industry, informal labour markets, and rural public health across India.">
-  
+  <link rel="canonical" href="https://taniyadsilva.com/">
+
+  <!-- Google Search Console Verification Meta -->
+  <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEZB9SX474"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FEZB9SX474', { 'send_page_view': true, 'cookie_flags': 'SameSite=None;Secure' });
+  </script>
+
+  <!-- Structured Data (JSON-LD): Person & ProfessionalService Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://taniyadsilva.com/#person",
+        "name": "Taniya D’silva",
+        "jobTitle": "Strategic Social Impact Advisor & Portfolio Lead",
+        "url": "https://taniyadsilva.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/taniyadsilva"
+        ],
+        "knowsAbout": [
+          "Strategic Social Impact Advisory",
+          "Evidence-to-Action Research",
+          "Climate Resilience & Agrarian Transitions",
+          "Gender Equity in Industry",
+          "Informal Labour Markets",
+          "Rural Public Health",
+          "Programme & Portfolio Management",
+          "PMP Certified Project Management"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://taniyadsilva.com/#organization",
+        "name": "Wise Impact Consulting Solutions",
+        "founder": { "@id": "https://taniyadsilva.com/#person" },
+        "url": "https://taniyadsilva.com",
+        "description": "Strategy & Programme/Portfolio Leadership for Social Impact",
+        "areaServed": "Global, India"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1544,6 +1594,78 @@
         }
       }
     });
+
+    // =========================================================================
+    // GOOGLE ANALYTICS 4 (GA4) EVENT TELEMETRY & CONVERSION TRACKING ENGINE
+    // =========================================================================
+    function trackGAEvent(eventName, params) {
+      try {
+        const payload = Object.assign({ site: 'taniyadsilva.com' }, params || {});
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, payload);
+        } else {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(['event', eventName, payload]);
+        }
+      } catch (err) {
+        console.warn('GA4 Telemetry error:', eventName, err);
+      }
+    }
+
+    // Attach click listeners for key conversion buttons
+    document.addEventListener('click', function(e) {
+      // 1. Both CV / Resume Buttons
+      const cvBtn = e.target.closest('a[onclick*="openCvViewer"]');
+      if (cvBtn) {
+        const isHero = !!cvBtn.closest('#hero');
+        trackGAEvent('cv_button_click', {
+          button_name: isHero ? 'hero_view_cv_pdf' : 'credentials_view_cv_pdf',
+          button_location: isHero ? 'hero_cta' : 'credentials_section',
+          action: 'open_viewer_modal'
+        });
+        return;
+      }
+
+      // 2. "Get in Touch" Buttons (Header, Hero, Footer)
+      const touchBtn = e.target.closest('a[href="#connect"]');
+      if (touchBtn) {
+        let loc = 'page_link';
+        if (touchBtn.closest('header')) loc = 'header_nav';
+        else if (touchBtn.closest('#hero')) loc = 'hero_cta';
+        else if (touchBtn.closest('footer')) loc = 'footer_link';
+        trackGAEvent('get_in_touch_click', {
+          button_name: 'get_in_touch',
+          button_location: loc,
+          target: '#connect'
+        });
+        return;
+      }
+
+      // 3. "My Work" Buttons (Header Dropdown, Hero CTA)
+      const workBtn = e.target.closest('a[href="#work"]');
+      if (workBtn) {
+        let loc = 'page_link';
+        if (workBtn.closest('header')) loc = 'header_dropdown';
+        else if (workBtn.closest('#hero')) loc = 'hero_cta';
+        trackGAEvent('my_work_click', {
+          button_name: 'my_work',
+          button_location: loc,
+          target: '#work'
+        });
+        return;
+      }
+    }, true);
+
+    // 4. Contact / Inquiry Form Submission Tracking
+    const inqForm = document.getElementById('inquiry-form');
+    if (inqForm) {
+      inqForm.addEventListener('submit', function() {
+        trackGAEvent('contact_form_submit', {
+          form_id: 'inquiry-form',
+          form_name: 'social_impact_inquiry'
+        });
+      });
+    }
   </script>
 
   <!-- ========================================================================= -->

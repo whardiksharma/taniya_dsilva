@@ -1,0 +1,10 @@
+# Robots.txt for Taniya D'silva Strategic Social Impact Advisory (https://taniyadsilva.com)
+User-agent: *
+Allow: /
+Allow: /assets/
+
+# Crawl-delay
+# Crawl-delay: 1
+
+# XML Sitemap
+Sitemap: https://taniyadsilva.com/sitemap.xml
