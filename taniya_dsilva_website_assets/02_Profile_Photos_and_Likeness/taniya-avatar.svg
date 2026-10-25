@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Warm Palette Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="50%" stop-color="#F2ECE4" />
+      <stop offset="100%" stop-color="#E5DDD2" />
+    </linearGradient>
+    <linearGradient id="oliveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B7D56" />
+      <stop offset="100%" stop-color="#435234" />
+    </linearGradient>
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2D4C3" />
+      <stop offset="100%" stop-color="#C5B19A" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1F1C19" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="400" height="400" rx="200" fill="url(#bgGrad)" />
+
+  <!-- Subtle Concentric Architectural Radii (Evidence & Systems Metaphor) -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#D5C8B9" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.6" />
+  <circle cx="200" cy="200" r="145" fill="none" stroke="#556643" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Abstract Editorial Stylized Silhouette / Likeness Portrait -->
+  <g id="portraitGroup" filter="url(#softShadow)">
+    <!-- Base Torso / Attire (Warm Charcoal with Olive Neckline) -->
+    <path d="M 120 370 C 120 285, 280 285, 280 370 Z" fill="#2B2824" />
+    <!-- Collared Inset (Olive Accent) -->
+    <path d="M 175 285 L 200 325 L 225 285 Z" fill="#556643" opacity="0.9" />
+    <!-- Warm Linen Inner V -->
+    <path d="M 188 285 L 200 308 L 212 285 Z" fill="#FAF8F5" />
+
+    <!-- Neck & Jawline -->
+    <path d="M 182 250 L 182 290 C 182 296, 218 296, 218 290 L 218 250 Z" fill="#E6CEBD" />
+
+    <!-- Head & Face Structure (Thoughtful, Poised Angle) -->
+    <ellipse cx="200" cy="215" rx="44" ry="52" fill="#ECD5C4" />
+
+    <!-- Hair Silhouette (Elegant Contemporary Bob / Waves) -->
+    <path d="M 152 215 C 150 145, 250 145, 248 215 C 248 245, 240 268, 230 270 C 220 250, 222 210, 218 200 C 205 190, 185 190, 178 202 C 172 215, 175 250, 168 270 C 158 268, 152 245, 152 215 Z" fill="#221E1B" />
+    
+    <!-- Warm Facial Contours (Editorial Minimalism) -->
+    <!-- Eyes / Brow (Calm, Intellectually Engaged) -->
+    <path d="M 178 208 Q 188 204 195 208" stroke="#3A322C" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 205 208 Q 212 204 222 208" stroke="#3A322C" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <!-- Subtle Eye Arc -->
+    <circle cx="187" cy="216" r="3" fill="#2E2823" />
+    <circle cx="213" cy="216" r="3" fill="#2E2823" />
+
+    <!-- Soft Nose Bridge -->
+    <path d="M 200 212 L 198 228 L 204 231" stroke="#C9AA94" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Warm Human Smile / Thoughtful Expression -->
+    <path d="M 191 243 Q 200 248 209 243" stroke="#B87C68" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Subtle Eyewear/Intellectual Framing Accent (Editorial) -->
+    <path d="M 174 213 Q 187 205 198 213 Q 198 225 186 226 Q 174 225 174 213 Z" fill="none" stroke="#556643" stroke-width="1.8" opacity="0.8" />
+    <path d="M 202 213 Q 213 205 226 213 Q 226 225 214 226 Q 202 225 202 213 Z" fill="none" stroke="#556643" stroke-width="1.8" opacity="0.8" />
+    <path d="M 198 213 L 202 213" stroke="#556643" stroke-width="2" />
+  </g>
+
+  <!-- Stylized Floating Geometric Elements (Translating Vision to Evidence Metaphor) -->
+  <!-- Top Right Evidence Compass / Star -->
+  <g transform="translate(305, 95)" opacity="0.85">
+    <circle cx="0" cy="0" r="28" fill="#F4EFEB" stroke="#D5C8B9" stroke-width="1" />
+    <path d="M 0 -16 L 3 -4 L 16 0 L 3 4 L 0 16 L -3 4 L -16 0 L -3 -4 Z" fill="#556643" />
+    <circle cx="0" cy="0" r="2.5" fill="#FAF8F5" />
+  </g>
+
+  <!-- Left Bottom Systems Intersection Nodes -->
+  <g transform="translate(65, 290)" opacity="0.75">
+    <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#FAF8F5" stroke="#556643" stroke-width="1.2" />
+    <circle cx="-5" cy="-5" r="4" fill="#556643" />
+    <circle cx="8" cy="8" r="5" fill="#38342F" />
+    <line x1="-5" y1="-5" x2="8" y2="8" stroke="#7C7469" stroke-width="1" />
+  </g>
+
+  <!-- Outer Ring Typography Inscription -->
+  <path id="textPathRing" d="M 60 200 A 140 140 0 0 1 340 200" fill="none" />
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#556643" letter-spacing="3.5" font-weight="600" text-anchor="middle">
+    <textPath href="#textPathRing" startOffset="50%">
+      STRATEGIC IMPACT · RESEARCH · EVIDENCE-TO-ACTION
+    </textPath>
+  </text>
+</svg>

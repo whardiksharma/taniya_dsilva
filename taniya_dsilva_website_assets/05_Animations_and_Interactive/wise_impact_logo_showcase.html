@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise Impact — Logo & Artwork Showcase</title>
+  <style>
+    :root {
+      --bg: #F8F9FA;
+      --card-bg: #FFFFFF;
+      --text: #202124;
+      --text-muted: #5F6368;
+      --border: #DADCE0;
+      --primary: #4285F4;
+      --green: #34A853;
+      --gold: #D4A017;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px 32px 60px;
+      transition: background 0.25s ease;
+    }
+    header {
+      max-width: 1400px;
+      margin: 0 auto 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .header-title h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a3328;
+      letter-spacing: -0.5px;
+    }
+    .header-title p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card-bg);
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .controls span {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+    .bg-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .bg-btn:hover {
+      transform: scale(1.15);
+    }
+    .bg-btn.active {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(66,133,244,0.3);
+    }
+    .btn-light { background: #FFFFFF; border: 1px solid #CCC; }
+    .btn-cream { background: #FAF7F2; }
+    .btn-sage { background: #EBF1EA; }
+    .btn-dark { background: #1E232A; }
+
+    .grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .card-header {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: #FAFAFA;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #202124;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .badge-primary { background: #E8F0FE; color: #1967D2; }
+    .badge-green { background: #E6F4EA; color: #137333; }
+    .badge-gold { background: #FEF7E0; color: #B06000; }
+    .badge-purple { background: #F3E8FD; color: #7627BB; }
+
+    .preview-box {
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #FFFFFF;
+      transition: background 0.25s ease;
+      position: relative;
+    }
+    .preview-box img, .preview-box object {
+      max-width: 100%;
+      max-height: 340px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.04));
+    }
+    .card-footer {
+      padding: 14px 20px;
+      background: #FAFAFA;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .file-path {
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      color: #3C4043;
+      font-weight: 600;
+    }
+    .open-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .open-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Full width card for banner */
+    .card-full {
+      grid-column: 1 / -1;
+    }
+    .card-full .preview-box {
+      min-height: 200px;
+    }
+    .card-full .preview-box img {
+      max-height: 160px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-title">
+      <h1>Wise Impact — Logo & Artwork Showcase</h1>
+      <p>Interactive browser comparison of all vector (.svg) assets & watercolor variations</p>
+    </div>
+    <div class="controls">
+      <span>Canvas Tint:</span>
+      <button class="bg-btn btn-light active" title="Pure White" onclick="setBg('#FFFFFF', '#FFFFFF')"></button>
+      <button class="bg-btn btn-cream" title="Warm Paper" onclick="setBg('#FAF7F2', '#FAF7F2')"></button>
+      <button class="bg-btn btn-sage" title="Sage Green" onclick="setBg('#EBF1EA', '#EBF1EA')"></button>
+      <button class="bg-btn btn-dark" title="Dark Mode" onclick="setBg('#1E232A', '#16191E')"></button>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- 1. EXACT CLIENT ARTWORK SVG -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">1. Exact Client Hand-Drawn Artwork (SVG)</span>
+        <span class="badge badge-green">1:1 Exact Match</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_logo.svg?v=1" alt="Wise Impact Client Artwork SVG" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_logo.svg</span>
+        <a class="open-link" href="wise_impact_logo.svg" target="_blank">Open SVG ↗</a>
+      </div>
+    </div>
+
+    <!-- 2. TRANSPARENT BACKGROUND SVG -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">2. Client Artwork (Transparent Background SVG)</span>
+        <span class="badge badge-primary">Grid Removed</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_transparent.svg?v=1" alt="Wise Impact Transparent SVG" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_transparent.svg</span>
+        <a class="open-link" href="wise_impact_transparent.svg" target="_blank">Open SVG ↗</a>
+      </div>
+    </div>
+
+    <!-- 3. SPHERICAL GLOBE WITH DISTRIBUTED PEOPLE -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">3. Spherical Globe — People Spread Across Countries</span>
+        <span class="badge badge-gold">Continental Grid</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_globe_master.png?v=1" alt="Wise Impact Spherical Distributed Globe" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_globe_master.png</span>
+        <a class="open-link" href="wise_impact_globe_master.png" target="_blank">Open PNG ↗</a>
+      </div>
+    </div>
+
+    <!-- 4. WISE IMPACT EMBLEM BADGE -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">4. Wise Impact Circular Emblem Badge</span>
+        <span class="badge badge-purple">Seal Format</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_emblem.svg?v=1" alt="Wise Impact Emblem SVG" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_emblem.svg</span>
+        <a class="open-link" href="wise_impact_emblem.svg" target="_blank">Open SVG ↗</a>
+      </div>
+    </div>
+
+    <!-- 5. STANDALONE CIRCLE (NO YELLOW OUTLINE, NO RINGS, NO TEXT) -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">5. Circular Globe (Yellow Outline &amp; Rings Removed)</span>
+        <span class="badge badge-green">Zero Outline</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_circle.svg?v=2" alt="Wise Impact Standalone Circle SVG (No Yellow Outline)" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_circle.svg</span>
+        <a class="open-link" href="wise_impact_circle.svg" target="_blank">Open SVG ↗</a>
+      </div>
+    </div>
+
+    <!-- 6. FULL HORIZONTAL BANNER LOGO -->
+    <div class="card card-full">
+      <div class="card-header">
+        <span class="card-title">6. Full Horizontal Brand Banner (Logo + Typography)</span>
+        <span class="badge badge-primary">Brand Identity</span>
+      </div>
+      <div class="preview-box">
+        <img src="wise_impact_banner.svg?v=1" alt="Wise Impact Banner SVG" />
+      </div>
+      <div class="card-footer">
+        <span class="file-path">wise_impact_banner.svg</span>
+        <a class="open-link" href="wise_impact_banner.svg" target="_blank">Open SVG ↗</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setBg(boxBg, pageBg) {
+      document.querySelectorAll('.preview-box').forEach(el => el.style.background = boxBg);
+      document.querySelectorAll('.bg-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
