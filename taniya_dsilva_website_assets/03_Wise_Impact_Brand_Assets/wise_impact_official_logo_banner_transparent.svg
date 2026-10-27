@@ -8,9 +8,9 @@
       .brand-title {
         font-family: 'Playfair Display', Georgia, serif;
         font-weight: 700;
-        font-size: 64px;
+        font-size: 72px;
         fill: #1C261D;
-        letter-spacing: -0.01em;
+        letter-spacing: -0.015em;
       }
       .brand-subtitle {
         font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -23,16 +23,9 @@
         font-family: 'Playfair Display', Georgia, serif;
         font-style: italic;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 21px;
         fill: #445446;
         letter-spacing: 0.02em;
-      }
-      .pill-badge {
-        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-        font-weight: 600;
-        font-size: 11px;
-        fill: #3E5A41;
-        letter-spacing: 0.08em;
       }
     </style>
 
@@ -69,28 +62,21 @@
   <!-- Divider Line -->
   <line x1="360" y1="70" x2="360" y2="290" stroke="#DFD5C2" stroke-width="1.5" stroke-dasharray="4, 4"/>
 
-  <!-- Right: Official Typography Lockup -->
-  <g transform="translate(405, 0)">
+  <!-- Right: Official Typography Lockup (Vertically Centered) -->
+  <g transform="translate(415, 0)">
     <!-- Subtitle (Category) -->
-    <text x="0" y="112" class="brand-subtitle">
+    <text x="0" y="132" class="brand-subtitle">
       CONSULTING SOLUTIONS
     </text>
 
     <!-- Main Brand Name -->
-    <text x="0" y="180" class="brand-title">
+    <text x="0" y="206" class="brand-title">
       Wise Impact
     </text>
 
     <!-- Tagline -->
-    <text x="0" y="222" class="brand-tagline">
+    <text x="0" y="250" class="brand-tagline">
       Transforming systems for people &amp; planet
     </text>
-
-    <!-- Accent Pill: Strategy & Social Impact -->
-    <g transform="translate(0, 252)">
-      <rect x="0" y="0" width="270" height="30" rx="15" fill="#EDF3EC" stroke="#3E5A41" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="14" cy="15" r="4" fill="#A84C2D"/>
-      <text x="26" y="19" class="pill-badge">CLIMATE · EQUITY · SYSTEMS</text>
-    </g>
   </g>
 </svg>
