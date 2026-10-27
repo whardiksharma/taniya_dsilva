@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1300 360" width="100%" height="100%">
   <title>Wise Impact Consulting Solutions — Official Logo Banner</title>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap');
       
-      .brand-title {
+      .brand-wise-impact {
         font-family: 'Playfair Display', Georgia, serif;
-        font-weight: 700;
-        font-size: 72px;
+        font-weight: 600;
+        font-size: 64px;
         fill: #1C261D;
-        letter-spacing: -0.015em;
+        letter-spacing: -0.01em;
       }
-      .brand-subtitle {
-        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        fill: #A84C2D;
-        letter-spacing: 0.28em;
-      }
-      .brand-tagline {
+      .brand-consulting-solutions {
         font-family: 'Playfair Display', Georgia, serif;
         font-style: italic;
         font-weight: 400;
-        font-size: 21px;
-        fill: #445446;
-        letter-spacing: 0.02em;
+        font-size: 56px;
+        fill: #2C3E2F;
+        letter-spacing: 0.01em;
+      }
+      .brand-tagline {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+        fill: #667768;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
       }
     </style>
 
@@ -40,12 +41,12 @@
   </defs>
 
   <!-- Clean Alabaster/Linen Background (matching site paper canvas) -->
-  <rect width="1200" height="360" rx="20" fill="#FAF7F2"/>
-  <rect width="1196" height="356" x="2" y="2" rx="18" fill="none" stroke="#E5DEC9" stroke-width="1.5"/>
+  <rect width="1300" height="360" rx="20" fill="#FAF7F2"/>
+  <rect width="1296" height="356" x="2" y="2" rx="18" fill="none" stroke="#E5DEC9" stroke-width="1.5"/>
 
   <!-- Left: Globe Emblem Icon -->
   <g id="logo-icon" filter="url(#soft-shadow)">
-    <!-- Outer delicate gold/terracotta border ring -->
+    <!-- Outer delicate border ring -->
     <circle cx="180" cy="180" r="134" fill="#FFFFFF" stroke="#D8C7A5" stroke-width="2"/>
     <circle cx="180" cy="180" r="130" fill="#FAF6F0"/>
     
@@ -63,20 +64,20 @@
   <!-- Divider Line -->
   <line x1="360" y1="70" x2="360" y2="290" stroke="#DFD5C2" stroke-width="1.5" stroke-dasharray="4, 4"/>
 
-  <!-- Right: Official Typography Lockup (Vertically Centered) -->
+  <!-- Right: Official Typography Lockup -->
   <g transform="translate(415, 0)">
-    <!-- Subtitle (Category) -->
-    <text x="0" y="132" class="brand-subtitle">
-      CONSULTING SOLUTIONS
-    </text>
-
-    <!-- Main Brand Name -->
-    <text x="0" y="206" class="brand-title">
+    <!-- Line 1: Wise Impact (first) -->
+    <text x="0" y="152" class="brand-wise-impact">
       Wise Impact
     </text>
 
-    <!-- Tagline -->
-    <text x="0" y="250" class="brand-tagline">
+    <!-- Line 2: Consulting Solutions (in italic!) -->
+    <text x="0" y="216" class="brand-consulting-solutions">
+      Consulting Solutions
+    </text>
+
+    <!-- Line 3: Tagline (clean, letterspaced, NO pills, NO badges) -->
+    <text x="3" y="260" class="brand-tagline">
       Transforming systems for people &amp; planet
     </text>
   </g>
