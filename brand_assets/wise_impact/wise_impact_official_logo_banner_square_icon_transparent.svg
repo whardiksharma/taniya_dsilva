@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1300 360" width="100%" height="100%">
-  <title>Wise Impact Consulting Solutions — Official Logo Banner (Square Icon)</title>
+  <title>Wise Impact Consulting Solutions — Official Logo Banner</title>
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap');
@@ -24,11 +24,15 @@
         font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
         font-weight: 600;
         font-size: 16.5px;
-        fill: #C47A60;
+        fill: #404040;
         letter-spacing: 0.16em;
         text-transform: uppercase;
       }
     </style>
+
+    <clipPath id="globe-clip">
+      <circle cx="180" cy="180" r="130"/>
+    </clipPath>
 
     <clipPath id="pure-square-banner-clip">
       <rect x="50" y="50" width="260" height="260" rx="28"/>
@@ -40,8 +44,7 @@
     </filter>
   </defs>
 
-  <!-- Clean Alabaster/Linen Background -->
-  <!-- Transparent Canvas -->
+
 
   <!-- Left: PURE SQUARE ICON (Artwork fills square, zero inner circle) -->
   <g id="square-logo-icon" filter="url(#soft-shadow)">
@@ -59,7 +62,7 @@
 
   <!-- Right: Official Typography Lockup -->
   <g transform="translate(415, 0)">
-    <!-- Line 1: Wise Impact (Deep Green #263628) -->
+    <!-- Line 1: Wise Impact (Green #263628) -->
     <text x="0" y="152" class="brand-wise-impact">
       Wise Impact
     </text>
@@ -69,7 +72,7 @@
       Consulting Solutions
     </text>
 
-    <!-- Line 3: Tagline (Light Terracotta #C47A60) -->
+    <!-- Line 3: Tagline (Soft Light Black #404040) -->
     <text x="3" y="260" class="brand-tagline">
       Transforming systems for people &amp; planet
     </text>
