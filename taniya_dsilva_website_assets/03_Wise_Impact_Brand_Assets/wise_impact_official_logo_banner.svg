@@ -9,7 +9,7 @@
         font-family: 'Playfair Display', Georgia, serif;
         font-weight: 700;
         font-size: 66px;
-        fill: #000000;
+        fill: #263628;
         letter-spacing: -0.015em;
       }
       .brand-consulting-solutions {
@@ -65,17 +65,17 @@
 
   <!-- Right: Official Typography Lockup -->
   <g transform="translate(415, 0)">
-    <!-- Line 1: Wise Impact (BLACK) -->
+    <!-- Line 1: Wise Impact (ORIGINAL FOREST GREEN #263628) -->
     <text x="0" y="152" class="brand-wise-impact">
       Wise Impact
     </text>
 
-    <!-- Line 2: Consulting Solutions (TERRACOTTA & ITALIC) -->
+    <!-- Line 2: Consulting Solutions (TERRACOTTA & ITALIC #A84C2D) -->
     <text x="0" y="216" class="brand-consulting-solutions">
       Consulting Solutions
     </text>
 
-    <!-- Line 3: Tagline (LIGHT TERRACOTTA) -->
+    <!-- Line 3: Tagline (LIGHT TERRACOTTA #C47A60) -->
     <text x="3" y="260" class="brand-tagline">
       Transforming systems for people &amp; planet
     </text>
